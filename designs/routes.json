@@ -1,0 +1,18 @@
+{
+    "routes": [
+        {
+            "path": "bank",
+            "component": "bankComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "bank",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

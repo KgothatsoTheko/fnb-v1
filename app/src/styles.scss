@@ -1,0 +1,21 @@
+/*Importing default angular material css theme. */
+
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+
+// Bank styles
+.bank {
+
+    // Flex 
+    .flex {
+        display: flex;
+    }
+
+    .column {
+       flex-direction: column; 
+    }
+
+    
+
+}

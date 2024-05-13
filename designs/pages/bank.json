@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_OnCLyxjiMYoKcuBV",
+        "type": "tab",
+        "createdDate": "2024-05-13T12:21:41.136Z",
+        "label": "bank",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_mEliQLOZp4jIw1lX",
+        "type": "OnInit",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_mEliQLOZp4jIw1lX",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_yzNTTPPwdiMjtXgw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_yzNTTPPwdiMjtXgw",
+        "type": "PageVariables",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_yzNTTPPwdiMjtXgw",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    }
+]
