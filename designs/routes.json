@@ -37,6 +37,50 @@
             "component": "cardComponent"
         },
         {
+            "path": "landing",
+            "component": "landingComponent"
+        },
+        {
+            "path": "home",
+            "component": "homeComponent"
+        },
+        {
+            "path": "message",
+            "component": "messageComponent"
+        },
+        {
+            "path": "profile",
+            "component": "profileComponent"
+        },
+        {
+            "component": "personal_infoComponent",
+            "path": "personal-info"
+        },
+        {
+            "path": "settings",
+            "component": "settingsComponent"
+        },
+        {
+            "path": "add-profile-pic",
+            "component": "add_profile_picComponent"
+        },
+        {
+            "path": "id-documents",
+            "component": "id_documentsComponent"
+        },
+        {
+            "path": "username",
+            "component": "usernameComponent"
+        },
+        {
+            "path": "change-password",
+            "component": "change_passwordComponent"
+        },
+        {
+            "path": "limits",
+            "component": "limitsComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "bank",
             "pathMatch": "full",
