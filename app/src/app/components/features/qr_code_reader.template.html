@@ -1,0 +1,19 @@
+<div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <p>
+        QR Code Reader</p>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
+      <div>
+        <span class="material-symbols-outlined pointer" (click)="goBack()">
+                close
+            </span>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" style="background:grey;" class="bank-height-500px" fxLayoutAlign="center center" [fxShow]="true">
+    <div>
+      Scanner</div>
+  </div>
+</div>
