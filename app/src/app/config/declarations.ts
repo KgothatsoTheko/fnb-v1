@@ -44,6 +44,22 @@ import { homeComponent } from '../components/home.component';
 import { footerComponent } from '../components/footer.component';
 //CORE_REFERENCE_IMPORT-landingComponent
 import { landingComponent } from '../components/landing.component';
+//CORE_REFERENCE_IMPORT-cardComponent
+import { cardComponent } from '../components/features/card.component';
+//CORE_REFERENCE_IMPORT-payComponent
+import { payComponent } from '../components/features/pay.component';
+//CORE_REFERENCE_IMPORT-ewalletComponent
+import { ewalletComponent } from '../components/features/ewallet.component';
+//CORE_REFERENCE_IMPORT-buy_electricityComponent
+import { buy_electricityComponent } from '../components/features/buy_electricity.component';
+//CORE_REFERENCE_IMPORT-buy_airtimeComponent
+import { buy_airtimeComponent } from '../components/features/buy_airtime.component';
+//CORE_REFERENCE_IMPORT-searchComponent
+import { searchComponent } from '../components/features/search.component';
+//CORE_REFERENCE_IMPORT-qr_code_readerComponent
+import { qr_code_readerComponent } from '../components/features/qr_code_reader.component';
+//CORE_REFERENCE_IMPORT-view_transactionsComponent
+import { view_transactionsComponent } from '../components/view_transactions.component';
 //CORE_REFERENCE_IMPORT-bankComponent
 import { bankComponent } from '../components/bank.component';
 
@@ -104,6 +120,22 @@ export const appDeclarations = [
   footerComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-landingComponent
   landingComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-cardComponent
+  cardComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-payComponent
+  payComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-ewalletComponent
+  ewalletComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-buy_electricityComponent
+  buy_electricityComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-buy_airtimeComponent
+  buy_airtimeComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-searchComponent
+  searchComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-qr_code_readerComponent
+  qr_code_readerComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-view_transactionsComponent
+  view_transactionsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-bankComponent
   bankComponent,
 ];
@@ -145,6 +177,14 @@ export const appRoutes = [
   { path: 'username', component: usernameComponent },
   { path: 'change-password', component: change_passwordComponent },
   { path: 'limits', component: limitsComponent },
+  { path: 'view-transactions', component: view_transactionsComponent },
+  { path: 'qr-code-reader', component: qr_code_readerComponent },
+  { path: 'search', component: searchComponent },
+  { path: 'airtime', component: buy_airtimeComponent },
+  { path: 'electricity', component: buy_electricityComponent },
+  { path: 'eWallet', component: ewalletComponent },
+  { path: 'pay', component: payComponent },
+  { path: 'cards', component: cardComponent },
   { path: '', redirectTo: 'bank', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

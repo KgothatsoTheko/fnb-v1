@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -55,6 +56,125 @@ export class bankComponent {
     }
   }
 
+  goToTransactions(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_lzbhoAkaARC0iBfx(bh);
+      //appendnew_next_goToTransactions
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EgdyPsf05vhDko23');
+    }
+  }
+
+  openScanner(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_oGYWxWUU8emMzYxX(bh);
+      //appendnew_next_openScanner
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FiIUdNr6qFB4fMbg');
+    }
+  }
+
+  goToSearch(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_yGgH5FkjrZJOiZ8Q(bh);
+      //appendnew_next_goToSearch
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wRGirzdWOtJZPnPH');
+    }
+  }
+
+  goToAirtime(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_kGLL3bXWMEQMJJhl(bh);
+      //appendnew_next_goToAirtime
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_z29Tapg2rpzkM1mJ');
+    }
+  }
+
+  goToElectricity(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_xpqupbZrQoVdJQAu(bh);
+      //appendnew_next_goToElectricity
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6jIFi34pkIioCrQV');
+    }
+  }
+
+  goToEwallet(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_SgsNGx1cZnLcpg5l(bh);
+      //appendnew_next_goToEwallet
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aVvo7DBqeWCgk6Oy');
+    }
+  }
+
+  goToPay(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_tDYSVNbUXDNJl3OU(bh);
+      //appendnew_next_goToPay
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Yo8FSaXAR6ou4ZLB');
+    }
+  }
+
+  goToCard(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_4gY2NKIDRROAm3qN(bh);
+      //appendnew_next_goToCard
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wX3DmtKIglUiskZF');
+    }
+  }
   //appendnew_flow_bankComponent_start
 
   sd_yzNTTPPwdiMjtXgw(bh) {
@@ -63,6 +183,128 @@ export class bankComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_yzNTTPPwdiMjtXgw');
+    }
+  }
+
+  async sd_lzbhoAkaARC0iBfx(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/view-transactions');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_lzbhoAkaARC0iBfx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lzbhoAkaARC0iBfx');
+    }
+  }
+
+  async sd_oGYWxWUU8emMzYxX(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/qr-code-reader');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_oGYWxWUU8emMzYxX
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_oGYWxWUU8emMzYxX');
+    }
+  }
+
+  async sd_yGgH5FkjrZJOiZ8Q(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/search');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_yGgH5FkjrZJOiZ8Q
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yGgH5FkjrZJOiZ8Q');
+    }
+  }
+
+  async sd_kGLL3bXWMEQMJJhl(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/airtime');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_kGLL3bXWMEQMJJhl
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kGLL3bXWMEQMJJhl');
+    }
+  }
+
+  async sd_xpqupbZrQoVdJQAu(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/electricity');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_xpqupbZrQoVdJQAu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xpqupbZrQoVdJQAu');
+    }
+  }
+
+  async sd_SgsNGx1cZnLcpg5l(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/eWallet');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_SgsNGx1cZnLcpg5l
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SgsNGx1cZnLcpg5l');
+    }
+  }
+
+  async sd_tDYSVNbUXDNJl3OU(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/pay');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_tDYSVNbUXDNJl3OU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tDYSVNbUXDNJl3OU');
+    }
+  }
+
+  async sd_4gY2NKIDRROAm3qN(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/cards');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_4gY2NKIDRROAm3qN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4gY2NKIDRROAm3qN');
     }
   }
 
