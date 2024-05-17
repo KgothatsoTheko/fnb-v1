@@ -1,0 +1,86 @@
+[
+    {
+        "id": "sd_l2dXZD6Cfbtutw6g",
+        "type": "tab",
+        "createdDate": "2024-05-13T13:14:59.315Z",
+        "label": "landing",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_fLCupHJD1dUJgFi9",
+        "type": "OnInit",
+        "z": "sd_l2dXZD6Cfbtutw6g",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_fLCupHJD1dUJgFi9",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 80,
+        "wires": [
+            [
+                "sd_mIPnLybZOGZKdAOg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "landingComponent"
+    },
+    {
+        "id": "sd_YWTUnLPCXM1hGksN",
+        "type": "PageVariables",
+        "z": "sd_l2dXZD6Cfbtutw6g",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "landingOptions",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "landingOptions"
+                }
+            }
+        ],
+        "functionName": "sd_YWTUnLPCXM1hGksN",
+        "category": "Function",
+        "x": 265,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "landingComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mIPnLybZOGZKdAOg",
+        "type": "Script",
+        "z": "sd_l2dXZD6Cfbtutw6g",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.landingOptions = [\n    { label: 'Login', image: \"/Web/Images/login2.PNG\", route: '/login' },\n    { label: 'Message', image: \"/Web/Images/message.PNG\", route: '/login' },\n    { label: 'Contact Us', image: \"/Web/Images/contact-us.PNG\", route: '/login' },\n    { label: 'My Offers', image: \"/Web/Images/my-offers.PNG\", route: '/login' },\n    { label: 'Product Shop', image: \"/Web/Images/product-shop.PNG\", route: '/login' },\n    { label: 'Pay', image: \"/Web/Images/pay.PNG\", route: '/login' },\n    { label: 'Buy', image: \"/Web/Images/buy.PNG\", route: '/login' },\n    { label: 'Transfer', image: \"/Web/Images/transfer.PNG\", route: '/login' },\n    { label: 'Forex', image: \"/Web/Images/forex.PNG\", route: '/login' },\n    { label: 'Insure', image: \"/Web/Images/insure.PNG\", route: '/login' },\n    { label: 'Invest', image: \"/Web/Images/invest.PNG\", route: '/login' },\n    { label: 'nav>>Energy', image: \"/Web/Images/nav-energy.PNG\", route: '/login' },\n    { label: 'nav-igate life', image: \"/Web/Images/navigate.PNG\", route: '/login' },\n    { label: 'eBucks', image: \"/Web/Images/ebucks.PNG\", route: '/login' },\n    { label: 'Secure chat', image: \"/Web/Images/secure.PNG\", route: '/login' },\n    { label: 'Cards', image: \"/Web/Images/cards.PNG\", route: '/login' },\n    { label: 'GuardMe', image: \"/Web/Images/guard.PNG\", route: '/login' },\n    { label: 'Security centre', image: \"/Web/Images/security.PNG\", route: '/login' },\n    { label: 'Manage my debt', image: \"/Web/Images/manage-debt.PNG\", route: '/login' },\n    { label: 'Hiiiiiiii', image: \"/Web/Images/add.PNG\", route: '/login' },\n\n  ]",
+        "functionName": "sd_mIPnLybZOGZKdAOg",
+        "category": "Function",
+        "x": 165,
+        "y": 80,
+        "wires": [
+            [
+                "sd_YWTUnLPCXM1hGksN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "landingComponent",
+        "generated": true
+    }
+]
