@@ -1,0 +1,191 @@
+[
+    {
+        "id": "sd_kp9oBTcqwP8tLzjP",
+        "type": "tab",
+        "createdDate": "2024-05-14T06:52:49.881Z",
+        "label": "view_transactions",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_K5NHmbmLJZLJQmKr",
+        "type": "OnInit",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_K5NHmbmLJZLJQmKr",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_3oH2r6rOuBE5VSlL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_3oH2r6rOuBE5VSlL",
+        "type": "PageVariables",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_3oH2r6rOuBE5VSlL",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Sr7vn4Z7hXrVNx77",
+        "type": "PageStart",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 105,
+        "y": 180,
+        "wires": [
+            [
+                "sd_3WsT5cgxjILzgAEg"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_DnMTqbMgscweVaTf",
+        "type": "Script",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.location.back()",
+        "functionName": "sd_DnMTqbMgscweVaTf",
+        "category": "Function",
+        "x": 360,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3WsT5cgxjILzgAEg",
+        "type": "UseDependency",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_3WsT5cgxjILzgAEg",
+        "category": "Function",
+        "x": 225,
+        "y": 180,
+        "wires": [
+            [
+                "sd_DnMTqbMgscweVaTf"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qgs1V0XSdLd3smGC",
+        "type": "PageStart",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to search",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToSearch",
+        "category": "General",
+        "x": 145,
+        "y": 320,
+        "wires": [
+            [
+                "sd_OiIEySJfDIqsnu5f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "view_transactionsComponent"
+    },
+    {
+        "id": "sd_OiIEySJfDIqsnu5f",
+        "type": "Navigation",
+        "z": "sd_kp9oBTcqwP8tLzjP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/search",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_OiIEySJfDIqsnu5f",
+        "category": "Navigation",
+        "x": 285,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "view_transactionsComponent",
+        "generated": true
+    }
+]

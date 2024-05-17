@@ -52,5 +52,392 @@
         "generateNext": false,
         "serviceName": "bankComponent",
         "generated": true
+    },
+    {
+        "id": "sd_EgdyPsf05vhDko23",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go To Transactions",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToTransactions",
+        "category": "General",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "sd_lzbhoAkaARC0iBfx"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_lzbhoAkaARC0iBfx",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/view-transactions",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_lzbhoAkaARC0iBfx",
+        "category": "Navigation",
+        "x": 305,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FiIUdNr6qFB4fMbg",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open scanner",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openScanner",
+        "category": "General",
+        "x": 100,
+        "y": 300,
+        "wires": [
+            [
+                "sd_oGYWxWUU8emMzYxX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_oGYWxWUU8emMzYxX",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/qr-code-reader",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_oGYWxWUU8emMzYxX",
+        "category": "Navigation",
+        "x": 260,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wRGirzdWOtJZPnPH",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to search",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToSearch",
+        "category": "General",
+        "x": 345,
+        "y": 60,
+        "wires": [
+            [
+                "sd_yGgH5FkjrZJOiZ8Q"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_yGgH5FkjrZJOiZ8Q",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/search",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_yGgH5FkjrZJOiZ8Q",
+        "category": "Navigation",
+        "x": 485,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_z29Tapg2rpzkM1mJ",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to airtime",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToAirtime",
+        "category": "General",
+        "x": 525,
+        "y": 200,
+        "wires": [
+            [
+                "sd_kGLL3bXWMEQMJJhl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_kGLL3bXWMEQMJJhl",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/airtime",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_kGLL3bXWMEQMJJhl",
+        "category": "Navigation",
+        "x": 685,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_6jIFi34pkIioCrQV",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to electricity",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToElectricity",
+        "category": "General",
+        "x": 445,
+        "y": 300,
+        "wires": [
+            [
+                "sd_xpqupbZrQoVdJQAu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_xpqupbZrQoVdJQAu",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/electricity",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_xpqupbZrQoVdJQAu",
+        "category": "Navigation",
+        "x": 605,
+        "y": 300,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_aVvo7DBqeWCgk6Oy",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to ewallet",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToEwallet",
+        "category": "General",
+        "x": 345,
+        "y": 405.8125,
+        "wires": [
+            [
+                "sd_SgsNGx1cZnLcpg5l"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_SgsNGx1cZnLcpg5l",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/eWallet",
+        "functionName": "sd_SgsNGx1cZnLcpg5l",
+        "category": "Navigation",
+        "x": 505,
+        "y": 405.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Yo8FSaXAR6ou4ZLB",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to pay",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToPay",
+        "category": "General",
+        "x": 619,
+        "y": 90.8125,
+        "wires": [
+            [
+                "sd_tDYSVNbUXDNJl3OU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_tDYSVNbUXDNJl3OU",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/pay",
+        "functionName": "sd_tDYSVNbUXDNJl3OU",
+        "category": "Navigation",
+        "x": 779,
+        "y": 90.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wX3DmtKIglUiskZF",
+        "type": "PageStart",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "go to card",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goToCard",
+        "category": "General",
+        "x": 118,
+        "y": 468.8125,
+        "wires": [
+            [
+                "sd_4gY2NKIDRROAm3qN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_4gY2NKIDRROAm3qN",
+        "type": "Navigation",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/cards",
+        "functionName": "sd_4gY2NKIDRROAm3qN",
+        "category": "Navigation",
+        "x": 278,
+        "y": 468.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
     }
 ]

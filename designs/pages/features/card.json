@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_vfyfaZUquOcdXWt1",
+        "type": "tab",
+        "createdDate": "2024-05-17T06:50:02.882Z",
+        "label": "card",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "cardComponent"
+    },
+    {
+        "id": "sd_mBSexFGppPzhHIKz",
+        "type": "OnInit",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_mBSexFGppPzhHIKz",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_HLdYTEAFr0krmd5a"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "cardComponent"
+    },
+    {
+        "id": "sd_HLdYTEAFr0krmd5a",
+        "type": "PageVariables",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_HLdYTEAFr0krmd5a",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
+    }
+]
