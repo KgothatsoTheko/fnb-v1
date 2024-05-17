@@ -16,6 +16,34 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-limitsComponent
+import { limitsComponent } from '../components/limits.component';
+//CORE_REFERENCE_IMPORT-change_passwordComponent
+import { change_passwordComponent } from '../components/change_password.component';
+//CORE_REFERENCE_IMPORT-usernameComponent
+import { usernameComponent } from '../components/username.component';
+//CORE_REFERENCE_IMPORT-id_documentsComponent
+import { id_documentsComponent } from '../components/id_documents.component';
+//CORE_REFERENCE_IMPORT-add_profile_picComponent
+import { add_profile_picComponent } from '../components/add_profile_pic.component';
+//CORE_REFERENCE_IMPORT-settingsComponent
+import { settingsComponent } from '../components/settings.component';
+//CORE_REFERENCE_IMPORT-personal_infoComponent
+import { personal_infoComponent } from '../components/personal_info.component';
+//CORE_REFERENCE_IMPORT-profileComponent
+import { profileComponent } from '../components/profile.component';
+//CORE_REFERENCE_IMPORT-common
+import { common } from '../sd-services/common';
+//CORE_REFERENCE_IMPORT-messageComponent
+import { messageComponent } from '../components/message.component';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { loginComponent } from '../components/login.component';
+//CORE_REFERENCE_IMPORT-homeComponent
+import { homeComponent } from '../components/home.component';
+//CORE_REFERENCE_IMPORT-footerComponent
+import { footerComponent } from '../components/footer.component';
+//CORE_REFERENCE_IMPORT-landingComponent
+import { landingComponent } from '../components/landing.component';
 //CORE_REFERENCE_IMPORT-bankComponent
 import { bankComponent } from '../components/bank.component';
 
@@ -50,6 +78,32 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-limitsComponent
+  limitsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-change_passwordComponent
+  change_passwordComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-usernameComponent
+  usernameComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-id_documentsComponent
+  id_documentsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-add_profile_picComponent
+  add_profile_picComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-settingsComponent
+  settingsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-personal_infoComponent
+  personal_infoComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-profileComponent
+  profileComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-messageComponent
+  messageComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loginComponent
+  loginComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-homeComponent
+  homeComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-footerComponent
+  footerComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-landingComponent
+  landingComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-bankComponent
   bankComponent,
 ];
@@ -69,6 +123,8 @@ export const appProviders = [
   },
   NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+  //CORE_REFERENCE_PUSH_TO_PRO_ARRAY-common
+  common,
 ];
 
 /**
@@ -78,6 +134,17 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
   { path: 'bank', component: bankComponent },
+  { path: 'landing', component: landingComponent },
+  { path: 'home', component: homeComponent },
+  { path: 'message', component: messageComponent },
+  { path: 'profile', component: profileComponent },
+  { path: 'personal-info', component: personal_infoComponent },
+  { path: 'settings', component: settingsComponent },
+  { path: 'add-profile-pic', component: add_profile_picComponent },
+  { path: 'id-documents', component: id_documentsComponent },
+  { path: 'username', component: usernameComponent },
+  { path: 'change-password', component: change_passwordComponent },
+  { path: 'limits', component: limitsComponent },
   { path: '', redirectTo: 'bank', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
