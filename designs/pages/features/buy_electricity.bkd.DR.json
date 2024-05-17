@@ -1326,7 +1326,7 @@
                         },
                         {
                             "_key": "fxLayoutGap",
-                            "_value": "",
+                            "_value": "1em",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1338,7 +1338,7 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "space-between",
+                            "_value": "start",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -2136,7 +2136,7 @@
                         },
                         {
                             "_key": "fxLayoutGap",
-                            "_value": "",
+                            "_value": "1em",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -2148,7 +2148,7 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "space-between",
+                            "_value": "start",
                             "_type": "a",
                             "_attrDef": "p"
                         },
