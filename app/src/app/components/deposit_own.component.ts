@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -49,7 +50,7 @@ export class deposit_ownComponent {
 
   sd_PMpMIhgg9rZOFHsZ(bh) {
     try {
-      bh = this.sd_UkU136FdQ26F6C1i(bh);
+      bh = this.sd_5NgDZOqMsOt1s1BB(bh);
       //appendnew_next_sd_PMpMIhgg9rZOFHsZ
       return bh;
     } catch (e) {
@@ -88,13 +89,39 @@ export class deposit_ownComponent {
   }
   //appendnew_flow_deposit_ownComponent_start
 
+  sd_5NgDZOqMsOt1s1BB(bh) {
+    try {
+      bh = this.sd_UkU136FdQ26F6C1i(bh);
+      //appendnew_next_sd_5NgDZOqMsOt1s1BB
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5NgDZOqMsOt1s1BB');
+    }
+  }
+
   sd_UkU136FdQ26F6C1i(bh) {
     try {
-      this.page.depositOwnForm = { depositAmount: '' };
+      this.page.depositForm = undefined;
+      bh = this.sd_n1swxNd5XPSBN52k(bh);
       //appendnew_next_sd_UkU136FdQ26F6C1i
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_UkU136FdQ26F6C1i');
+    }
+  }
+
+  sd_n1swxNd5XPSBN52k(bh) {
+    try {
+      const page = this.page;
+      page.depositForm = new FormGroup({
+        depositAmount: new FormControl('', Validators.required),
+      });
+
+      console.log('page', page);
+      //appendnew_next_sd_n1swxNd5XPSBN52k
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_n1swxNd5XPSBN52k');
     }
   }
 
@@ -114,7 +141,7 @@ export class deposit_ownComponent {
   sd_B1W8fHGFHUOh5dHk(bh) {
     try {
       const page = this.page;
-      console.log(page.depositOwnForm);
+      console.log(page.depositForm.value);
       bh = this.sd_F4KXyA8KsxeWXj4H(bh);
       //appendnew_next_sd_B1W8fHGFHUOh5dHk
       return bh;
@@ -129,7 +156,9 @@ export class deposit_ownComponent {
         this.sdService.getPathAndQParamsObj('/bank');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_F4KXyA8KsxeWXj4H
       return bh;
     } catch (e) {
