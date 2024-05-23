@@ -4,6 +4,8 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { menu_dialogComponent } from 'app/components/menu_dialog.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -55,6 +57,21 @@ export class footerComponent {
     }
   }
 
+  openTheDialog(data: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { data };
+      bh.local = { response: undefined };
+      bh = this.sd_bad57GFHDwVmTSqh(bh);
+      //appendnew_next_openTheDialog
+      return bh.local.response;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rWbfo4SPd6lqltWs');
+    }
+  }
   //appendnew_flow_footerComponent_start
 
   sd_uG476h0mGQexMXjY(bh) {
@@ -89,6 +106,49 @@ export class footerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_jF8y0IaE8zFwZjJz');
+    }
+  }
+
+  sd_bad57GFHDwVmTSqh(bh) {
+    try {
+      const page = this.page;
+      bh.data = {
+        name: 'This is a sample dialog window',
+      };
+      bh = this.sd_owqwWGEntlJElkW9(bh);
+      //appendnew_next_sd_bad57GFHDwVmTSqh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_bad57GFHDwVmTSqh');
+    }
+  }
+
+  sd_owqwWGEntlJElkW9(bh) {
+    try {
+      const menu_dialogDialog = this.__page_injector__.get(MatDialog);
+      const menu_dialogDialogRef = menu_dialogDialog.open(
+        menu_dialogComponent,
+        {}
+      );
+      menu_dialogDialogRef.backdropClick().subscribe((event) => {
+        bh['backdropClick'] = event;
+        this.sd_iV7hbDWdk9MQA15c(bh);
+      });
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_owqwWGEntlJElkW9');
+    }
+  }
+
+  sd_iV7hbDWdk9MQA15c(bh) {
+    try {
+      const page = this.page;
+      console.log('The User has accepted the policy', bh.local.response);
+      //appendnew_next_sd_iV7hbDWdk9MQA15c
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iV7hbDWdk9MQA15c');
     }
   }
 

@@ -4,7 +4,6 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -12,13 +11,13 @@ import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-limits',
-  templateUrl: './limits.template.html',
+  selector: 'bh-confirm_limits',
+  templateUrl: './confirm_limits.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class limitsComponent {
+export class confirm_limitsComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -35,7 +34,7 @@ export class limitsComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_bk9iYnDDXkqipMt5(bh);
+      this.sd_wURU5ynK5ZzePLB3(bh);
     }
   }
 
@@ -47,13 +46,13 @@ export class limitsComponent {
     //append_listeners
   }
 
-  sd_bk9iYnDDXkqipMt5(bh) {
+  sd_wURU5ynK5ZzePLB3(bh) {
     try {
-      bh = this.sd_Duho4YkOqFfHpKvB(bh);
-      //appendnew_next_sd_bk9iYnDDXkqipMt5
+      bh = this.sd_Yx9vKLiZeaJVmgXY(bh);
+      //appendnew_next_sd_wURU5ynK5ZzePLB3
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bk9iYnDDXkqipMt5');
+      return this.errorHandler(bh, e, 'sd_wURU5ynK5ZzePLB3');
     }
   }
 
@@ -65,62 +64,33 @@ export class limitsComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_b0Qu37P5ojbtrECl(bh);
+      bh = this.sd_r6H5nwWcbpxzjOiK(bh);
       //appendnew_next_goBack
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_bZCvoXOCXM7qEgPz');
+      return this.errorHandler(bh, e, 'sd_u0E5pHe8zZhTfbA0');
     }
   }
+  //appendnew_flow_confirm_limitsComponent_start
 
-  sd_hxe3t0gMk44EwbqG(...others) {
-    let bh: any = {};
+  sd_Yx9vKLiZeaJVmgXY(bh) {
     try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_6JYBZpNgH2HJh7Rd(bh);
-      //appendnew_next_sd_hxe3t0gMk44EwbqG
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_hxe3t0gMk44EwbqG');
-    }
-  }
-  //appendnew_flow_limitsComponent_start
-
-  sd_Duho4YkOqFfHpKvB(bh) {
-    try {
-      //appendnew_next_sd_Duho4YkOqFfHpKvB
+      //appendnew_next_sd_Yx9vKLiZeaJVmgXY
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Duho4YkOqFfHpKvB');
+      return this.errorHandler(bh, e, 'sd_Yx9vKLiZeaJVmgXY');
     }
   }
 
-  async sd_b0Qu37P5ojbtrECl(bh) {
+  async sd_r6H5nwWcbpxzjOiK(bh) {
     try {
       const commonInstance: common = this.__page_injector__.get(common);
 
       let outputVariables = await commonInstance.goBack();
 
-      //appendnew_next_sd_b0Qu37P5ojbtrECl
+      //appendnew_next_sd_r6H5nwWcbpxzjOiK
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_b0Qu37P5ojbtrECl');
-    }
-  }
-
-  async sd_6JYBZpNgH2HJh7Rd(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/confirm-limits');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
-      //appendnew_next_sd_6JYBZpNgH2HJh7Rd
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_6JYBZpNgH2HJh7Rd');
+      return this.errorHandler(bh, e, 'sd_r6H5nwWcbpxzjOiK');
     }
   }
 
@@ -140,5 +110,5 @@ export class limitsComponent {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_limitsComponent_Catch
+  //appendnew_flow_confirm_limitsComponent_Catch
 }
