@@ -211,7 +211,7 @@ export const appRoutes = [
   { path: 'menu-dialog', component: menu_dialogComponent },
   { path: 'forgot-password', component: forgot_passwordComponent },
   { path: 'verify-code', component: verify_codeComponent },
-  { path: '', redirectTo: 'bank', pathMatch: 'full' },
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END
