@@ -1,6 +1,6 @@
 <mat-toolbar class="footer-mat-toolbar landing-full-width landing-full-height">
   <div fxLayout="row wrap" class="landing-full-width landing-full-height" fxLayoutAlign="space-between end" [fxShow]="true">
-    <div fxLayout="column wrap" style="height: 80%" class="landing-full-height footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/home&apos;]">
+    <div fxLayout="column wrap" style="height: 80%" class="landing-full-height footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/landing&apos;]">
       <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center end" [fxShow]="true"><span>
                 <span class="material-symbols-outlined footer-tab-icon">
                     home
@@ -10,7 +10,7 @@
           Home</h6>
       </div>
     </div>
-    <div fxLayout="column wrap" style=" height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/bank&apos;]">
+    <div fxLayout="column wrap" style=" height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
       <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
                 <span class="material-symbols-outlined footer-tab-icon">
                     credit_card
@@ -20,7 +20,7 @@
           Bank</h6>
       </div>
     </div>
-    <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/message&apos;]">
+    <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
       <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
                 <span class="material-symbols-outlined footer-tab-icon">
                     mode_comment
@@ -30,7 +30,7 @@
           Message</h6>
       </div>
     </div>
-    <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/profile&apos;]">
+    <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
       <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
                 <span class="material-symbols-outlined footer-tab-icon">
                     account_circle
@@ -40,7 +40,7 @@
           Profile</h6>
       </div>
     </div>
-    <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" style="height: 80%" class="footer-menu-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="openTheDialog(accept)">
       <div fxLayout="row wrap" class="footer-icon" fxLayoutAlign="center center" [fxShow]="true"><span>
                 <span class="material-symbols-outlined footer-tab-icon">
                     menu

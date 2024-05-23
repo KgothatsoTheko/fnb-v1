@@ -17,6 +17,9 @@ declare const cordova: any;
   providedIn: 'root',
 })
 export class common {
+  public random: any;
+  public email: any;
+
   constructor(
     private sdService: SDBaseService,
     private router: Router,
@@ -54,6 +57,34 @@ export class common {
       return await this.errorHandler(bh, e, 'sd_jJRXnjTcMQmcijs6');
     }
   }
+
+  async generateRandomNumber(email: any = undefined, ...others) {
+    let bh: any = {
+      input: {
+        email,
+      },
+      local: {
+        random: 0,
+      },
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_GivSlaUgVKNBuw7X(bh);
+      //appendnew_next_generateRandomNumber
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {
+            random: bh.local.random,
+          },
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_7URbVYjuQh1rrIFw');
+    }
+  }
   //appendnew_flow_common_start
 
   async sd_ZMlcqDyLVVUnwQuz(bh) {
@@ -69,13 +100,34 @@ export class common {
 
   async sd_41H6JPbAEHahPPfJ(bh) {
     try {
-      console.log(bh.location);
-
       bh.location.back();
       //appendnew_next_sd_41H6JPbAEHahPPfJ
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_41H6JPbAEHahPPfJ');
+    }
+  }
+
+  async sd_GivSlaUgVKNBuw7X(bh) {
+    try {
+      // Generates a random number between 1000 (inclusive) and 10000 (exclusive)
+      bh.local.random = Math.floor(1000 + Math.random() * 9000);
+      bh = await this.sd_8IfP9fSLeu6m7gEI(bh);
+      //appendnew_next_sd_GivSlaUgVKNBuw7X
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_GivSlaUgVKNBuw7X');
+    }
+  }
+
+  async sd_8IfP9fSLeu6m7gEI(bh) {
+    try {
+      this.random = bh.local.random;
+      this.email = bh.input.email;
+      //appendnew_next_sd_8IfP9fSLeu6m7gEI
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_8IfP9fSLeu6m7gEI');
     }
   }
 

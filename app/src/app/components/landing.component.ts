@@ -116,8 +116,9 @@ export class landingComponent {
           image: '/Web/Images/manage-debt.PNG',
           route: '/login',
         },
-        { label: 'Hiiiiiiii', image: '/Web/Images/add.PNG', route: '/login' },
+        { label: '', image: '/Web/Images/add.PNG', route: '' },
       ];
+
       bh = this.sd_YWTUnLPCXM1hGksN(bh);
       //appendnew_next_sd_mIPnLybZOGZKdAOg
       return bh;
@@ -129,6 +130,8 @@ export class landingComponent {
   sd_YWTUnLPCXM1hGksN(bh) {
     try {
       this.page.landingOptions = bh.landingOptions;
+      this.page.items = bh.items;
+      this.page.loader = false;
       //appendnew_next_sd_YWTUnLPCXM1hGksN
       return bh;
     } catch (e) {

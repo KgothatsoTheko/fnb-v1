@@ -1,47 +1,55 @@
 [
     {
-        "id": "sd_dfQ2vHZYHyt5Ymfr",
+        "id": "sd_pJX4oN0ELFcPypn0",
         "type": "tab",
-        "createdDate": "2024-05-16T08:59:17.190Z",
-        "label": "limits",
+        "createdDate": "2024-05-21T06:37:38.423Z",
+        "label": "deposit_own",
         "disabled": false,
         "info": "",
         "functionSeq": 0,
         "generateNext": true,
-        "serviceName": "limitsComponent"
+        "serviceName": "deposit_ownComponent"
     },
     {
-        "id": "sd_bk9iYnDDXkqipMt5",
+        "id": "sd_PMpMIhgg9rZOFHsZ",
         "type": "OnInit",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "z": "sd_pJX4oN0ELFcPypn0",
         "viewType": "common",
         "nodeType": "start",
         "name": "",
-        "functionName": "sd_bk9iYnDDXkqipMt5",
+        "functionName": "sd_PMpMIhgg9rZOFHsZ",
         "category": "Lifecycle Events",
         "x": 30,
         "y": 30,
         "wires": [
             [
-                "sd_Duho4YkOqFfHpKvB"
+                "sd_UkU136FdQ26F6C1i"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "limitsComponent"
+        "serviceName": "deposit_ownComponent"
     },
     {
-        "id": "sd_Duho4YkOqFfHpKvB",
+        "id": "sd_UkU136FdQ26F6C1i",
         "type": "PageVariables",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "z": "sd_pJX4oN0ELFcPypn0",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
-        "functionName": "sd_Duho4YkOqFfHpKvB",
+        "globalVariables": [
+            {
+                "textIp": "depositOwnForm",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "{depositAmount:''}"
+                }
+            }
+        ],
+        "functionName": "sd_UkU136FdQ26F6C1i",
         "category": "Function",
         "x": 180,
         "y": 30,
@@ -50,13 +58,13 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "limitsComponent",
+        "serviceName": "deposit_ownComponent",
         "generated": true
     },
     {
-        "id": "sd_bZCvoXOCXM7qEgPz",
+        "id": "sd_rLCUea0xKXL16k0c",
         "type": "PageStart",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "z": "sd_pJX4oN0ELFcPypn0",
         "viewType": "pages",
         "nodeType": "start",
         "name": "Go Back",
@@ -66,21 +74,21 @@
         "flow_type": "sync",
         "functionName": "goBack",
         "category": "General",
-        "x": 65,
-        "y": 220,
+        "x": 74,
+        "y": 139.8020782470703,
         "wires": [
             [
-                "sd_b0Qu37P5ojbtrECl"
+                "sd_MLnhXBVfvMFFaZrD"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "limitsComponent"
+        "serviceName": "deposit_ownComponent"
     },
     {
-        "id": "sd_b0Qu37P5ojbtrECl",
+        "id": "sd_MLnhXBVfvMFFaZrD",
         "type": "PageCallService",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "z": "sd_pJX4oN0ELFcPypn0",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
@@ -108,58 +116,82 @@
         "inputParams": [],
         "accept_bh": false,
         "accept_csd": true,
-        "functionName": "sd_b0Qu37P5ojbtrECl",
+        "functionName": "sd_MLnhXBVfvMFFaZrD",
         "category": "General",
-        "x": 205,
-        "y": 220,
+        "x": 214,
+        "y": 139.8020782470703,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "limitsComponent",
+        "serviceName": "deposit_ownComponent",
         "generated": true
     },
     {
-        "id": "sd_hxe3t0gMk44EwbqG",
+        "id": "sd_ikOFeqKZlwzi1OiY",
         "type": "PageStart",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "z": "sd_pJX4oN0ELFcPypn0",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "",
+        "name": "deposit",
         "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
         "flow_type": "sync",
-        "functionName": "sd_hxe3t0gMk44EwbqG",
+        "functionName": "deposit",
         "category": "General",
         "x": 80,
-        "y": 380,
+        "y": 300,
         "wires": [
             [
-                "sd_6JYBZpNgH2HJh7Rd"
+                "sd_B1W8fHGFHUOh5dHk"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "limitsComponent"
+        "serviceName": "deposit_ownComponent"
     },
     {
-        "id": "sd_6JYBZpNgH2HJh7Rd",
+        "id": "sd_B1W8fHGFHUOh5dHk",
+        "type": "Script",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.depositOwnForm)",
+        "functionName": "sd_B1W8fHGFHUOh5dHk",
+        "category": "Function",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "sd_F4KXyA8KsxeWXj4H"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_F4KXyA8KsxeWXj4H",
         "type": "Navigation",
-        "z": "sd_dfQ2vHZYHyt5Ymfr",
+        "z": "sd_pJX4oN0ELFcPypn0",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/confirm-limits",
-        "functionName": "sd_6JYBZpNgH2HJh7Rd",
+        "path": "/bank",
+        "functionName": "sd_F4KXyA8KsxeWXj4H",
         "category": "Navigation",
-        "x": 180,
-        "y": 380,
+        "x": 280,
+        "y": 320,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "limitsComponent",
+        "serviceName": "deposit_ownComponent",
         "generated": true
     }
 ]

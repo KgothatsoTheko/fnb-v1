@@ -12,14 +12,13 @@
             },
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 60px;",
                 "_type": "kv",
                 "_attrDef": "p"
             },
             {
                 "_key": "class",
                 "_value": [
-                    "bank-padding-10px",
                     "bank-full-width"
                 ],
                 "_type": "dav",
@@ -12277,6 +12276,95 @@
                     }
                 }
             }
+        }
+    },
+    "77ee082a-2ea2-1df0-a43a-e762d0a8d1bd": {
+        "paletteKey": "FlexLayoutRow",
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "componentLabel",
+                "_value": "Row",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "style",
+                "_value": "position: fixed; bottom: 0",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": [
+                    "bank-full-width"
+                ],
+                "_type": "dav",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "wrap",
+                "_value": "wrap",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "layoutAlign",
+                "_value": "start",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "stretch",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "[fxShow]",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "97827346-9bdc-cb02-d8fa-b62124cca40d": {
+            "paletteKey": "NEUTRINOS_VIEW_footer",
+            "parentEditorKey": "77ee082a-2ea2-1df0-a43a-e762d0a8d1bd",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "footer",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "dav",
+                    "_attrDef": "p"
+                }
+            ]
         }
     }
 }
