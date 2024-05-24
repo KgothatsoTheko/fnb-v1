@@ -48,7 +48,7 @@ export class qr_code_readerComponent {
 
   sd_CNBBqa9xYYQzraID(bh) {
     try {
-      bh = this.sd_tS4QeW0tWbtwlwf1(bh);
+      bh = this.sd_XdZkRUacWzIDiQhi(bh);
       //appendnew_next_sd_CNBBqa9xYYQzraID
       return bh;
     } catch (e) {
@@ -72,12 +72,34 @@ export class qr_code_readerComponent {
   }
   //appendnew_flow_qr_code_readerComponent_start
 
+  sd_XdZkRUacWzIDiQhi(bh) {
+    try {
+      bh = this.sd_tS4QeW0tWbtwlwf1(bh);
+      //appendnew_next_sd_XdZkRUacWzIDiQhi
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XdZkRUacWzIDiQhi');
+    }
+  }
+
   sd_tS4QeW0tWbtwlwf1(bh) {
     try {
+      bh = this.sd_5r3OUjpttnHskp2v(bh);
       //appendnew_next_sd_tS4QeW0tWbtwlwf1
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_tS4QeW0tWbtwlwf1');
+    }
+  }
+
+  sd_5r3OUjpttnHskp2v(bh) {
+    try {
+      const page = this.page;
+      console.log(page);
+      //appendnew_next_sd_5r3OUjpttnHskp2v
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5r3OUjpttnHskp2v');
     }
   }
 

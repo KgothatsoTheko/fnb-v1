@@ -8,6 +8,7 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -175,14 +176,82 @@ export class bankComponent {
       return this.errorHandler(bh, e, 'sd_wX3DmtKIglUiskZF');
     }
   }
+
+  sd_Sny7AQBI4zahxtmm(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      //appendnew_next_sd_Sny7AQBI4zahxtmm
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Sny7AQBI4zahxtmm');
+    }
+  }
   //appendnew_flow_bankComponent_start
 
   sd_yzNTTPPwdiMjtXgw(bh) {
     try {
+      this.page.currentQuote = "''";
+      bh = this.sd_5hwHpF27cnLFp0eP(bh);
       //appendnew_next_sd_yzNTTPPwdiMjtXgw
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_yzNTTPPwdiMjtXgw');
+    }
+  }
+
+  async sd_5hwHpF27cnLFp0eP(bh) {
+    try {
+      const commonInstance: common = this.__page_injector__.get(common);
+
+      let outputVariables = await commonInstance.amount();
+
+      bh = this.sd_AZGO8I8Cn77iGbQU(bh);
+      //appendnew_next_sd_5hwHpF27cnLFp0eP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5hwHpF27cnLFp0eP');
+    }
+  }
+
+  sd_AZGO8I8Cn77iGbQU(bh) {
+    try {
+      const commonInstance: common = this.__page_injector__.get(common);
+      bh.quote = commonInstance['quote'];
+      bh.currentQuote = commonInstance['currentQuote'];
+      this.sd_krAMr93Zmrmf1xzb(bh);
+      bh = this.sd_w5cpEroO58nEOohN(bh);
+      //appendnew_next_sd_AZGO8I8Cn77iGbQU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AZGO8I8Cn77iGbQU');
+    }
+  }
+
+  sd_krAMr93Zmrmf1xzb(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh);
+      //appendnew_next_sd_krAMr93Zmrmf1xzb
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_krAMr93Zmrmf1xzb');
+    }
+  }
+
+  sd_w5cpEroO58nEOohN(bh) {
+    try {
+      const page = this.page;
+      page.currentQuote = bh.currentQuote.currentQuote.source.value;
+
+      console.log('page', page);
+      console.log('bh', bh);
+      //appendnew_next_sd_w5cpEroO58nEOohN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_w5cpEroO58nEOohN');
     }
   }
 
@@ -272,7 +341,9 @@ export class bankComponent {
         this.sdService.getPathAndQParamsObj('/eWallet');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_SgsNGx1cZnLcpg5l
       return bh;
     } catch (e) {
@@ -286,7 +357,9 @@ export class bankComponent {
         this.sdService.getPathAndQParamsObj('/pay');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_tDYSVNbUXDNJl3OU
       return bh;
     } catch (e) {
@@ -300,7 +373,9 @@ export class bankComponent {
         this.sdService.getPathAndQParamsObj('/cards');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_4gY2NKIDRROAm3qN
       return bh;
     } catch (e) {

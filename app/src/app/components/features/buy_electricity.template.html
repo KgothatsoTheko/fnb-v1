@@ -82,10 +82,10 @@
       <p>
         Cellphone Number</p>
       <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-        <input matInput placeholder="Input" [required]="false">
+        <input matInput [(ngModel)]="page.quote" placeholder="Input" [required]="false">
         <mat-icon matSuffix>add_circle</mat-icon>
       </mat-form-field>
     </div>
   </div>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="bank-top-40px bank-purchase bank-relative">Purchase</button></div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="bank-top-40px bank-purchase bank-relative" (click)="submit()">Purchase</button></div>
 </div>

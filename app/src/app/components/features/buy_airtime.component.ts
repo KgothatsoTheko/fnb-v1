@@ -3,11 +3,11 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { Location } from '@angular/common'; //_splitter_
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -56,7 +56,7 @@ export class buy_airtimeComponent {
     }
   }
 
-  goBack(...others) {
+  goBack2(...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
@@ -64,10 +64,10 @@ export class buy_airtimeComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_j55ERgRoolysVKZS(bh);
-      //appendnew_next_goBack
+      bh = this.sd_rnwzf7GG4GtwMenu(bh);
+      //appendnew_next_goBack2
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_LTy3CWsnZ9UizG6e');
+      return this.errorHandler(bh, e, 'sd_UPPt3rtyuEHaLwqM');
     }
   }
   //appendnew_flow_buy_airtimeComponent_start
@@ -81,26 +81,16 @@ export class buy_airtimeComponent {
     }
   }
 
-  sd_j55ERgRoolysVKZS(bh) {
+  async sd_rnwzf7GG4GtwMenu(bh) {
     try {
-      this.page.location = this.__page_injector__.get(Location);
-      bh = this.sd_msWMqvIgmEBP5672(bh);
-      //appendnew_next_sd_j55ERgRoolysVKZS
+      const commonInstance: common = this.__page_injector__.get(common);
+
+      let outputVariables = await commonInstance.goBack();
+
+      //appendnew_next_sd_rnwzf7GG4GtwMenu
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_j55ERgRoolysVKZS');
-    }
-  }
-
-  sd_msWMqvIgmEBP5672(bh) {
-    try {
-      const page = this.page;
-      page.location.back();
-
-      //appendnew_next_sd_msWMqvIgmEBP5672
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_msWMqvIgmEBP5672');
+      return this.errorHandler(bh, e, 'sd_rnwzf7GG4GtwMenu');
     }
   }
 

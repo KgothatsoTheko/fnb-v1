@@ -166,6 +166,14 @@ export const appProviders = [
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
   { path: 'bank', component: bankComponent },
+  { path: 'view-transactions', component: view_transactionsComponent },
+  { path: 'qr-code-reader', component: qr_code_readerComponent },
+  { path: 'search', component: searchComponent },
+  { path: 'airtime', component: buy_airtimeComponent },
+  { path: 'electricity', component: buy_electricityComponent },
+  { path: 'eWallet', component: ewalletComponent },
+  { path: 'pay', component: payComponent },
+  { path: 'cards', component: cardComponent },
   { path: 'landing', component: landingComponent },
   { path: 'home', component: homeComponent },
   { path: 'message', component: messageComponent },
@@ -177,15 +185,7 @@ export const appRoutes = [
   { path: 'username', component: usernameComponent },
   { path: 'change-password', component: change_passwordComponent },
   { path: 'limits', component: limitsComponent },
-  { path: 'view-transactions', component: view_transactionsComponent },
-  { path: 'qr-code-reader', component: qr_code_readerComponent },
-  { path: 'search', component: searchComponent },
-  { path: 'airtime', component: buy_airtimeComponent },
-  { path: 'electricity', component: buy_electricityComponent },
-  { path: 'eWallet', component: ewalletComponent },
-  { path: 'pay', component: payComponent },
-  { path: 'cards', component: cardComponent },
-  { path: '', redirectTo: 'bank', pathMatch: 'full' },
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

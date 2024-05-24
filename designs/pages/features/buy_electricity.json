@@ -40,7 +40,15 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "quote",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": "\"\""
+                }
+            }
+        ],
         "functionName": "sd_WflFAq94qqVyQOV6",
         "category": "Function",
         "x": 180,
@@ -131,6 +139,82 @@
             [
                 "sd_YWfVfFZvLk9wAyQu"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "buy_electricityComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QJljhIzH0nQatkB8",
+        "type": "PageStart",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submit",
+        "category": "General",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "sd_eXX8BsfxhmCCZceN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "buy_electricityComponent"
+    },
+    {
+        "id": "sd_eXX8BsfxhmCCZceN",
+        "type": "PageCallService",
+        "z": "sd_zfSgx6DaziJIt7ws",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_vO7ZpSwQ0nvvbLo3",
+            "flowName": "update"
+        },
+        "inputVariables": [
+            {
+                "key": "newQuote",
+                "map": true,
+                "valueType": "this.page",
+                "value": "quote"
+            }
+        ],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "update",
+        "inputParams": [
+            "this.page.quote"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_eXX8BsfxhmCCZceN",
+        "category": "General",
+        "x": 260,
+        "y": 160,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

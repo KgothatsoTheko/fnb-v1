@@ -82,7 +82,7 @@
         },
         {
             "path": "''",
-            "redirectTo": "bank",
+            "redirectTo": "landing",
             "pathMatch": "full",
             "default": true
         },
