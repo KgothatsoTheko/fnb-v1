@@ -8,7 +8,6 @@ import { Injectable, Injector } from '@angular/core'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
-import { BehaviorSubject } from 'rxjs'; //_splitter_
 //append_imports_end
 
 declare const window: any;
@@ -19,7 +18,6 @@ declare const cordova: any;
 })
 export class common {
   public currentQuote: any;
-  public quote: any;
 
   constructor(
     private sdService: SDBaseService,
@@ -59,7 +57,7 @@ export class common {
     }
   }
 
-  async update(newQuote = '', ...others) {
+  async update(newQuote = 0, ...others) {
     let bh: any = {
       input: {
         newQuote,
@@ -141,11 +139,23 @@ export class common {
 
   async sd_e0YkvY1IoU1EKOEY(bh) {
     try {
-      bh.quote.next(bh.input.newQuote);
+      console.log('quote :', bh);
+      // bh.quote.next(bh.input.newQuote)
+      bh = await this.sd_fIHO9yfBT63eind0(bh);
       //appendnew_next_sd_e0YkvY1IoU1EKOEY
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_e0YkvY1IoU1EKOEY');
+    }
+  }
+
+  async sd_fIHO9yfBT63eind0(bh) {
+    try {
+      this.currentQuote = bh;
+      //appendnew_next_sd_fIHO9yfBT63eind0
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_fIHO9yfBT63eind0');
     }
   }
 
@@ -162,27 +172,16 @@ export class common {
   async sd_iShVV0N6PNcKApKr(bh) {
     try {
       // Declaring a quote
-      bh.quote = new BehaviorSubject<string>('hello');
+      // bh.quote = new BehaviorSubject<string>("hello")
+      console.log('hello', bh);
 
       // expose as an observable
-      bh.currentQuote = bh.quote.asObservable();
+      // bh.currentQuote = bh.quote.asObservable()
 
-      bh = await this.sd_CVmrA6zXyhKsGY3H(bh);
       //appendnew_next_sd_iShVV0N6PNcKApKr
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_iShVV0N6PNcKApKr');
-    }
-  }
-
-  async sd_CVmrA6zXyhKsGY3H(bh) {
-    try {
-      this.currentQuote = bh;
-      this.quote = bh.quote;
-      //appendnew_next_sd_CVmrA6zXyhKsGY3H
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_CVmrA6zXyhKsGY3H');
     }
   }
 

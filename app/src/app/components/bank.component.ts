@@ -176,26 +176,12 @@ export class bankComponent {
       return this.errorHandler(bh, e, 'sd_wX3DmtKIglUiskZF');
     }
   }
-
-  sd_Sny7AQBI4zahxtmm(...others) {
-    let bh: any = {};
-    try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      //appendnew_next_sd_Sny7AQBI4zahxtmm
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Sny7AQBI4zahxtmm');
-    }
-  }
   //appendnew_flow_bankComponent_start
 
   sd_yzNTTPPwdiMjtXgw(bh) {
     try {
-      this.page.currentQuote = "''";
-      bh = this.sd_5hwHpF27cnLFp0eP(bh);
+      this.page.currentQuote = undefined;
+      bh = this.sd_AZGO8I8Cn77iGbQU(bh);
       //appendnew_next_sd_yzNTTPPwdiMjtXgw
       return bh;
     } catch (e) {
@@ -203,26 +189,10 @@ export class bankComponent {
     }
   }
 
-  async sd_5hwHpF27cnLFp0eP(bh) {
-    try {
-      const commonInstance: common = this.__page_injector__.get(common);
-
-      let outputVariables = await commonInstance.amount();
-
-      bh = this.sd_AZGO8I8Cn77iGbQU(bh);
-      //appendnew_next_sd_5hwHpF27cnLFp0eP
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_5hwHpF27cnLFp0eP');
-    }
-  }
-
   sd_AZGO8I8Cn77iGbQU(bh) {
     try {
       const commonInstance: common = this.__page_injector__.get(common);
-      bh.quote = commonInstance['quote'];
       bh.currentQuote = commonInstance['currentQuote'];
-      this.sd_krAMr93Zmrmf1xzb(bh);
       bh = this.sd_w5cpEroO58nEOohN(bh);
       //appendnew_next_sd_AZGO8I8Cn77iGbQU
       return bh;
@@ -231,23 +201,20 @@ export class bankComponent {
     }
   }
 
-  sd_krAMr93Zmrmf1xzb(bh) {
-    try {
-      console.log(new Date().toLocaleTimeString(), bh);
-      //appendnew_next_sd_krAMr93Zmrmf1xzb
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_krAMr93Zmrmf1xzb');
-    }
-  }
-
   sd_w5cpEroO58nEOohN(bh) {
     try {
-      const page = this.page;
-      page.currentQuote = bh.currentQuote.currentQuote.source.value;
+      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
+      page.currentQuote = page.currentQuote || 0;
 
-      console.log('page', page);
-      console.log('bh', bh);
+      if (bh.currentQuote) {
+        console.log('value');
+        page.currentQuote = bh.currentQuote.input.newQuote; // Subtracting the new quote value
+        console.log('new bh :', bh.currentQuote.input.newQuote);
+      } else {
+        console.log('no value');
+        page.currentQuote = 100;
+      }
+
       //appendnew_next_sd_w5cpEroO58nEOohN
       return bh;
     } catch (e) {

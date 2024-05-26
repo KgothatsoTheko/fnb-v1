@@ -45,7 +45,7 @@
                 "textIp": "quote",
                 "typedIpValue": {
                     "type": "literal",
-                    "value": "\"\""
+                    "value": ""
                 }
             }
         ],
@@ -211,7 +211,7 @@
         "accept_csd": true,
         "functionName": "sd_eXX8BsfxhmCCZceN",
         "category": "General",
-        "x": 260,
+        "x": 265,
         "y": 160,
         "wires": [
             []

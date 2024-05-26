@@ -4237,7 +4237,7 @@
                         },
                         {
                             "_key": "type",
-                            "_value": "",
+                            "_value": "number",
                             "_type": "kv",
                             "_attrDef": "p"
                         },

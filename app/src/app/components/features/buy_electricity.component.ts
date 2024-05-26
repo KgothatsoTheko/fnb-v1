@@ -92,6 +92,7 @@ export class buy_electricityComponent {
 
   sd_WflFAq94qqVyQOV6(bh) {
     try {
+      this.page.quote = undefined;
       //appendnew_next_sd_WflFAq94qqVyQOV6
       return bh;
     } catch (e) {

@@ -44,8 +44,8 @@
             {
                 "textIp": "currentQuote",
                 "typedIpValue": {
-                    "type": "str",
-                    "value": "''"
+                    "type": "literal",
+                    "value": ""
                 }
             }
         ],
@@ -55,7 +55,7 @@
         "y": 80,
         "wires": [
             [
-                "sd_5hwHpF27cnLFp0eP"
+                "sd_AZGO8I8Cn77iGbQU"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -483,13 +483,6 @@
         "operation": "get",
         "globalVariables": [
             {
-                "textIp": "quote",
-                "typedIpValue": {
-                    "type": "bh",
-                    "value": "quote"
-                }
-            },
-            {
                 "textIp": "currentQuote",
                 "typedIpValue": {
                     "type": "bh",
@@ -526,11 +519,10 @@
         },
         "serviceImportPath": "app/sd-services/common",
         "category": "Function",
-        "x": 385,
+        "x": 305,
         "y": 80,
         "wires": [
             [
-                "sd_krAMr93Zmrmf1xzb",
                 "sd_w5cpEroO58nEOohN"
             ]
         ],
@@ -540,108 +532,17 @@
         "generated": true
     },
     {
-        "id": "sd_krAMr93Zmrmf1xzb",
-        "type": "Log",
-        "z": "sd_OnCLyxjiMYoKcuBV",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 0,
-        "logObject": "bh",
-        "functionName": "sd_krAMr93Zmrmf1xzb",
-        "category": "General",
-        "x": 505,
-        "y": 40,
-        "wires": [],
-        "__ssdTypeInputs__": {
-            "logObject": {
-                "type": "bh",
-                "value": "",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "bankComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_5hwHpF27cnLFp0eP",
-        "type": "PageCallService",
-        "z": "sd_OnCLyxjiMYoKcuBV",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_O7BgeFkazhosv8N2",
-            "type": "tab",
-            "createdDate": "2024-05-14T08:16:55.985Z",
-            "label": "common",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0,
-            "tabType": "client"
-        },
-        "flow": {
-            "flowId": "sd_gDxgBOtWEwBlKd2e",
-            "flowName": "amount"
-        },
-        "inputVariables": [],
-        "outputMapping": [],
-        "serviceImportPath": "app/sd-services/common",
-        "startName": "amount",
-        "inputParams": [],
-        "accept_bh": false,
-        "accept_csd": true,
-        "functionName": "sd_5hwHpF27cnLFp0eP",
-        "category": "General",
-        "x": 280,
-        "y": 80,
-        "wires": [
-            [
-                "sd_AZGO8I8Cn77iGbQU"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "bankComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_Sny7AQBI4zahxtmm",
-        "type": "PageStart",
-        "z": "sd_OnCLyxjiMYoKcuBV",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "",
-        "outputs": 1,
-        "flow_type": "sync",
-        "functionName": "sd_Sny7AQBI4zahxtmm",
-        "category": "General",
-        "x": 505,
-        "y": 140,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "bankComponent"
-    },
-    {
         "id": "sd_w5cpEroO58nEOohN",
         "type": "Script",
         "z": "sd_OnCLyxjiMYoKcuBV",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.currentQuote = bh.currentQuote.currentQuote.source.value\n\nconsole.log('page', page)\nconsole.log('bh', bh)",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.currentQuote || 0;\n\nif (bh.currentQuote) {\n    console.log('value');\n    page.currentQuote = bh.currentQuote.input.newQuote; // Subtracting the new quote value\n    console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n} else {\n    console.log('no value');\n    page.currentQuote = 100;\n}\n",
         "functionName": "sd_w5cpEroO58nEOohN",
         "category": "Function",
-        "x": 620,
-        "y": 100,
+        "x": 425,
+        "y": 80,
         "wires": [
             []
         ],
