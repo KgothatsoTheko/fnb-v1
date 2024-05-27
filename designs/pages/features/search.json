@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_DTvrWz57bEJDLY6e",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 25,
+        "y": 40,
         "wires": [
             [
                 "sd_8SWG1mUj5QFRduiJ"
@@ -43,8 +43,8 @@
         "globalVariables": [],
         "functionName": "sd_8SWG1mUj5QFRduiJ",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 125,
+        "y": 40,
         "wires": [
             []
         ],
@@ -169,6 +169,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/eWallet",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_KCeErSltVHx68fou",
         "category": "Navigation",
         "x": 245,

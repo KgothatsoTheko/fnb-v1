@@ -1273,7 +1273,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input type=\"text\" style=\"width: 98%; height:80% ; border: 2px solid gray;\r\n    border-radius: 20px; font-size: 20px\" placeholder=\"How can we help you?\">",
+                                    "_value": "<input type=\"text\" style=\"width: 98%; height:80% ; border: 2px solid gray;\r\n    border-radius: 20px; font-size: 20px; padding-left: 10px\" placeholder=\"How can we help you?\" [(ngModel)]=\"term\">\r\n<div *ngFor = \"let item of items |filter:term\" >\r\n          <p>\r\n            {{item.name}}\r\n          </p>\r\n        </div>",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -1281,14 +1281,14 @@
                         }
                     }
                 },
-                "3301a2ea-b438-70ab-b5a6-619dfcf3f991": {
-                    "paletteKey": "FlexLayoutCol",
+                "c875442e-0da0-4872-97ce-66a7a588ea74": {
+                    "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "25d0522e-a3b7-2d15-6dfd-808aa34114a4",
                     "commentid": null,
                     "designerReference": [
                         {
                             "_key": "componentLabel",
-                            "_value": "Column",
+                            "_value": "Row",
                             "_type": "kv",
                             "_attrDef": "p",
                             "_useAsLabel": true
@@ -1315,7 +1315,7 @@
                         },
                         {
                             "_key": "fxLayoutGap",
-                            "_value": "1em",
+                            "_value": "",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1327,7 +1327,7 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "space-between",
+                            "_value": "start",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -1344,9 +1344,9 @@
                             "_attrDef": "p"
                         }
                     ],
-                    "f7d1b946-0e49-8c4b-7b59-63c64e001ca2": {
+                    "99593b2d-b389-3ce9-61c8-338569bc5d64": {
                         "paletteKey": "FlexLayoutCol",
-                        "parentEditorKey": "3301a2ea-b438-70ab-b5a6-619dfcf3f991",
+                        "parentEditorKey": "c875442e-0da0-4872-97ce-66a7a588ea74",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1408,14 +1408,14 @@
                             },
                             {
                                 "_key": "*ngFor",
-                                "_value": "let item of page.landingOptions; let i = index;",
+                                "_value": "let item of page.landingOptions |filter:term; let i = index;",
                                 "_type": "kv",
                                 "_attrDef": "c"
                             }
                         ],
-                        "55044376-f0af-b826-3070-a6a0db7dd5b5": {
+                        "a127ef0d-1542-140e-8036-c43e9a5def66": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "f7d1b946-0e49-8c4b-7b59-63c64e001ca2",
+                            "parentEditorKey": "99593b2d-b389-3ce9-61c8-338569bc5d64",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1474,11 +1474,17 @@
                                     "_value": "true",
                                     "_type": "kv",
                                     "_attrDef": "p"
+                                },
+                                {
+                                    "_key": "[routerLink]",
+                                    "_value": "[item.route]",
+                                    "_type": "kv",
+                                    "_attrDef": "c"
                                 }
                             ],
-                            "9e5f5b9f-e2c5-3912-5603-76e3567e385d": {
+                            "6deb36a7-c6f2-d214-a61e-3dae763302c4": {
                                 "paletteKey": "NG-image",
-                                "parentEditorKey": "55044376-f0af-b826-3070-a6a0db7dd5b5",
+                                "parentEditorKey": "a127ef0d-1542-140e-8036-c43e9a5def66",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1545,9 +1551,9 @@
                                 ]
                             }
                         },
-                        "6c12e464-d7fb-70ef-7919-795b4a0ec884": {
+                        "c8d6a78a-c4c2-4036-b11d-c49143d6fd5f": {
                             "paletteKey": "FlexLayoutRow",
-                            "parentEditorKey": "f7d1b946-0e49-8c4b-7b59-63c64e001ca2",
+                            "parentEditorKey": "99593b2d-b389-3ce9-61c8-338569bc5d64",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1608,9 +1614,9 @@
                                     "_attrDef": "p"
                                 }
                             ],
-                            "fb3a8c9c-4c12-46a3-e12a-2950bee6c947": {
+                            "c52ffcc8-ee24-5cbb-c237-201da31896f7": {
                                 "paletteKey": "Html5",
-                                "parentEditorKey": "6c12e464-d7fb-70ef-7919-795b4a0ec884",
+                                "parentEditorKey": "c8d6a78a-c4c2-4036-b11d-c49143d6fd5f",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
                                 "designerReference": [
@@ -1797,9 +1803,9 @@
                                         "_visibility": false
                                     }
                                 ],
-                                "7e2a4272-b941-ce1b-6191-c11a2e3646bd": {
+                                "2eab6517-515e-c63c-ecd5-963ba121dde3": {
                                     "paletteKey": "html-editor",
-                                    "parentEditorKey": "fb3a8c9c-4c12-46a3-e12a-2950bee6c947",
+                                    "parentEditorKey": "c52ffcc8-ee24-5cbb-c237-201da31896f7",
                                     "isAdvancedChildComponent": true,
                                     "commentid": null,
                                     "designerReference": [

@@ -46,6 +46,7 @@
         "neutrinos-oauth-client": "1.2.5-beta.1",
         "ng2-charts": "3.0.11",
         "ngx-scanner-qrcode": "1.6.6",
+        "ng2-search-filter": "0.5.1",
         "rxjs": "7.5.5",
         "signature_pad": "4.0.7",
         "tslib": "2.4.0",
@@ -74,63 +75,5 @@
         "cordova-plugin-x-toast": "2.7.3",
         "cordova.plugins.diagnostic": "6.1.1",
         "typescript": "4.6.4"
-    },
-    "cordova": {
-        "platforms": [
-            "android",
-            "ios"
-        ],
-        "plugins": {
-            "cordova-plugin-device": {},
-            "cordova-plugin-x-toast": {},
-            "cordova-plugin-inappbrowser": {},
-            "cordova-plugin-splashscreen": {},
-            "cordova-plugin-firebasex": {
-                "FIREBASE_ANALYTICS_COLLECTION_ENABLED": "true",
-                "FIREBASE_PERFORMANCE_COLLECTION_ENABLED": "true",
-                "FIREBASE_CRASHLYTICS_COLLECTION_ENABLED": "true",
-                "FIREBASE_FCM_AUTOINIT_ENABLED": "true",
-                "ANDROID_ICON_ACCENT": "#FF00FFFF",
-                "ANDROID_FIREBASE_PERFORMANCE_MONITORING": "false",
-                "ANDROID_PLAY_SERVICES_TAGMANAGER_VERSION": "18.0.1",
-                "ANDROID_PLAY_SERVICES_AUTH_VERSION": "20.2.0",
-                "ANDROID_FIREBASE_ANALYTICS_VERSION": "21.0.0",
-                "ANDROID_FIREBASE_MESSAGING_VERSION": "23.0.5",
-                "ANDROID_FIREBASE_CONFIG_VERSION": "21.1.0",
-                "ANDROID_FIREBASE_PERF_VERSION": "20.0.6",
-                "ANDROID_FIREBASE_AUTH_VERSION": "21.0.4",
-                "ANDROID_FIREBASE_INAPPMESSAGING_VERSION": "20.1.2",
-                "ANDROID_FIREBASE_FIRESTORE_VERSION": "24.1.2",
-                "ANDROID_FIREBASE_FUNCTIONS_VERSION": "20.1.0",
-                "ANDROID_FIREBASE_IID_VERSION": "21.1.0",
-                "ANDROID_FIREBASE_INSTALLATIONS_VERSION": "17.0.1",
-                "ANDROID_FIREBASE_CRASHLYTICS_VERSION": "18.2.10",
-                "ANDROID_FIREBASE_CRASHLYTICS_NDK_VERSION": "18.2.10",
-                "ANDROID_GSON_VERSION": "2.9.0",
-                "ANDROID_FIREBASE_PERF_GRADLE_PLUGIN_VERSION": "1.4.1",
-                "ANDROID_GRPC_OKHTTP": "1.46.0"
-            },
-            "cordova-plugin-camera": {
-                "CAMERA_USAGE_DESCRIPTION": "",
-                "PHOTOLIBRARY_USAGE_DESCRIPTION": "",
-                "ANDROIDX_CORE_VERSION": "1.6.+"
-            },
-            "cordova-plugin-file": {
-                "ANDROIDX_WEBKIT_VERSION": "1.4.0"
-            },
-            "cordova-plugin-geolocation": {
-                "GPS_REQUIRED": "true"
-            },
-            "cordova.plugins.diagnostic": {
-                "ANDROIDX_VERSION": "1.0.0",
-                "ANDROIDX_APPCOMPAT_VERSION": "1.3.1"
-            },
-            "cordova-plugin-uniquedeviceid-waymondo": {},
-            "com.cordova.plugins.cookiemaster": {},
-            "@ahovakimyan/cordova-plugin-wkwebviewxhrfix": {},
-            "cordova-plugin-neucookies": {},
-            "cordova-plugin-wkwebviewxhrfix": {},
-            "cordova-plugin-fingerprint-aio": {}
-        }
     }
 }

@@ -1,1 +1,49 @@
-<div id="angularRoot"></div>
+<div fxLayout="column wrap" class="add-profile-pic-ff-roboto bank-full-width login" fxLayoutAlign="start center" [fxShow]="true">
+  <div fxLayout="row wrap" style="    position: fixed;" class="message-a-center landing-full-width message-top" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-height message-action-tab" fxLayoutAlign="center center" [fxShow]="true" (click)="goBack()"><span>
+                <span class="material-symbols-outlined ">
+                arrow_back
+            </span></span></div><label class="message-fz-21 message-margin-left-1em">
+      FNB</label><span class="message-flex-1">
+                </span>
+  </div>
+  <form #loginForm="ngForm" class="my-profile-width-90-only login-middle">
+    <div fxLayout="column wrap" class="bank-full-height bank-full-width" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="Web/Images/fnb-logo2.webp" style="width: 42%; height: 15%;"><label class="limits-fz-16 my-profile-margin-top-1em my-profile-green-text">
+        <b>Please enter your linked email address and your FNB App password to login</b></label>
+      <div class="bank-margin-top-10px bank-full-width">
+        Email address</div>
+      <div style="height: 10%" class="bank-full-width">
+        <input required pattern="page.emailPattern" [(ngModel)]="page.userDetails.email" name="email" id="email" type="text" style="width: 98%; height:70% ; border: 2px solid gray;
+    border-radius: 15px; font-size: 20px; padding-left: 10px">
+      </div>
+      <div class="bank-margin-top-10px bank-full-width">
+        Password</div>
+      <div fxLayout="row wrap" style="height: 10%; " class="bank-full-width" fxLayoutAlign="center start" [fxShow]="true">
+        <div style="width: 80%" class="bank-full-height">
+          <input required [(ngModel)]="page.userDetails.password" name="password" id="password" [type]="page.password" style="width: 98%; height:70% ; border: 2px solid gray;
+    border-radius: 15px 0px 0px 16px; font-size: 20px; padding-left: 10px">
+        </div><button mat-button style="height: 80%; width: 20%; background: black; color: white; border-radius: 0 15px 16px 0;" (click)="showPassword()">Show</button>
+      </div><button mat-raised-button style="margin-top: 2em" class="login-green-bg bank-full-width login-btn message-fz-18" (click)="login(loginForm)">Login</button><button mat-raised-button routerLink="/forgot-password" class="my-profile-margin-top-1em login-forgot-btn bank-full-width message-fz-18">Forgot password</button>
+      <div fxLayout="row wrap" class="my-profile-margin-top-1em bank-full-width login-last-row" fxLayoutGap="1.5em" fxLayoutAlign="center center" [fxShow]="true">
+        <div fxLayout="column wrap" style="width: 30%; " class="bank-full-height" fxLayoutAlign="start space-between" [fxShow]="true">
+          <div fxLayout="row wrap" style="height: 58%; " class="bank-full-width" fxLayoutAlign="center center" [fxShow]="true">
+            <div style="display: flex" class="bank-center-center login-round">
+              <span class="material-symbols-outlined add-profile-pic-fz-45 my-profile-green-text">
+fingerprint
+</span>
+            </div>
+          </div>
+          <div fxLayout="row wrap" style="height: 40%; " class="bank-full-width" fxLayoutAlign="center center" [fxShow]="true"><label class="footer-text-center">
+              Biometric <br> Login</label></div>
+        </div>
+        <div fxLayout="column wrap" style="width: 30%; " class="bank-full-height" fxLayoutAlign="start space-between" [fxShow]="true">
+          <div fxLayout="row wrap" style="height: 58%; " class="bank-full-width" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="Web/Images/favicon.ico"></div>
+          <div fxLayout="row wrap" style="height: 40%; " class="bank-full-width" fxLayoutAlign="center center" [fxShow]="true">
+            <div fxLayout="row wrap" style="height: 40%; " class="bank-full-width" fxLayoutAlign="center center" [fxShow]="true"><label class="footer-text-center">
+                Neutrinos <br> Login</label></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

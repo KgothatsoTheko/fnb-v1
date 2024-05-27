@@ -81,6 +81,30 @@
             "component": "limitsComponent"
         },
         {
+            "path": "login",
+            "component": "loginComponent"
+        },
+        {
+            "path": "deposit",
+            "component": "deposit_ownComponent"
+        },
+        {
+            "component": "confirm_limitsComponent",
+            "path": "confirm-limits"
+        },
+        {
+            "path": "menu-dialog",
+            "component": "menu_dialogComponent"
+        },
+        {
+            "path": "forgot-password",
+            "component": "forgot_passwordComponent"
+        },
+        {
+            "path": "verify-code",
+            "component": "verify_codeComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "landing",
             "pathMatch": "full",

@@ -16,6 +16,16 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-verify_codeComponent
+import { verify_codeComponent } from '../components/verify_code.component';
+//CORE_REFERENCE_IMPORT-forgot_passwordComponent
+import { forgot_passwordComponent } from '../components/forgot_password.component';
+//CORE_REFERENCE_IMPORT-confirm_limitsComponent
+import { confirm_limitsComponent } from '../components/confirm_limits.component';
+//CORE_REFERENCE_IMPORT-deposit_ownComponent
+import { deposit_ownComponent } from '../components/deposit_own.component';
+//CORE_REFERENCE_IMPORT-menu_dialogComponent
+import { menu_dialogComponent } from '../components/menu_dialog.component';
 //CORE_REFERENCE_IMPORT-limitsComponent
 import { limitsComponent } from '../components/limits.component';
 //CORE_REFERENCE_IMPORT-change_passwordComponent
@@ -94,6 +104,16 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-verify_codeComponent
+  verify_codeComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-forgot_passwordComponent
+  forgot_passwordComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-confirm_limitsComponent
+  confirm_limitsComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-deposit_ownComponent
+  deposit_ownComponent,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-menu_dialogComponent
+  menu_dialogComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-limitsComponent
   limitsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-change_passwordComponent
@@ -185,6 +205,12 @@ export const appRoutes = [
   { path: 'username', component: usernameComponent },
   { path: 'change-password', component: change_passwordComponent },
   { path: 'limits', component: limitsComponent },
+  { path: 'login', component: loginComponent },
+  { path: 'deposit', component: deposit_ownComponent },
+  { path: 'confirm-limits', component: confirm_limitsComponent },
+  { path: 'menu-dialog', component: menu_dialogComponent },
+  { path: 'forgot-password', component: forgot_passwordComponent },
+  { path: 'verify-code', component: verify_codeComponent },
   { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

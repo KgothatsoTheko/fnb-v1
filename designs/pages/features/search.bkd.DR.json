@@ -1271,7 +1271,6 @@
             "9b361e47-5cbc-5b67-e894-09252147e7bd": {
                 "paletteKey": "FlexLayoutCol",
                 "parentEditorKey": "ad49cb14-0728-bac4-4661-e2687b782ee5",
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -1333,7 +1332,6 @@
                 "55e1ca97-b6f4-2417-302b-1b02af1cbf97": {
                     "paletteKey": "NG-icon",
                     "parentEditorKey": "9b361e47-5cbc-5b67-e894-09252147e7bd",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1641,7 +1639,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "<input type=\"text\" class=\"bank-padding-left-33px bank-border-box bank-no-margin bank-search bank-border-radius-10px\" placeholder=\"How can we help you\">",
+                                "_value": "<input type=\"text\" class=\"bank-padding-left-33px bank-border-box bank-no-margin bank-search bank-border-radius-10px\" placeholder=\"How can we help you\">\r\n",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }

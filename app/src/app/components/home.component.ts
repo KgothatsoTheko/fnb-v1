@@ -61,8 +61,11 @@ export class homeComponent {
     try {
       const page = this.page;
       bh.landingOptions = [
-        { label: 'Login', image: '/Web/Images/login2.PNG', route: '/login' },
-        { label: 'Message', image: '/Web/Images/message.PNG', route: '/login' },
+        {
+          label: 'Message',
+          image: '/Web/Images/message.PNG',
+          route: '/message',
+        },
         {
           label: 'Contact Us',
           image: '/Web/Images/contact-us.PNG',
@@ -78,13 +81,9 @@ export class homeComponent {
           image: '/Web/Images/product-shop.PNG',
           route: '/login',
         },
-        { label: 'Pay', image: '/Web/Images/pay.PNG', route: '/login' },
-        { label: 'Buy', image: '/Web/Images/buy.PNG', route: '/login' },
-        {
-          label: 'Transfer',
-          image: '/Web/Images/transfer.PNG',
-          route: '/login',
-        },
+        { label: 'Pay', image: '/Web/Images/pay.PNG', route: '/pay' },
+        { label: 'Buy', image: '/Web/Images/buy.PNG', route: '/buy' },
+        { label: 'Transfer', image: '/Web/Images/transfer.PNG', route: '/pay' },
         { label: 'Forex', image: '/Web/Images/forex.PNG', route: '/login' },
         { label: 'Insure', image: '/Web/Images/insure.PNG', route: '/login' },
         { label: 'Invest', image: '/Web/Images/invest.PNG', route: '/login' },
@@ -116,7 +115,8 @@ export class homeComponent {
           image: '/Web/Images/manage-debt.PNG',
           route: '/login',
         },
-        { label: 'Hiiiiiiii', image: '/Web/Images/add.PNG', route: '/login' },
+        { label: '', image: '/Web/Images/add.PNG', route: '/login' },
+        // { label: '', image: "", route: '/home' },
       ];
       bh = this.sd_pF2ZSp3hIF8bjLzf(bh);
       //appendnew_next_sd_RN0Fcj9LXAhFI8bC

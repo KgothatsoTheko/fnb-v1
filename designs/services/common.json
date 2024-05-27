@@ -83,11 +83,113 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.location)\n\nbh.location.back();",
+        "script": "bh.location.back();",
         "functionName": "sd_41H6JPbAEHahPPfJ",
         "category": "Function",
         "x": 305,
         "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_7URbVYjuQh1rrIFw",
+        "type": "Start",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "generate Random Number",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "email",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [
+            {
+                "key": "random",
+                "defaultValue": {
+                    "type": "num",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "accept_bh": false,
+        "functionName": "generateRandomNumber",
+        "category": "General",
+        "x": 85,
+        "y": 220,
+        "wires": [
+            [
+                "sd_GivSlaUgVKNBuw7X"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "common"
+    },
+    {
+        "id": "sd_GivSlaUgVKNBuw7X",
+        "type": "Script",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// Generates a random number between 1000 (inclusive) and 10000 (exclusive)\nbh.local.random = Math.floor(1000 + Math.random() * 9000); ",
+        "functionName": "sd_GivSlaUgVKNBuw7X",
+        "category": "Function",
+        "x": 205,
+        "y": 220,
+        "wires": [
+            [
+                "sd_8IfP9fSLeu6m7gEI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_8IfP9fSLeu6m7gEI",
+        "type": "ServiceVariables",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "random",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "random"
+                }
+            },
+            {
+                "textIp": "email",
+                "typedIpValue": {
+                    "type": "bh.input",
+                    "value": "email"
+                }
+            }
+        ],
+        "functionName": "sd_8IfP9fSLeu6m7gEI",
+        "category": "Function",
+        "x": 305,
+        "y": 220,
         "wires": [
             []
         ],

@@ -1,0 +1,282 @@
+[
+    {
+        "id": "sd_pJX4oN0ELFcPypn0",
+        "type": "tab",
+        "createdDate": "2024-05-21T06:37:38.423Z",
+        "label": "deposit_own",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_PMpMIhgg9rZOFHsZ",
+        "type": "OnInit",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_PMpMIhgg9rZOFHsZ",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_5NgDZOqMsOt1s1BB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_UkU136FdQ26F6C1i",
+        "type": "PageVariables",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "depositForm",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_UkU136FdQ26F6C1i",
+        "category": "Function",
+        "x": 225,
+        "y": 40,
+        "wires": [
+            [
+                "sd_n1swxNd5XPSBN52k"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rLCUea0xKXL16k0c",
+        "type": "PageStart",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "Go Back",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 74,
+        "y": 139.8020782470703,
+        "wires": [
+            [
+                "sd_MLnhXBVfvMFFaZrD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_MLnhXBVfvMFFaZrD",
+        "type": "PageCallService",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_jJRXnjTcMQmcijs6",
+            "flowName": "goBack"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/common",
+        "startName": "goBack",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_MLnhXBVfvMFFaZrD",
+        "category": "General",
+        "x": 214,
+        "y": 139.8020782470703,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ikOFeqKZlwzi1OiY",
+        "type": "PageStart",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "deposit",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "deposit",
+        "category": "General",
+        "x": 80,
+        "y": 300,
+        "wires": [
+            [
+                "sd_B1W8fHGFHUOh5dHk"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "deposit_ownComponent"
+    },
+    {
+        "id": "sd_B1W8fHGFHUOh5dHk",
+        "type": "Script",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.depositForm.value)",
+        "functionName": "sd_B1W8fHGFHUOh5dHk",
+        "category": "Function",
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "sd_F4KXyA8KsxeWXj4H"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_F4KXyA8KsxeWXj4H",
+        "type": "Navigation",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/bank",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_F4KXyA8KsxeWXj4H",
+        "category": "Navigation",
+        "x": 280,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_n1swxNd5XPSBN52k",
+        "type": "Script",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.depositForm = new FormGroup({\n    depositAmount: new FormControl('', Validators.required)\n}) \n\nconsole.log('page', page)",
+        "functionName": "sd_n1swxNd5XPSBN52k",
+        "category": "Function",
+        "x": 420,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5NgDZOqMsOt1s1BB",
+        "type": "UseDependency",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_5NgDZOqMsOt1s1BB",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_UkU136FdQ26F6C1i"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    }
+]

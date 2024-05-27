@@ -5,7 +5,7 @@
         <h4 class="landing-fz-25 landing-fw-500">
           FNB</h4>
       </div>
-      <div fxLayout="row wrap" style="width: 20%; height: 100%; " fxLayoutAlign="end center" [fxShow]="true">
+      <div fxLayout="row wrap" style="width: 20%; height: 100%; " fxLayoutAlign="end center" [fxShow]="true" [routerLink]="[&apos;/login&apos;]">
         <div>
           <span class="material-symbols-outlined landing-fz-35">
 qr_code
@@ -20,12 +20,17 @@ qr_code
       <div fxLayout="row wrap" class="landing-search-tab" fxLayoutAlign="start stretch" [fxShow]="true">
         <div style="width: 100%; height: 100%">
           <input type="text" style="width: 98%; height:80% ; border: 2px solid gray;
-    border-radius: 20px; font-size: 20px" placeholder="How can we help you?">
+    border-radius: 20px; font-size: 20px; padding-left: 10px" placeholder="How can we help you?" [(ngModel)]="term">
+          <div *ngFor="let item of items |filter:term">
+            <p>
+              {{item.name}}
+            </p>
+          </div>
         </div>
       </div>
-      <div fxLayout="column wrap" class="landing-card-tabs" fxLayoutGap="1em" fxLayoutAlign="space-between stretch" [fxShow]="true">
-        <div fxLayout="column wrap" class="landing-card-tab" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.landingOptions; let i = index;">
-          <div fxLayout="row wrap" class="landing-top-icon" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="{{item.image}}" style="width:100%; height: 100%"></div>
+      <div fxLayout="row wrap" class="landing-card-tabs" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="landing-card-tab" fxLayoutAlign="start stretch" [fxShow]="true" *ngFor="let item of page.landingOptions |filter:term; let i = index;">
+          <div fxLayout="row wrap" class="landing-top-icon" fxLayoutAlign="start stretch" [fxShow]="true" [routerLink]="[item.route]"><img imgSrc="{{item.image}}" style="width:100%; height: 100%"></div>
           <div fxLayout="row wrap" class="landing-bottom-text" fxLayoutAlign="center center" [fxShow]="true">
             <div class="landing-text-center">
               {{item.label}}
