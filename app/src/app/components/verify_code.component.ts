@@ -50,7 +50,7 @@ export class verify_codeComponent {
 
   sd_M77mjLFAr7rAaWaA(bh) {
     try {
-      bh = this.sd_JnOutHTCg72NGJIq(bh);
+      bh = this.sd_nJyDqZKN6DaRtAGg(bh);
       //appendnew_next_sd_M77mjLFAr7rAaWaA
       return bh;
     } catch (e) {
@@ -119,6 +119,16 @@ export class verify_codeComponent {
   }
   //appendnew_flow_verify_codeComponent_start
 
+  sd_nJyDqZKN6DaRtAGg(bh) {
+    try {
+      bh = this.sd_JnOutHTCg72NGJIq(bh);
+      //appendnew_next_sd_nJyDqZKN6DaRtAGg
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nJyDqZKN6DaRtAGg');
+    }
+  }
+
   sd_JnOutHTCg72NGJIq(bh) {
     try {
       this.page.codeObject = { a: '', b: '', c: '', d: '' };
@@ -135,6 +145,13 @@ export class verify_codeComponent {
     try {
       const page = this.page;
       page.verifyCodeForm = page.codeObject;
+
+      // page.loginForm = new FormGroup({
+      //     a: new FormControl('', [Validators.required]),
+      //     b: new FormControl('', Validators.required),
+      //     c: new FormControl('', Validators.required),
+      //     e: new FormControl('', Validators.required),
+      // })
       bh = this.sd_Ef2QxF9xdJ6GlLqn(bh);
       //appendnew_next_sd_rrlkQXrIDUo9u0rB
       return bh;
@@ -182,7 +199,7 @@ export class verify_codeComponent {
   sd_2tJBVMnCUjwrZMXT(bh) {
     try {
       const page = this.page; // console.log("bh.input.elementToFocus",bh.input.elementToFocus)
-      console.log(page.codeObject);
+      // console.log(page.codeObject)
       if (page.codeObject.a) {
         document.getElementById(bh.input.elementToFocus).focus();
       }
@@ -261,8 +278,10 @@ export class verify_codeComponent {
     try {
       const commonInstance: common = this.__page_injector__.get(common);
 
-      let outputVariables = await commonInstance.generateRandomNumber(bh.email);
-      bh.code = outputVariables.local.random;
+      let outputVariables = await commonInstance.generateRandomNumber(
+        this.page.email
+      );
+      this.page.random = outputVariables.local.random;
 
       bh = this.sd_EQ6jPFmfVmigcjXj(bh);
       //appendnew_next_sd_K558rzqhP5rIaeD7
@@ -288,10 +307,13 @@ export class verify_codeComponent {
       const page = this.page;
       bh.body = {
         email: page.email,
-        code: page.random,
+        OTP: page.random,
       };
 
       bh.url = page.ssdUrl + 'forgot-password';
+
+      console.log(bh.body);
+
       bh = this.sd_afKuwnXlNLvaV6aQ(bh);
       //appendnew_next_sd_gTeUoaunEY4SEmNI
       return bh;
@@ -303,12 +325,12 @@ export class verify_codeComponent {
   async sd_afKuwnXlNLvaV6aQ(bh) {
     try {
       let requestOptions = {
-        url: this.page.url,
-        method: 'post',
+        url: bh.url,
+        method: 'put',
         responseType: 'json',
         headers: {},
         params: {},
-        body: this.page.body,
+        body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_jhaRzdlpZkZv36Oc(bh);
@@ -327,10 +349,21 @@ export class verify_codeComponent {
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
       });
+      this.sd_TlD2ZlPTBdAsgIdY(bh);
       //appendnew_next_sd_jhaRzdlpZkZv36Oc
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_jhaRzdlpZkZv36Oc');
+    }
+  }
+
+  sd_TlD2ZlPTBdAsgIdY(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), this.page.random);
+      //appendnew_next_sd_TlD2ZlPTBdAsgIdY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_TlD2ZlPTBdAsgIdY');
     }
   }
 

@@ -1188,7 +1188,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<small>Deposit Amount is required</small>",
+                                    "_value": "<small><b>Deposit Amount is required</b></small>",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }

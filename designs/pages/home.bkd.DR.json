@@ -1901,6 +1901,7 @@
             "a008665d-cb64-fc49-841f-2679a890779c": {
                 "paletteKey": "NEUTRINOS_VIEW_footer",
                 "parentEditorKey": "9cfdd3aa-5005-c662-3fd6-5e9cedf54a67",
+                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {

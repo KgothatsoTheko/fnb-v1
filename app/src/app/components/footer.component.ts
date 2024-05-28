@@ -130,25 +130,10 @@ export class footerComponent {
         menu_dialogComponent,
         {}
       );
-      menu_dialogDialogRef.backdropClick().subscribe((event) => {
-        bh['backdropClick'] = event;
-        this.sd_iV7hbDWdk9MQA15c(bh);
-      });
 
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_owqwWGEntlJElkW9');
-    }
-  }
-
-  sd_iV7hbDWdk9MQA15c(bh) {
-    try {
-      const page = this.page;
-      console.log('The User has accepted the policy', bh.local.response);
-      //appendnew_next_sd_iV7hbDWdk9MQA15c
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iV7hbDWdk9MQA15c');
     }
   }
 
