@@ -48,7 +48,7 @@ export class personal_infoComponent {
 
   sd_dPgL9CGW7b1kChu2(bh) {
     try {
-      bh = this.sd_rQOfEXAMOUzol1j5(bh);
+      bh = this.sd_ikzzmdpAVXbHii6E(bh);
       //appendnew_next_sd_dPgL9CGW7b1kChu2
       return bh;
     } catch (e) {
@@ -71,6 +71,19 @@ export class personal_infoComponent {
     }
   }
   //appendnew_flow_personal_infoComponent_start
+
+  sd_ikzzmdpAVXbHii6E(bh) {
+    try {
+      this.page.loggedInUser = JSON.parse(
+        sessionStorage.getItem('loggedInUser')
+      );
+      bh = this.sd_rQOfEXAMOUzol1j5(bh);
+      //appendnew_next_sd_ikzzmdpAVXbHii6E
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ikzzmdpAVXbHii6E');
+    }
+  }
 
   sd_rQOfEXAMOUzol1j5(bh) {
     try {

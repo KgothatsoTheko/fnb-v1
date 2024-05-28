@@ -23,7 +23,7 @@
         "y": 80,
         "wires": [
             [
-                "sd_JnOutHTCg72NGJIq"
+                "sd_nJyDqZKN6DaRtAGg"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -58,7 +58,7 @@
         ],
         "functionName": "sd_JnOutHTCg72NGJIq",
         "category": "Function",
-        "x": 165,
+        "x": 225,
         "y": 80,
         "wires": [
             [
@@ -192,7 +192,7 @@
         },
         "serviceImportPath": "app/sd-services/common",
         "category": "Function",
-        "x": 300,
+        "x": 360,
         "y": 80,
         "wires": [
             [
@@ -215,7 +215,7 @@
         "logObject": "this.page.code",
         "functionName": "sd_u8On1OFZuKXRt8YO",
         "category": "General",
-        "x": 425,
+        "x": 485,
         "y": 80,
         "wires": [],
         "__ssdTypeInputs__": {
@@ -270,7 +270,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// console.log(\"bh.input.elementToFocus\",bh.input.elementToFocus)\nconsole.log(page.codeObject)\nif(page.codeObject.a){\n    document.getElementById(bh.input.elementToFocus).focus();\n}\n",
+        "script": "// console.log(\"bh.input.elementToFocus\",bh.input.elementToFocus)\n// console.log(page.codeObject)\nif(page.codeObject.a){\n    document.getElementById(bh.input.elementToFocus).focus();\n}\n",
         "functionName": "sd_2tJBVMnCUjwrZMXT",
         "category": "Function",
         "x": 165,
@@ -345,10 +345,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.verifyCodeForm = page.codeObject;",
+        "script": "page.verifyCodeForm = page.codeObject;\n\n// page.loginForm = new FormGroup({\n//     a: new FormControl('', [Validators.required]),\n//     b: new FormControl('', Validators.required),\n//     c: new FormControl('', Validators.required),\n//     e: new FormControl('', Validators.required),\n// })",
         "functionName": "sd_rrlkQXrIDUo9u0rB",
         "category": "Function",
-        "x": 285,
+        "x": 305,
         "y": 200,
         "wires": [
             [
@@ -511,7 +511,7 @@
             {
                 "key": "email",
                 "map": true,
-                "valueType": "bh",
+                "valueType": "this.page",
                 "value": "email"
             }
         ],
@@ -519,16 +519,16 @@
             {
                 "mapVarType": "local",
                 "key": "random",
-                "valueType": "bh",
-                "value": "code",
+                "valueType": "this.page",
+                "value": "random",
                 "mapVarName": "random",
-                "localVar": "bh.code"
+                "localVar": "this.page.random"
             }
         ],
         "serviceImportPath": "app/sd-services/common",
         "startName": "generateRandomNumber",
         "inputParams": [
-            "bh.email"
+            "this.page.email"
         ],
         "accept_bh": false,
         "accept_csd": true,
@@ -584,7 +584,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.body = {\n    email: page.email,\n    code: page.random,\n};\n\nbh.url = page.ssdUrl + 'forgot-password';",
+        "script": "bh.body = {\n    email: page.email,\n    OTP: page.random,\n};\n\nbh.url = page.ssdUrl + 'forgot-password';\n\nconsole.log(bh.body)\n",
         "functionName": "sd_gTeUoaunEY4SEmNI",
         "category": "Function",
         "x": 380,
@@ -606,11 +606,11 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "method": "post",
+        "method": "put",
         "methodMappingObj": {},
-        "urlMapping": "this.page.url",
+        "urlMapping": "bh.url",
         "urlMappingObj": {
-            "mapVarType": "this.page",
+            "mapVarType": "bh",
             "mapVarValue": "url"
         },
         "ret": "json",
@@ -619,9 +619,9 @@
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
-        "reqBody": "this.page.body",
+        "reqBody": "bh.body",
         "reqBodyObj": {
-            "mapVarType": "this.page",
+            "mapVarType": "bh",
             "mapVarValue": "body"
         },
         "resultMapping": "this.page.result",
@@ -657,22 +657,23 @@
         "nodeType": "flow",
         "name": "",
         "outputs": 0,
-        "logObject": "this.page.code",
+        "logObject": "this.page.random",
         "functionName": "sd_TlD2ZlPTBdAsgIdY",
         "category": "General",
-        "x": 620,
+        "x": 705,
         "y": 560,
         "wires": [],
         "__ssdTypeInputs__": {
             "logObject": {
                 "type": "this.page",
-                "value": "code",
+                "value": "random",
                 "constant": false
             }
         },
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "verify_codeComponent"
+        "generateNext": false,
+        "serviceName": "verify_codeComponent",
+        "generated": true
     },
     {
         "id": "sd_jhaRzdlpZkZv36Oc",
@@ -702,10 +703,68 @@
         "direction": "ltr",
         "functionName": "sd_jhaRzdlpZkZv36Oc",
         "category": "General",
-        "x": 585,
-        "y": 660,
+        "x": 605,
+        "y": 560,
         "wires": [
-            []
+            [
+                "sd_TlD2ZlPTBdAsgIdY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verify_codeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nJyDqZKN6DaRtAGg",
+        "type": "UseDependency",
+        "z": "sd_O5utXTlOeL3NSqi0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_nJyDqZKN6DaRtAGg",
+        "category": "Function",
+        "x": 125,
+        "y": 80,
+        "wires": [
+            [
+                "sd_JnOutHTCg72NGJIq"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

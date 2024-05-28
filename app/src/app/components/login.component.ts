@@ -4,6 +4,9 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -48,7 +51,7 @@ export class loginComponent {
 
   sd_45uy5mdWi5EPQeTa(bh) {
     try {
-      bh = this.sd_PrG6MjwBVP5tc48y(bh);
+      bh = this.sd_JiXbyYIEfixaMome(bh);
       //appendnew_next_sd_45uy5mdWi5EPQeTa
       return bh;
     } catch (e) {
@@ -94,7 +97,7 @@ export class loginComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_SG4YS97YQ1V358K7(bh);
+      bh = this.sd_AuqUk4zhQQO4MrD4(bh);
       //appendnew_next_login
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_44CrbDcLdLIXeUnr');
@@ -102,13 +105,24 @@ export class loginComponent {
   }
   //appendnew_flow_loginComponent_start
 
+  sd_JiXbyYIEfixaMome(bh) {
+    try {
+      bh = this.sd_PrG6MjwBVP5tc48y(bh);
+      //appendnew_next_sd_JiXbyYIEfixaMome
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_JiXbyYIEfixaMome');
+    }
+  }
+
   sd_PrG6MjwBVP5tc48y(bh) {
     try {
       this.page.password = this.page.password;
       this.page.show = true;
       this.page.submitted = false;
       this.page.userDetails = { email: '', password: '' };
-      this.page.emailPattern = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+      this.page.loginForm = undefined;
+      this.page.email = undefined;
       bh = this.sd_dQ2knbDgryiwbT69(bh);
       //appendnew_next_sd_PrG6MjwBVP5tc48y
       return bh;
@@ -121,7 +135,13 @@ export class loginComponent {
     try {
       const page = this.page;
       page.password = 'password';
-      page.loginForm = page.userDetails;
+
+      page.loginForm = new FormGroup({
+        email: new FormControl('', [Validators.required, Validators.email]),
+        password: new FormControl('', Validators.required),
+      });
+
+      // console.log(page.loginForm.value)
 
       //appendnew_next_sd_dQ2knbDgryiwbT69
       return bh;
@@ -161,26 +181,107 @@ export class loginComponent {
     }
   }
 
-  sd_SG4YS97YQ1V358K7(bh) {
+  sd_AuqUk4zhQQO4MrD4(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
       bh = this.sd_mjHhs3TZbNwVZsQd(bh);
-      //appendnew_next_sd_SG4YS97YQ1V358K7
+      //appendnew_next_sd_AuqUk4zhQQO4MrD4
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_SG4YS97YQ1V358K7');
+      return this.errorHandler(bh, e, 'sd_AuqUk4zhQQO4MrD4');
     }
   }
 
   sd_mjHhs3TZbNwVZsQd(bh) {
     try {
-      const page = this.page;
-      page.submitted = true;
-      // Need login api
+      const page = this.page; // page.submitted = true;
+      bh.body = {
+        // email: page.email
+        email: bh.input.form.get('email').value,
+        password: bh.input.form.get('password').value,
+
+        // email: bh.body.email
+        // email: page.loginForm.email
+      };
+
+      console.log('length:', bh.input.form.get('password').value.length);
+      bh.url = page.ssdUrl + 'login';
+      // bh.url = page.ssdUrl + 'add-admin';
+
+      console.log('email1', bh.input.form.get('email').value);
+      console.log('second email', bh.input.email);
+      console.log('3email', page.loginForm.email);
+      console.log('bh body', bh.body);
+
+      console.log(page.loginForm.value);
+
+      bh = this.sd_OBFx5QCcbXpVMC3X(bh);
       //appendnew_next_sd_mjHhs3TZbNwVZsQd
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_mjHhs3TZbNwVZsQd');
+    }
+  }
+
+  async sd_OBFx5QCcbXpVMC3X(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_qHPQnSMmoHBTLids(bh);
+      //appendnew_next_sd_OBFx5QCcbXpVMC3X
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OBFx5QCcbXpVMC3X');
+    }
+  }
+
+  sd_qHPQnSMmoHBTLids(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Logged In', 'OK', {
+        duration: 2000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_CMrcJi2YZEihissP(bh);
+      //appendnew_next_sd_qHPQnSMmoHBTLids
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_qHPQnSMmoHBTLids');
+    }
+  }
+
+  sd_CMrcJi2YZEihissP(bh) {
+    try {
+      sessionStorage.setItem('loggedInUser', JSON.stringify(this.page.result));
+      bh = this.sd_Qok80ybFFhBH8hR9(bh);
+      //appendnew_next_sd_CMrcJi2YZEihissP
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_CMrcJi2YZEihissP');
+    }
+  }
+
+  async sd_Qok80ybFFhBH8hR9(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/deposit');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_Qok80ybFFhBH8hR9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Qok80ybFFhBH8hR9');
     }
   }
 

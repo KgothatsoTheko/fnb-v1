@@ -913,8 +913,8 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "#loginForm",
-                    "_value": "ngForm",
+                    "_key": "[formGroup]",
+                    "_value": "page.loginForm",
                     "_type": "kv",
                     "_attrDef": "c"
                 }
@@ -922,7 +922,6 @@
             "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee": {
                 "paletteKey": "FlexLayoutCol",
                 "parentEditorKey": "c12a78ae-19c4-d193-8de9-58fce457d99f",
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -987,7 +986,6 @@
                 "d6f8bc37-8c53-5c63-09f1-d565277057e0": {
                     "paletteKey": "NG-image",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1057,7 +1055,6 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1249,7 +1246,6 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "16ecddea-4406-7bdf-a614-0ecc69a9430e",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1277,7 +1273,6 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1468,7 +1463,6 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "be8cea19-e756-765f-8be7-94a64ee69556",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1496,7 +1490,6 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1686,7 +1679,6 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "596471cf-7809-18a4-ecf2-52197ffedefd",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1703,7 +1695,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "<input required pattern=\"page.emailPattern\" [(ngModel)]=\"page.userDetails.email\" name=\"email\" id=\"email\" type=\"text\" style=\"width: 98%; height:70% ; border: 2px solid gray;\r\n    border-radius: 15px; font-size: 20px; padding-left: 10px\">",
+                                "_value": "<input required pattern=\"page.emailPattern\" formControlName = \"email\" type=\"text\" style=\"width: 98%; height:70% ; border: 2px solid gray;\r\n    border-radius: 15px; font-size: 20px; padding-left: 10px\">",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -1714,12 +1706,11 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
                     "isAdvancedComponent": true,
-                    "isCommented": "true",
-                    "commentid": "1716450718674",
+                    "commentid": null,
                     "designerReference": [
                         {
                             "_key": "style",
-                            "_value": "",
+                            "_value": "color: red",
                             "_type": "kv",
                             "_attrDef": "p"
                         },
@@ -1899,7 +1890,7 @@
                         },
                         {
                             "_key": "*ngIf",
-                            "_value": "(page.submitted || page.userDetails.email.touched) && ( page.userDetails.email.errors &&  page.userDetails.email.errors?.required)",
+                            "_value": "(page.loginForm.controls.email?.touched) && (page.loginForm.controls.email?.errors?.required)",
                             "_type": "kv",
                             "_attrDef": "c"
                         }
@@ -1908,8 +1899,7 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "1a366815-0577-5185-4ce4-176f23bb5d63",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "true",
-                        "commentid": "1716450718674",
+                        "commentid": null,
                         "designerReference": [
                             {
                                 "_key": "style",
@@ -1925,7 +1915,227 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "<small *ngIf=\"(page.submitted ||  page.userDetails.email?.touched) && (page.userDetails.email.errors && page.userDetails.email.errors?.required)\">Email is <b>required</b></small>\r\n<small *ngIf=\"(page.submitted ||  page.userDetails.email?.touched) && (page.userDetails.email.errors && page.userDetails.email.errors?.pattern)\">Please enter <b>valid</b> email</small>",
+                                "_value": "Email is <b>required</b>",
+                                "_type": "a",
+                                "_attrDef": "p"
+                            }
+                        ]
+                    }
+                },
+                "c83eb7e5-7adf-012b-7c5c-09ec5b74fd04": {
+                    "paletteKey": "Html5",
+                    "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
+                    "isAdvancedComponent": true,
+                    "commentid": null,
+                    "designerReference": [
+                        {
+                            "_key": "style",
+                            "_value": "color: red",
+                            "_type": "kv",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "class",
+                            "_value": "",
+                            "_type": "dav",
+                            "_attrDef": "p"
+                        },
+                        {
+                            "_key": "htmlElement",
+                            "_value": "div",
+                            "_type": "dav",
+                            "_attrDef": "p",
+                            "_useAsLabel": true
+                        },
+                        {
+                            "_key": "tagType",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "name",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "sandbox",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "src",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "srcdoc",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "width",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "[autoplay]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "[loop]",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "data",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "audioSource",
+                            "_value": [],
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "videoSource",
+                            "_value": [],
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "audioDatasource",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "audioSrc",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "audioType",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "videoDatasource",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "videoSrc",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "videoType",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "(audioplay)",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "(videoplay)",
+                            "_value": "",
+                            "_type": "a",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "(audiopause)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "(videopause)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "(audioended)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "(videoended)",
+                            "_value": "",
+                            "_type": "kv",
+                            "_attrDef": "p",
+                            "_visibility": false
+                        },
+                        {
+                            "_key": "*ngIf",
+                            "_value": "(page.loginForm.controls.email?.touched) && (page.loginForm.controls.email?.errors?.email)",
+                            "_type": "kv",
+                            "_attrDef": "c"
+                        }
+                    ],
+                    "082fb4e2-65ec-f49e-041d-e9bfca176803": {
+                        "paletteKey": "html-editor",
+                        "parentEditorKey": "c83eb7e5-7adf-012b-7c5c-09ec5b74fd04",
+                        "isAdvancedChildComponent": true,
+                        "commentid": null,
+                        "designerReference": [
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "html",
+                                "_value": "<b>Please provide a valid email</b>",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -1936,7 +2146,6 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2127,7 +2336,6 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "2a7a0c31-57f4-b4eb-8256-6c70723b61fc",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2154,7 +2362,6 @@
                 "622864e9-2b7f-4f4b-d6c2-7187ac9551e3": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2219,7 +2426,6 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "622864e9-2b7f-4f4b-d6c2-7187ac9551e3",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2409,7 +2615,6 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "a08c6b7a-6e93-78fb-0ca1-10121c2634b2",
                             "isAdvancedChildComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2426,7 +2631,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input required [(ngModel)]=\"page.userDetails.password\" name=\"password\" id=\"password\" [type]=\"page.password\" style=\"width: 98%; height:70% ; border: 2px solid gray;\r\n    border-radius: 15px 0px 0px 16px; font-size: 20px; padding-left: 10px\">",
+                                    "_value": "<input required  formControlName = \"password\" [type]=\"page.password\" style=\"width: 98%; height:70% ; border: 2px solid gray;\r\n    border-radius: 15px 0px 0px 16px; font-size: 20px; padding-left: 10px\">",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -2436,7 +2641,6 @@
                     "6b068da2-0230-c992-fe7b-529695aac4dd": {
                         "paletteKey": "NG-button",
                         "parentEditorKey": "622864e9-2b7f-4f4b-d6c2-7187ac9551e3",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2507,7 +2711,6 @@
                 "06c55a2d-618d-946e-42ed-9b26e11657be": {
                     "paletteKey": "NG-RaisedButton",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2542,7 +2745,7 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "login(loginForm)",
+                            "_value": "login(page.loginForm)",
                             "_type": "kv",
                             "_attrDef": "p",
                             "objValue": {
@@ -2551,7 +2754,7 @@
                                 "activeTree": "pages",
                                 "z": "sd_ikfhfteWsIbUuVcK",
                                 "input": [
-                                    "loginForm"
+                                    "page.loginForm"
                                 ]
                             }
                         },
@@ -2585,7 +2788,6 @@
                 "e50f096a-5e09-aeac-7b79-55b2439cb0ac": {
                     "paletteKey": "NG-RaisedButton",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2653,7 +2855,6 @@
                 "f602d4f7-bacf-ac40-9319-e14587ee3c66": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "e28b66b6-0c4c-b4ef-1176-f50bb860d1ee",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2719,7 +2920,6 @@
                     "159452b0-ec1d-771b-6dd0-edb724011569": {
                         "paletteKey": "FlexLayoutCol",
                         "parentEditorKey": "f602d4f7-bacf-ac40-9319-e14587ee3c66",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2783,7 +2983,6 @@
                         "8577be98-8dfe-8ca3-bc07-ca9ed1367177": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "159452b0-ec1d-771b-6dd0-edb724011569",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2848,7 +3047,6 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "8577be98-8dfe-8ca3-bc07-ca9ed1367177",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3039,7 +3237,6 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "2807ef92-6bd0-d7a3-20ea-83d3360d6cee",
                                     "isAdvancedChildComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3067,7 +3264,6 @@
                         "e046513e-35fe-e283-7aee-e6817b7fd0c6": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "159452b0-ec1d-771b-6dd0-edb724011569",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3132,7 +3328,6 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "e046513e-35fe-e283-7aee-e6817b7fd0c6",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3322,7 +3517,6 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "9bb15b97-6cd9-05d3-d773-2c18fb439bfe",
                                     "isAdvancedChildComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3351,7 +3545,6 @@
                     "4b43d90b-d31a-4565-a2a4-6de5c2b5f350": {
                         "paletteKey": "FlexLayoutCol",
                         "parentEditorKey": "f602d4f7-bacf-ac40-9319-e14587ee3c66",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -3415,7 +3608,6 @@
                         "ca4a9331-84e7-22f0-a65a-6be24875a3a5": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "4b43d90b-d31a-4565-a2a4-6de5c2b5f350",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3479,7 +3671,6 @@
                             "3e62b8d0-c9a7-44bc-4804-565f65cc8703": {
                                 "paletteKey": "NG-image",
                                 "parentEditorKey": "ca4a9331-84e7-22f0-a65a-6be24875a3a5",
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3549,7 +3740,6 @@
                         "9c8a826f-1fe3-a46f-2159-eb76dd995b3a": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "4b43d90b-d31a-4565-a2a4-6de5c2b5f350",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3613,7 +3803,6 @@
                             "2fdc26a3-3bfe-ea5e-9461-6cfb4135ac5f": {
                                 "paletteKey": "FlexLayoutRow",
                                 "parentEditorKey": "9c8a826f-1fe3-a46f-2159-eb76dd995b3a",
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -3678,7 +3867,6 @@
                                     "paletteKey": "Html5",
                                     "parentEditorKey": "2fdc26a3-3bfe-ea5e-9461-6cfb4135ac5f",
                                     "isAdvancedComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3868,7 +4056,6 @@
                                         "paletteKey": "html-editor",
                                         "parentEditorKey": "f72f75be-796b-176a-2aad-abbd622d9aa0",
                                         "isAdvancedChildComponent": true,
-                                        "isCommented": "false",
                                         "commentid": null,
                                         "designerReference": [
                                             {

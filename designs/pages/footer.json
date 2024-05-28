@@ -118,8 +118,8 @@
         "flow_type": "sync",
         "functionName": "openTheDialog",
         "category": "General",
-        "x": 65,
-        "y": 240,
+        "x": 45,
+        "y": 220,
         "wires": [
             [
                 "sd_bad57GFHDwVmTSqh"
@@ -139,187 +139,12 @@
         "script": "bh.data = {\n    name: \"This is a sample dialog window\"\n}",
         "functionName": "sd_bad57GFHDwVmTSqh",
         "category": "Function",
-        "x": 165,
-        "y": 240,
+        "x": 145,
+        "y": 220,
         "wires": [
             [
                 "sd_owqwWGEntlJElkW9"
             ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "footerComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_qpIUqnhFmjiE11rQ",
-        "type": "OpenDialog",
-        "z": "sd_8wT6eeWtqANSsuWR",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 4,
-        "flow": {
-            "flowId": "sd_IT5uMFW8Iv7Hndga",
-            "label": "menu_dialog"
-        },
-        "relativePath": "app/components/menu_dialog",
-        "data": "bh.input.data",
-        "ariaDescribedBy": "this.page.Shows additional menu options",
-        "ariaLabel": "this.page.Menu options",
-        "ariaLabelledBy": "this.page",
-        "autoFocus": "this.page",
-        "backdropClass": "this.page",
-        "closeOnNavigation": "this.page",
-        "direction": "this.page",
-        "disableClose": "this.page",
-        "hasBackdrop": "this.page",
-        "height": "\"400px\"",
-        "maxHeight": "this.page",
-        "minHeight": "this.page",
-        "width": "\"400px\"",
-        "maxWidth": "this.page",
-        "minWidth": "this.page",
-        "panelClass": "this.page",
-        "position": "this.page",
-        "restoreFocus": "this.page",
-        "role": "this.page",
-        "resultMapping": "bh.local.response",
-        "functionName": "sd_qpIUqnhFmjiE11rQ",
-        "category": "Dialog",
-        "x": 305,
-        "y": 340,
-        "wires": [
-            [],
-            [],
-            [],
-            []
-        ],
-        "__ssdTypeInputs__": {
-            "data": {
-                "type": "bh.input",
-                "value": "data",
-                "constant": false
-            },
-            "ariaDescribedBy": {
-                "type": "this.page",
-                "value": "Shows additional menu options",
-                "constant": false
-            },
-            "ariaLabel": {
-                "type": "this.page",
-                "value": "Menu options",
-                "constant": false
-            },
-            "ariaLabelledBy": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "autoFocus": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "backdropClass": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "closeOnNavigation": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "direction": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "disableClose": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "hasBackdrop": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "height": {
-                "type": "str",
-                "value": "400px",
-                "constant": false
-            },
-            "maxHeight": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "minHeight": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "width": {
-                "type": "str",
-                "value": "400px",
-                "constant": false
-            },
-            "maxWidth": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "minWidth": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "panelClass": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "position": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "restoreFocus": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "role": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "resultMapping": {
-                "type": "bh.local",
-                "value": "response",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "footerComponent"
-    },
-    {
-        "id": "sd_iV7hbDWdk9MQA15c",
-        "type": "Script",
-        "z": "sd_8wT6eeWtqANSsuWR",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(\"The User has accepted the policy\", bh.local.response);",
-        "functionName": "sd_iV7hbDWdk9MQA15c",
-        "category": "Function",
-        "x": 484,
-        "y": 250.1354217529297,
-        "wires": [
-            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -362,14 +187,12 @@
         "resultMapping": "this.page",
         "functionName": "sd_owqwWGEntlJElkW9",
         "category": "Dialog",
-        "x": 260,
-        "y": 240,
+        "x": 240,
+        "y": 220,
         "wires": [
             [],
             [],
-            [
-                "sd_iV7hbDWdk9MQA15c"
-            ],
+            [],
             []
         ],
         "__ssdTypeInputs__": {
