@@ -197,5 +197,215 @@
         "generateNext": false,
         "serviceName": "common",
         "generated": true
+    },
+    {
+        "id": "sd_SSD3DKzpFoOLZnwq",
+        "type": "UseDependency",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "BehaviorSubject",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "rxjs",
+        "serviceDesignerType": "client",
+        "functionName": "sd_SSD3DKzpFoOLZnwq",
+        "category": "Function",
+        "x": 225,
+        "y": 440,
+        "wires": [
+            [
+                "sd_iShVV0N6PNcKApKr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_iShVV0N6PNcKApKr",
+        "type": "Script",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "\n// Declaring a quote\n// bh.quote = new BehaviorSubject<string>(\"hello\")\nconsole.log(\"hello\",bh)\n\n// expose as an observable\n// bh.currentQuote = bh.quote.asObservable()\n\n\n\n\n",
+        "functionName": "sd_iShVV0N6PNcKApKr",
+        "category": "Function",
+        "x": 345,
+        "y": 440,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_vO7ZpSwQ0nvvbLo3",
+        "type": "Start",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "update",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "newQuote",
+                "defaultValue": {
+                    "type": "num",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "update",
+        "category": "General",
+        "x": 65,
+        "y": 560,
+        "wires": [
+            [
+                "sd_DbXIiXM0h0l5FP71"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "common"
+    },
+    {
+        "id": "sd_e0YkvY1IoU1EKOEY",
+        "type": "Script",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log('quote :',bh)\n// bh.quote.next(bh.input.newQuote)",
+        "functionName": "sd_e0YkvY1IoU1EKOEY",
+        "category": "Function",
+        "x": 325,
+        "y": 560,
+        "wires": [
+            [
+                "sd_fIHO9yfBT63eind0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_gDxgBOtWEwBlKd2e",
+        "type": "Start",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "amount",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "amount",
+        "category": "General",
+        "x": 105,
+        "y": 440,
+        "wires": [
+            [
+                "sd_SSD3DKzpFoOLZnwq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "common"
+    },
+    {
+        "id": "sd_DbXIiXM0h0l5FP71",
+        "type": "UseDependency",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "BehaviorSubject",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "rxjs",
+        "serviceDesignerType": "client",
+        "functionName": "sd_DbXIiXM0h0l5FP71",
+        "category": "Function",
+        "x": 185,
+        "y": 560,
+        "wires": [
+            [
+                "sd_e0YkvY1IoU1EKOEY"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
+    },
+    {
+        "id": "sd_fIHO9yfBT63eind0",
+        "type": "ServiceVariables",
+        "z": "sd_O7BgeFkazhosv8N2",
+        "viewType": "client-server",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "currentQuote",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_fIHO9yfBT63eind0",
+        "category": "Function",
+        "x": 465,
+        "y": 560,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "common",
+        "generated": true
     }
 ]

@@ -19,8 +19,8 @@
         "name": "",
         "functionName": "sd_mEliQLOZp4jIw1lX",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 85,
+        "y": 80,
         "wires": [
             [
                 "sd_yzNTTPPwdiMjtXgw"
@@ -40,13 +40,23 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "textIp": "currentQuote",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
         "functionName": "sd_yzNTTPPwdiMjtXgw",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 185,
+        "y": 80,
         "wires": [
-            []
+            [
+                "sd_AZGO8I8Cn77iGbQU"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -66,8 +76,8 @@
         "flow_type": "sync",
         "functionName": "goToTransactions",
         "category": "General",
-        "x": 160,
-        "y": 160,
+        "x": 345,
+        "y": 340,
         "wires": [
             [
                 "sd_lzbhoAkaARC0iBfx"
@@ -94,8 +104,8 @@
         "resultMapping": "",
         "functionName": "sd_lzbhoAkaARC0iBfx",
         "category": "Navigation",
-        "x": 305,
-        "y": 160,
+        "x": 465,
+        "y": 340,
         "wires": [
             []
         ],
@@ -117,8 +127,8 @@
         "flow_type": "sync",
         "functionName": "openScanner",
         "category": "General",
-        "x": 100,
-        "y": 300,
+        "x": 105,
+        "y": 400,
         "wires": [
             [
                 "sd_oGYWxWUU8emMzYxX"
@@ -145,8 +155,8 @@
         "resultMapping": "",
         "functionName": "sd_oGYWxWUU8emMzYxX",
         "category": "Navigation",
-        "x": 260,
-        "y": 300,
+        "x": 245,
+        "y": 400,
         "wires": [
             []
         ],
@@ -168,8 +178,8 @@
         "flow_type": "sync",
         "functionName": "goToSearch",
         "category": "General",
-        "x": 345,
-        "y": 60,
+        "x": 105,
+        "y": 240,
         "wires": [
             [
                 "sd_yGgH5FkjrZJOiZ8Q"
@@ -196,8 +206,8 @@
         "resultMapping": "",
         "functionName": "sd_yGgH5FkjrZJOiZ8Q",
         "category": "Navigation",
-        "x": 485,
-        "y": 60,
+        "x": 245,
+        "y": 240,
         "wires": [
             []
         ],
@@ -219,8 +229,8 @@
         "flow_type": "sync",
         "functionName": "goToAirtime",
         "category": "General",
-        "x": 525,
-        "y": 200,
+        "x": 105,
+        "y": 320,
         "wires": [
             [
                 "sd_kGLL3bXWMEQMJJhl"
@@ -247,8 +257,8 @@
         "resultMapping": "",
         "functionName": "sd_kGLL3bXWMEQMJJhl",
         "category": "Navigation",
-        "x": 685,
-        "y": 200,
+        "x": 245,
+        "y": 320,
         "wires": [
             []
         ],
@@ -270,8 +280,8 @@
         "flow_type": "sync",
         "functionName": "goToElectricity",
         "category": "General",
-        "x": 445,
-        "y": 300,
+        "x": 345,
+        "y": 240,
         "wires": [
             [
                 "sd_xpqupbZrQoVdJQAu"
@@ -298,8 +308,8 @@
         "resultMapping": "",
         "functionName": "sd_xpqupbZrQoVdJQAu",
         "category": "Navigation",
-        "x": 605,
-        "y": 300,
+        "x": 465,
+        "y": 240,
         "wires": [
             []
         ],
@@ -321,8 +331,8 @@
         "flow_type": "sync",
         "functionName": "goToEwallet",
         "category": "General",
-        "x": 345,
-        "y": 405.8125,
+        "x": 105,
+        "y": 500,
         "wires": [
             [
                 "sd_SgsNGx1cZnLcpg5l"
@@ -349,8 +359,8 @@
         "resultMapping": "",
         "functionName": "sd_SgsNGx1cZnLcpg5l",
         "category": "Navigation",
-        "x": 505,
-        "y": 405.8125,
+        "x": 245,
+        "y": 500,
         "wires": [
             []
         ],
@@ -372,8 +382,8 @@
         "flow_type": "sync",
         "functionName": "goToPay",
         "category": "General",
-        "x": 619,
-        "y": 90.8125,
+        "x": 345,
+        "y": 440,
         "wires": [
             [
                 "sd_tDYSVNbUXDNJl3OU"
@@ -400,8 +410,8 @@
         "resultMapping": "",
         "functionName": "sd_tDYSVNbUXDNJl3OU",
         "category": "Navigation",
-        "x": 779,
-        "y": 90.8125,
+        "x": 465,
+        "y": 440,
         "wires": [
             []
         ],
@@ -423,8 +433,8 @@
         "flow_type": "sync",
         "functionName": "goToCard",
         "category": "General",
-        "x": 118,
-        "y": 468.8125,
+        "x": 105,
+        "y": 600,
         "wires": [
             [
                 "sd_4gY2NKIDRROAm3qN"
@@ -451,8 +461,88 @@
         "resultMapping": "",
         "functionName": "sd_4gY2NKIDRROAm3qN",
         "category": "Navigation",
-        "x": 278,
-        "y": 468.8125,
+        "x": 245,
+        "y": 600,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_AZGO8I8Cn77iGbQU",
+        "type": "PageServiceVariables",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "get",
+        "globalVariables": [
+            {
+                "textIp": "currentQuote",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "currentQuote"
+                }
+            }
+        ],
+        "functionName": "sd_AZGO8I8Cn77iGbQU",
+        "service": {
+            "id": "sd_O7BgeFkazhosv8N2",
+            "type": "tab",
+            "createdDate": "2024-05-14T08:16:55.985Z",
+            "label": "common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client",
+            "generateNext": true,
+            "serviceName": "common",
+            "relativeParentPath": "",
+            "_def": {
+                "defaults": {
+                    "label": {
+                        "value": ""
+                    },
+                    "disabled": {
+                        "value": false
+                    },
+                    "info": {
+                        "value": ""
+                    }
+                }
+            }
+        },
+        "serviceImportPath": "app/sd-services/common",
+        "category": "Function",
+        "x": 305,
+        "y": 80,
+        "wires": [
+            [
+                "sd_w5cpEroO58nEOohN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_w5cpEroO58nEOohN",
+        "type": "Script",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.currentQuote || 0;\n\nif (bh.currentQuote) {\n    console.log('value');\n    page.currentQuote = bh.currentQuote.input.newQuote; // Subtracting the new quote value\n    console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n} else {\n    console.log('no value');\n    page.currentQuote = 100;\n}\n",
+        "functionName": "sd_w5cpEroO58nEOohN",
+        "category": "Function",
+        "x": 425,
+        "y": 80,
         "wires": [
             []
         ],

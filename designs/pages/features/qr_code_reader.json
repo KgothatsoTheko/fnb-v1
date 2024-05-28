@@ -23,7 +23,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_tS4QeW0tWbtwlwf1"
+                "sd_XdZkRUacWzIDiQhi"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -43,10 +43,12 @@
         "globalVariables": [],
         "functionName": "sd_tS4QeW0tWbtwlwf1",
         "category": "Function",
-        "x": 165,
+        "x": 245,
         "y": 40,
         "wires": [
-            []
+            [
+                "sd_5r3OUjpttnHskp2v"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -131,6 +133,66 @@
             [
                 "sd_wkoF8gW7CdJX16if"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "qr_code_readerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_XdZkRUacWzIDiQhi",
+        "type": "UseDependency",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "NgxScannerQrcodeModule",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "ngx-scanner-qrcode",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_XdZkRUacWzIDiQhi",
+        "category": "Function",
+        "x": 145,
+        "y": 40,
+        "wires": [
+            [
+                "sd_tS4QeW0tWbtwlwf1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "qr_code_readerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5r3OUjpttnHskp2v",
+        "type": "Script",
+        "z": "sd_AOv9kIt72QmNixpa",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page)",
+        "functionName": "sd_5r3OUjpttnHskp2v",
+        "category": "Function",
+        "x": 345,
+        "y": 40,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

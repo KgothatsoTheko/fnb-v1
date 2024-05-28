@@ -31,7 +31,11 @@ search
           <p class="bank-no-margin">
             63022441248</p>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-amount" (click)="goToTransactions()">R800</button></div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-amount" (click)="goToTransactions()">R800</button>
+          <p>
+            {{page.currentQuote}}
+          </p>
+        </div>
       </div>
     </mat-card-content>
 
@@ -42,7 +46,7 @@ search
 
     <mat-card-content>
       <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToCard()" class="bank-border-radius-10px">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToCard()" class="bank-pointer bank-border-radius-10px">
             <mat-card-content><span>
                 <span class="material-symbols-outlined bank-icons">
     credit_card
@@ -60,7 +64,7 @@ search
           <p>
             Statements</p>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToTransactions()" class="bank-border-radius-10px">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card (click)="goToTransactions()" class="bank-pointer bank-border-radius-10px">
             <mat-card-content><span>
                 <span class="material-symbols-outlined bank-icons">
     more_horiz
@@ -210,7 +214,7 @@ search
           eWallet</p>
       </div>
     </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-center-center bank-flex bank-border-radius-10px bank-card bank-pointer">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-center-center bank-flex bank-border-radius-10px bank-card">
         <mat-card-content><span>
                 <span class="material-symbols-outlined bank-disabled">
                 bolt
@@ -221,7 +225,7 @@ search
           Transfer</p>
       </div>
     </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-flex bank-center-center bank-card bank-pointer bank-border-radius-10px">
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><mat-card class="bank-border-box bank-flex bank-center-center bank-card bank-border-radius-10px">
         <mat-card-content><span>
                 <span class="material-symbols-outlined bank-disabled">
             compare_arrows
