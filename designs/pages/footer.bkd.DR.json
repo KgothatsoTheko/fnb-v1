@@ -168,7 +168,7 @@
                     },
                     {
                         "_key": "[routerLink]",
-                        "_value": "['/landing']",
+                        "_value": "['/home']",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
@@ -796,7 +796,7 @@
                     },
                     {
                         "_key": "[routerLink]",
-                        "_value": "['/login']",
+                        "_value": "['/bank']",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
@@ -1424,7 +1424,7 @@
                     },
                     {
                         "_key": "[routerLink]",
-                        "_value": "['/login']",
+                        "_value": "['/message']",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
@@ -2052,7 +2052,7 @@
                     },
                     {
                         "_key": "[routerLink]",
-                        "_value": "['/login']",
+                        "_value": "['/profile']",
                         "_type": "kv",
                         "_attrDef": "c"
                     }

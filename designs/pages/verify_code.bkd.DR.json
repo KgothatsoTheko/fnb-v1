@@ -1136,7 +1136,6 @@
         "724208f4-63f7-5d15-8ff7-42c33ced7125": {
             "paletteKey": "NG-Form",
             "parentEditorKey": "25ad1f9c-45d1-1372-c042-a08821bd8524",
-            "isCommented": "false",
             "commentid": null,
             "designerReference": [
                 {
@@ -1191,7 +1190,7 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "#verifyCodeForm",
+                    "_key": "#VerifyCodeForm",
                     "_value": "ngForm",
                     "_type": "kv",
                     "_attrDef": "c"
@@ -1200,7 +1199,6 @@
             "eb15f420-7bb6-3ff3-ac53-432f1e34b7d7": {
                 "paletteKey": "FlexLayoutCol",
                 "parentEditorKey": "724208f4-63f7-5d15-8ff7-42c33ced7125",
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -1262,7 +1260,6 @@
                 "7cdccfca-6e22-d871-0440-3469454dc87f": {
                     "paletteKey": "NG-image",
                     "parentEditorKey": "eb15f420-7bb6-3ff3-ac53-432f1e34b7d7",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1332,7 +1329,6 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "eb15f420-7bb6-3ff3-ac53-432f1e34b7d7",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1523,7 +1519,6 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "18d1445c-5ee7-6278-f135-e6b5c8c50a43",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -3264,6 +3259,13 @@
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_visibility": false
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "resendCode()",
+                                    "_type": "kv",
+                                    "_attrDef": "c",
+                                    "_customAttributeFlag": "customInput"
                                 }
                             ],
                             "3a791bdb-b4e0-36e6-aa2f-7250e9d7970e": {
@@ -3286,7 +3288,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<span (click)=\"resendCode()\">Resend code <span>",
+                                        "_value": "<span>Resend code <span>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -3298,7 +3300,6 @@
                 "6c38ae17-1ddd-7f1f-5eb4-e35392dd6210": {
                     "paletteKey": "NG-RaisedButton",
                     "parentEditorKey": "eb15f420-7bb6-3ff3-ac53-432f1e34b7d7",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -3333,7 +3334,7 @@
                         },
                         {
                             "_key": "(click)",
-                            "_value": "submit(verifyCodeForm)",
+                            "_value": "submit(VerifyCodeForm)",
                             "_type": "kv",
                             "_attrDef": "p",
                             "objValue": {
@@ -3342,13 +3343,13 @@
                                 "activeTree": "pages",
                                 "z": "sd_O5utXTlOeL3NSqi0",
                                 "input": [
-                                    "verifyCodeForm"
+                                    "VerifyCodeForm"
                                 ]
                             }
                         },
                         {
                             "_key": "[disabled]",
-                            "_value": "verifyCodeForm?.invalid",
+                            "_value": "VerifyCodeForm?.invalid",
                             "_type": "kv",
                             "_attrDef": "p",
                             "_customAttributeFlag": "customInput"

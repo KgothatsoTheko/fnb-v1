@@ -11,7 +11,7 @@
                 close
                 </span></span></div>
   </div>
-  <form #verifyCodeForm="ngForm" style="    height: 80%;" class="my-profile-width-90-only">
+  <form #VerifyCodeForm="ngForm" style="    height: 80%;" class="my-profile-width-90-only">
     <div fxLayout="column wrap" style="width: 100%; height: 100%" fxLayoutAlign="start center" [fxShow]="true"><img imgSrc="Web/Images/fnb-logo2.webp" style="width: 42%; height: 16%;"><label style="margin-top: 2em" class="message-fz-18 my-profile-green-text">
         <b>Please enter the verification code you got from your email.</b></label>
       <div fxLayout="column wrap" style="height: 30%; margin-top: 15px; " class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
@@ -38,9 +38,9 @@
           </div>
         </div>
         <div fxLayout="column wrap" class="message-fz-18 verify-code-row1 bank-full-width" fxLayoutAlign="center center" [fxShow]="true"><label>
-            Didn&apos;t receive an OTP?</label><label style="text-decoration: underline">
-            <span (click)="resendCode()">Resend code <span></span></span></label></div>
-      </div><button mat-raised-button class="login-green-bg verify-btn bank-full-width message-fz-18" (click)="submit(verifyCodeForm)" [disabled]="verifyCodeForm?.invalid">Submit</button>
+            Didn&apos;t receive an OTP?</label><label (click)="resendCode()" style="text-decoration: underline">
+            <span>Resend code <span></span></span></label></div>
+      </div><button mat-raised-button class="login-green-bg verify-btn bank-full-width message-fz-18" (click)="submit(VerifyCodeForm)" [disabled]="VerifyCodeForm?.invalid">Submit</button>
     </div>
   </form>
 </div>

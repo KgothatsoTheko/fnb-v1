@@ -10,7 +10,7 @@
       </div>
       <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
         <p *ngIf="(page.depositForm.controls.depositAmount?.touched) &amp;&amp; (page.depositForm.controls.depositAmount?.errors?.required)" style="color:red;" class="message-no-margin">
-          <small>Deposit Amount is required</small>
+          <small><b>Deposit Amount is required</b></small>
         </p>
       </div><button mat-raised-button style="margin-top: 1em" class="login-green-bg bank-full-width login-btn message-fz-18" (click)="deposit()" [disabled]="page.depositForm.invalid">Deposit</button>
     </div>

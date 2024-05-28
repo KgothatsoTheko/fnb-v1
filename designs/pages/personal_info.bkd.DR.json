@@ -640,7 +640,6 @@
                 "paletteKey": "Html5",
                 "parentEditorKey": "cb3b2b8a-b9da-8504-84dd-09b3c21437f2",
                 "isAdvancedComponent": true,
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -830,7 +829,6 @@
                     "paletteKey": "html-editor",
                     "parentEditorKey": "b587023b-a751-280a-468b-b1c1821d74df",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1734,7 +1732,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "Kgothatso Theko",
+                                        "_value": "{{page.loggedInUser.name}} {{page.loggedInUser.surname}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -1950,7 +1948,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "0109150177086",
+                                        "_value": "{{page.loggedInUser.idNum}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -2162,7 +2160,6 @@
                 "fa62fae9-dbca-980b-1222-15977eee49b1": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "721933a3-9d41-cbf1-7099-755e2ab64ef2",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2791,7 +2788,6 @@
                 "bd9e7f27-c560-fdac-78b5-0dbd727cd2cd": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "a107ccc2-5e26-49ce-3d45-925742d570a3",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -3420,7 +3416,6 @@
                 "d1925b95-17a8-4118-4d94-3493a63111ae": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "39f141d7-a196-bb66-bf19-00cf808f703a",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -4049,7 +4044,6 @@
                 "ba30fca0-5006-fb57-8e1d-f21d520e70e3": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "1660f7ef-681f-d0a3-b851-9f6c48000435",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -4678,7 +4672,6 @@
                 "61a9b6a4-0207-b75b-4d80-b16d187478fa": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "7b0206fb-d63a-a18b-64cc-b9c5da04c5b4",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {

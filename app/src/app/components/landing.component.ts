@@ -4,6 +4,9 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { MatDialog } from '@angular/material/dialog'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
+import { menu_dialogComponent } from 'app/components/menu_dialog.component'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -42,6 +45,17 @@ export class landingComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
 
+    try {
+      window.onoffline = (event) => {
+        let bh = this.sdService.__constructDefault({});
+        bh.input.event = event;
+        this.sd_O7ASAVd5IGkfXfZm(bh);
+      };
+    } catch (e) {
+      let bh = this.sdService.__constructDefault({});
+      return this.errorHandler(bh, e, 'sd_O7ASAVd5IGkfXfZm');
+    }
+
     //append_listeners
   }
 
@@ -55,6 +69,31 @@ export class landingComponent {
     }
   }
 
+  sd_O7ASAVd5IGkfXfZm(bh) {
+    try {
+      bh = this.sd_ELNylOT3x9xnJwaZ(bh);
+      //appendnew_next_sd_O7ASAVd5IGkfXfZm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_O7ASAVd5IGkfXfZm');
+    }
+  }
+
+  openTheDialog(data: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { data };
+      bh.local = { response: undefined };
+      bh = this.sd_SuuO0HmqTlC0x9hB(bh);
+      //appendnew_next_openTheDialog
+      return bh.local.response;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6SPjYWqR5ZT7MLA2');
+    }
+  }
   //appendnew_flow_landingComponent_start
 
   sd_mIPnLybZOGZKdAOg(bh) {
@@ -119,6 +158,10 @@ export class landingComponent {
         { label: '', image: '/Web/Images/add.PNG', route: '' },
       ];
 
+      bh.isOffline = [
+        { image1: 'Web/Images/landing-banner.PNG' },
+        { image2: '/Web/Images/network.JPG' },
+      ];
       bh = this.sd_YWTUnLPCXM1hGksN(bh);
       //appendnew_next_sd_mIPnLybZOGZKdAOg
       return bh;
@@ -131,11 +174,68 @@ export class landingComponent {
     try {
       this.page.landingOptions = bh.landingOptions;
       this.page.items = bh.items;
-      this.page.loader = false;
+      this.page.isOfflineNow = false;
       //appendnew_next_sd_YWTUnLPCXM1hGksN
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_YWTUnLPCXM1hGksN');
+    }
+  }
+
+  sd_ELNylOT3x9xnJwaZ(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('You are offline', 'OK', {
+        duration: 5000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      bh = this.sd_Vz1n164d40Ms54Hu(bh);
+      //appendnew_next_sd_ELNylOT3x9xnJwaZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ELNylOT3x9xnJwaZ');
+    }
+  }
+
+  sd_Vz1n164d40Ms54Hu(bh) {
+    try {
+      const page = this.page;
+      page.isOfflineNow = true;
+
+      // bh.isOffline = image.2;
+      //appendnew_next_sd_Vz1n164d40Ms54Hu
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Vz1n164d40Ms54Hu');
+    }
+  }
+
+  sd_SuuO0HmqTlC0x9hB(bh) {
+    try {
+      const page = this.page;
+      bh.data = {
+        name: 'This is a sample dialog window',
+      };
+      bh = this.sd_Czz8ypODTZxLkMNy(bh);
+      //appendnew_next_sd_SuuO0HmqTlC0x9hB
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_SuuO0HmqTlC0x9hB');
+    }
+  }
+
+  sd_Czz8ypODTZxLkMNy(bh) {
+    try {
+      const menu_dialogDialog = this.__page_injector__.get(MatDialog);
+      const menu_dialogDialogRef = menu_dialogDialog.open(
+        menu_dialogComponent,
+        {}
+      );
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Czz8ypODTZxLkMNy');
     }
   }
 

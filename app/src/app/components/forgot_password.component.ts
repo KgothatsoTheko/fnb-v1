@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -49,7 +50,7 @@ export class forgot_passwordComponent {
 
   sd_4pxV0wPLRVKGHsKt(bh) {
     try {
-      bh = this.sd_tccPHs4fcoYfU5Zd(bh);
+      bh = this.sd_B14dUA0Q3zmzZpWI(bh);
       //appendnew_next_sd_4pxV0wPLRVKGHsKt
       return bh;
     } catch (e) {
@@ -80,7 +81,7 @@ export class forgot_passwordComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_nAnCruwWwmT2U6S6(bh);
+      bh = this.sd_2Xj20Ht9f7GhnmKJ(bh);
       //appendnew_next_submit
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_sKJ4EVPTNuClAKte');
@@ -88,11 +89,23 @@ export class forgot_passwordComponent {
   }
   //appendnew_flow_forgot_passwordComponent_start
 
+  sd_B14dUA0Q3zmzZpWI(bh) {
+    try {
+      bh = this.sd_tccPHs4fcoYfU5Zd(bh);
+      //appendnew_next_sd_B14dUA0Q3zmzZpWI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_B14dUA0Q3zmzZpWI');
+    }
+  }
+
   sd_tccPHs4fcoYfU5Zd(bh) {
     try {
       this.page.userDetails = { email: '' };
       this.page.emailPattern = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
       this.page.submitted = false;
+      this.page.forgotPasswordForm = undefined;
+      this.page.email = undefined;
       bh = this.sd_GTWLLiw6tkF425qr(bh);
       //appendnew_next_sd_tccPHs4fcoYfU5Zd
       return bh;
@@ -104,7 +117,10 @@ export class forgot_passwordComponent {
   sd_GTWLLiw6tkF425qr(bh) {
     try {
       const page = this.page;
-      page.forgotPassword = page.userDetails;
+      page.forgotPasswordForm = new FormGroup({
+        email: new FormControl('', [Validators.required, Validators.email]),
+      });
+
       //appendnew_next_sd_GTWLLiw6tkF425qr
       return bh;
     } catch (e) {
@@ -125,23 +141,21 @@ export class forgot_passwordComponent {
     }
   }
 
-  sd_nAnCruwWwmT2U6S6(bh) {
+  sd_2Xj20Ht9f7GhnmKJ(bh) {
     try {
-      if (
-        this.sdService.operators['true'](
-          bh.input.form.valid,
-          undefined,
-          undefined,
-          undefined
-        )
-      ) {
-        bh = this.sd_CMEjWYscrjevbYPX(bh);
+      const page = this.page;
+      if (bh.input.form) {
+        page.email = bh.input.form.get('email').value;
+        console.log('valid');
       } else {
+        console.log('not valid');
       }
 
+      bh = this.sd_CMEjWYscrjevbYPX(bh);
+      //appendnew_next_sd_2Xj20Ht9f7GhnmKJ
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_nAnCruwWwmT2U6S6');
+      return this.errorHandler(bh, e, 'sd_2Xj20Ht9f7GhnmKJ');
     }
   }
 
@@ -150,7 +164,7 @@ export class forgot_passwordComponent {
       const commonInstance: common = this.__page_injector__.get(common);
 
       let outputVariables = await commonInstance.generateRandomNumber(
-        this.page.userDetails.email
+        this.page.email
       );
       this.page.random = outputVariables.local.random;
 
@@ -177,13 +191,16 @@ export class forgot_passwordComponent {
     try {
       const page = this.page;
       bh.body = {
-        email: page.userDetails.email,
-        code: page.random,
+        email: page.email,
+        // code: page.random,
+        OTP: page.random,
       };
+
+      // console.log(bh.body)
 
       bh.url = page.ssdUrl + 'forgot-password';
 
-      console.log('form:', page.forgotPassword);
+      // console.log("form:", page.forgotPasswordForm)
       bh = this.sd_8vELHlSQYJthK1VQ(bh);
       //appendnew_next_sd_LSh7NpWWTjA7NlY6
       return bh;
@@ -195,12 +212,12 @@ export class forgot_passwordComponent {
   async sd_8vELHlSQYJthK1VQ(bh) {
     try {
       let requestOptions = {
-        url: this.page.url,
-        method: 'post',
+        url: bh.url,
+        method: 'put',
         responseType: 'json',
         headers: {},
         params: {},
-        body: this.page.body,
+        body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_rT7Iv9cm3h7pEb8y(bh);
