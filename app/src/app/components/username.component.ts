@@ -5,6 +5,7 @@
 
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
+import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -80,7 +81,7 @@ export class usernameComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_Gbn68Q4K0y31QQwg(bh);
+      bh = this.sd_sGlzf6ICld962W6M(bh);
       //appendnew_next_changeUsername
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8Y55FILZiHv0qHei');
@@ -90,9 +91,7 @@ export class usernameComponent {
 
   sd_dxrVY9Rzxi5uTvHQ(bh) {
     try {
-      this.page.loggedInUser = JSON.parse(
-        sessionStorage.getItem('loggedInUser')
-      );
+      this.page.userDetails = JSON.parse(sessionStorage.getItem('user'));
       bh = this.sd_GHFhBt0oZxdnQMSY(bh);
       //appendnew_next_sd_dxrVY9Rzxi5uTvHQ
       return bh;
@@ -116,7 +115,6 @@ export class usernameComponent {
       this.page.usernameForm = undefined;
       this.page.usernamePattern =
         /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@]).{8,30}$/;
-      this.page.parsedStorage = undefined;
       bh = this.sd_uRHW1CRPVztMBH4M(bh);
       //appendnew_next_sd_nOdVft6eatxx7Ukt
       return bh;
@@ -129,7 +127,7 @@ export class usernameComponent {
     try {
       const page = this.page;
       page.usernameForm = new FormGroup({
-        newUsername: new FormControl('', [
+        username: new FormControl('', [
           Validators.required,
           Validators.pattern(page.usernamePattern),
         ]),
@@ -137,9 +135,10 @@ export class usernameComponent {
 
       console.log(page.usernameForm);
 
-      console.log('loggedInUser:', page.loggedInUser);
-      page.parsedStorage = JSON.parse(page.loggedInUser);
-      console.log('parsed storage:', page.parsedStorage);
+      console.log('userDetailss:', page.userDetails);
+      console.log(page.usernameForm);
+      // page.parsedStorage = JSON.parse(page.loggedInUser)
+      // console.log("parsed storage:", page.parsedStorage)
       //appendnew_next_sd_uRHW1CRPVztMBH4M
       return bh;
     } catch (e) {
@@ -160,28 +159,118 @@ export class usernameComponent {
     }
   }
 
-  sd_Gbn68Q4K0y31QQwg(bh) {
+  sd_sGlzf6ICld962W6M(bh) {
     try {
-      const page = this.page; // bh.username = page.usernameForm.controls.newUsername.value
-      // console.log(bh)
-
-      // page.loggedInUser.username = page.usernameForm.controls.newUsername.value
-      // console.log(page.loggedInUser.username)
-      bh = this.sd_SU0KHpnfJlwPkjxJ(bh);
-      //appendnew_next_sd_Gbn68Q4K0y31QQwg
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_CHyEx4ZQtCVvlWFH(bh);
+      //appendnew_next_sd_sGlzf6ICld962W6M
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Gbn68Q4K0y31QQwg');
+      return this.errorHandler(bh, e, 'sd_sGlzf6ICld962W6M');
     }
   }
 
-  sd_SU0KHpnfJlwPkjxJ(bh) {
+  sd_CHyEx4ZQtCVvlWFH(bh) {
     try {
-      sessionStorage.setItem('loggedInUser', JSON.stringify(bh.username));
-      //appendnew_next_sd_SU0KHpnfJlwPkjxJ
+      const page = this.page;
+      bh.body = {
+        email: page.userDetails.email,
+        username: page.usernameForm.value.username,
+        collection: 'users',
+      };
+
+      // bh.body = {
+      //     email: page.userDetails.email,
+      //     collection: 'users'
+      // };
+
+      bh.url = page.ssdUrl + 'update';
+      bh.url2 = page.ssdUrl + `get-user/${page.userDetails._id}`;
+
+      bh = this.sd_wYISw7qqKxA6Xq8m(bh);
+      //appendnew_next_sd_CHyEx4ZQtCVvlWFH
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_SU0KHpnfJlwPkjxJ');
+      return this.errorHandler(bh, e, 'sd_CHyEx4ZQtCVvlWFH');
+    }
+  }
+
+  async sd_wYISw7qqKxA6Xq8m(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'put',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_fNhq50989haHDjT8(bh);
+      //appendnew_next_sd_wYISw7qqKxA6Xq8m
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wYISw7qqKxA6Xq8m');
+    }
+  }
+
+  async sd_fNhq50989haHDjT8(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url2,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.data = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_Qnq8xnGbHoHOLnWD(bh);
+      //appendnew_next_sd_fNhq50989haHDjT8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fNhq50989haHDjT8');
+    }
+  }
+
+  sd_Qnq8xnGbHoHOLnWD(bh) {
+    try {
+      const page = this.page;
+      console.log('y', page.result);
+
+      console.log('x', page.data);
+
+      bh = this.sd_PPlEqPGhsGPk0D3o(bh);
+      //appendnew_next_sd_Qnq8xnGbHoHOLnWD
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Qnq8xnGbHoHOLnWD');
+    }
+  }
+
+  sd_PPlEqPGhsGPk0D3o(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(this.page.data));
+      bh = this.sd_BdkXBLh5tBYukSLx(bh);
+      //appendnew_next_sd_PPlEqPGhsGPk0D3o
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_PPlEqPGhsGPk0D3o');
+    }
+  }
+
+  sd_BdkXBLh5tBYukSLx(bh) {
+    try {
+      this.__page_injector__.get(MatSnackBar).open('Username Changed', 'OK', {
+        duration: 4000,
+        direction: 'ltr',
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+      });
+      //appendnew_next_sd_BdkXBLh5tBYukSLx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_BdkXBLh5tBYukSLx');
     }
   }
 

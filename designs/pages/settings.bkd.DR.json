@@ -1507,13 +1507,13 @@
                             },
                             {
                                 "_key": "layoutAlign",
-                                "_value": "start",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "stretch",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -1538,7 +1538,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "width: 100%; height: 100%;",
+                                    "_value": "width: 50%; height: 50%;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -1990,13 +1990,13 @@
                             },
                             {
                                 "_key": "layoutAlign",
-                                "_value": "start",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "stretch",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -2021,7 +2021,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "width: 100%; height: 100%;",
+                                    "_value": "width: 50%; height: 50%;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2473,13 +2473,13 @@
                             },
                             {
                                 "_key": "layoutAlign",
-                                "_value": "start",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "stretch",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -2504,7 +2504,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "width: 100%; height: 100%;",
+                                    "_value": "width: 50%; height: 50%;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -2844,6 +2844,7 @@
                 "6115dae0-4339-c3ac-c495-68c35ef31a07": {
                     "paletteKey": "FlexLayoutCol",
                     "parentEditorKey": "bdf10586-3f2f-a6de-ec50-73b09b18555a",
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -2902,11 +2903,18 @@
                             "_value": "true",
                             "_type": "kv",
                             "_attrDef": "p"
+                        },
+                        {
+                            "_key": "[routerLink]",
+                            "_value": "['/coming-soon']",
+                            "_type": "kv",
+                            "_attrDef": "c"
                         }
                     ],
                     "885c002a-dd57-1e2d-8b4c-8c0fcc98453e": {
                         "paletteKey": "FlexLayoutRow",
                         "parentEditorKey": "6115dae0-4339-c3ac-c495-68c35ef31a07",
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2950,13 +2958,13 @@
                             },
                             {
                                 "_key": "layoutAlign",
-                                "_value": "start",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
                             {
                                 "_key": "pLayoutAlign",
-                                "_value": "stretch",
+                                "_value": "center",
                                 "_type": "a",
                                 "_attrDef": "p"
                             },
@@ -2970,6 +2978,7 @@
                         "a7ff1bf1-c7e8-d937-572e-95d5ae237ddc": {
                             "paletteKey": "NG-image",
                             "parentEditorKey": "885c002a-dd57-1e2d-8b4c-8c0fcc98453e",
+                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2981,7 +2990,7 @@
                                 },
                                 {
                                     "_key": "style",
-                                    "_value": "width: 100%; height: 100%;",
+                                    "_value": "width: 50%; height: 50%;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3039,6 +3048,7 @@
                     "0f793323-27bb-1580-7d91-534b615caeb6": {
                         "paletteKey": "FlexLayoutRow",
                         "parentEditorKey": "6115dae0-4339-c3ac-c495-68c35ef31a07",
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -3103,6 +3113,7 @@
                             "paletteKey": "Html5",
                             "parentEditorKey": "0f793323-27bb-1580-7d91-534b615caeb6",
                             "isAdvancedComponent": true,
+                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3293,6 +3304,7 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "a8b000fc-9999-53f1-5729-8fd89e59bccf",
                                 "isAdvancedChildComponent": true,
+                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {

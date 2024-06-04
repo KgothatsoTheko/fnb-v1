@@ -11,13 +11,13 @@ import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-profile',
-  templateUrl: './profile.template.html',
+  selector: 'bh-coming_soon',
+  templateUrl: './coming_soon.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class profileComponent {
+export class coming_soonComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -34,7 +34,7 @@ export class profileComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_RZl1lPTvq2B3CnEO(bh);
+      this.sd_rCryj0d3w1AcXYk1(bh);
     }
   }
 
@@ -46,13 +46,13 @@ export class profileComponent {
     //append_listeners
   }
 
-  sd_RZl1lPTvq2B3CnEO(bh) {
+  sd_rCryj0d3w1AcXYk1(bh) {
     try {
-      bh = this.sd_4eAqkKdvjjOXSJWW(bh);
-      //appendnew_next_sd_RZl1lPTvq2B3CnEO
+      bh = this.sd_u5WgrKOEBJuzHou5(bh);
+      //appendnew_next_sd_rCryj0d3w1AcXYk1
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_RZl1lPTvq2B3CnEO');
+      return this.errorHandler(bh, e, 'sd_rCryj0d3w1AcXYk1');
     }
   }
 
@@ -64,58 +64,33 @@ export class profileComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_4zLalLXWupkFnGD7(bh);
+      bh = this.sd_k4B7JboW63w4JUcP(bh);
       //appendnew_next_goBack
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_HydofGyzBYWDNkwc');
+      return this.errorHandler(bh, e, 'sd_d2KKfBMbysoiJcTH');
     }
   }
+  //appendnew_flow_coming_soonComponent_start
 
-  logout(...others) {
-    let bh: any = {};
+  sd_u5WgrKOEBJuzHou5(bh) {
     try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_EONESmdyvguzBVw2(bh);
-      //appendnew_next_logout
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Gs53YiVAeSkcj5Gz');
-    }
-  }
-  //appendnew_flow_profileComponent_start
-
-  sd_4eAqkKdvjjOXSJWW(bh) {
-    try {
-      //appendnew_next_sd_4eAqkKdvjjOXSJWW
+      //appendnew_next_sd_u5WgrKOEBJuzHou5
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_4eAqkKdvjjOXSJWW');
+      return this.errorHandler(bh, e, 'sd_u5WgrKOEBJuzHou5');
     }
   }
 
-  async sd_4zLalLXWupkFnGD7(bh) {
+  async sd_k4B7JboW63w4JUcP(bh) {
     try {
       const commonInstance: common = this.__page_injector__.get(common);
 
       let outputVariables = await commonInstance.goBack();
 
-      //appendnew_next_sd_4zLalLXWupkFnGD7
+      //appendnew_next_sd_k4B7JboW63w4JUcP
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_4zLalLXWupkFnGD7');
-    }
-  }
-
-  sd_EONESmdyvguzBVw2(bh) {
-    try {
-      sessionStorage.removeItem('user');
-      //appendnew_next_sd_EONESmdyvguzBVw2
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_EONESmdyvguzBVw2');
+      return this.errorHandler(bh, e, 'sd_k4B7JboW63w4JUcP');
     }
   }
 
@@ -135,5 +110,5 @@ export class profileComponent {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_profileComponent_Catch
+  //appendnew_flow_coming_soonComponent_Catch
 }

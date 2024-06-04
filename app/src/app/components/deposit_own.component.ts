@@ -117,7 +117,7 @@ export class deposit_ownComponent {
         depositAmount: new FormControl('', Validators.required),
       });
 
-      console.log('page', page);
+      // console.log('page', page)
       //appendnew_next_sd_n1swxNd5XPSBN52k
       return bh;
     } catch (e) {
@@ -140,8 +140,7 @@ export class deposit_ownComponent {
 
   sd_B1W8fHGFHUOh5dHk(bh) {
     try {
-      const page = this.page;
-      console.log(page.depositForm.value);
+      const page = this.page; // console.log(page.depositForm.value)
       bh = this.sd_F4KXyA8KsxeWXj4H(bh);
       //appendnew_next_sd_B1W8fHGFHUOh5dHk
       return bh;
@@ -156,9 +155,7 @@ export class deposit_ownComponent {
         this.sdService.getPathAndQParamsObj('/bank');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_F4KXyA8KsxeWXj4H
       return bh;
     } catch (e) {
