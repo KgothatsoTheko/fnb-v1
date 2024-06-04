@@ -17,12 +17,12 @@
         Username details</h1>
       <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label class="message-fz-18 profile-gray-text">
           Current username</label><label *ngIf="page.usernameForm.valid" class="message-fz-18">
-          <!-- {{page.loggedInUser.name}} -->
-          {{page.usernameForm.controls.newUsername.value}}</label></div>
+          {{page.userDetails.username}}
+          <!-- {{page.usernameForm.controls.newUsername.value}} --></label></div>
       <div fxLayout="column wrap" style="height: 20%; " fxLayoutAlign="start stretch" [fxShow]="true"><label class="profile-gray-text message-margin-top-6px message-fz-18">
           New username</label>
         <div style="background-color: #80808014; height: 35%" class="message-margin-top-6px">
-          <input [pattern]="page.usernamePattern" formControlName="newUsername" type="text" style="width: 98%; height:100% ; border: 2px solid gray;
+          <input [pattern]="page.usernamePattern" formControlName="username" type="text" style="width: 98%; height:100% ; border: 2px solid gray;
     border-radius: 20px; font-size: 18px; background-color: #80808014; padding-left: 6px">
         </div><label *ngIf="(page.usernameForm.controls.newUsername?.touched) &amp;&amp; (page.usernameForm.controls.newUsername?.errors?.required)" style="color: red; " class="my-profile-margin-top-1em">
           New user name is required</label>
@@ -41,6 +41,6 @@
           You cannot use an ID number as a username.
         </label></div>
     </div>
-    <div fxLayout="row wrap" style="left: 0" class="landing-full-width limits-footer-btn" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="limits-btn" (click)="changeUsername(page.usernameForm)">Change</button></div>
+    <div fxLayout="row wrap" style="left: 0" class="landing-full-width limits-footer-btn" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="limits-btn" (click)="changeUsername(page.usernameForm)" [disabled]="false">Change</button></div>
   </form>
 </div>

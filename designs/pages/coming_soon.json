@@ -1,39 +1,39 @@
 [
     {
-        "id": "sd_vPNvaEpfinZ4fb1w",
+        "id": "sd_5LfjUB7qBjaoyPIC",
         "type": "tab",
-        "createdDate": "2024-05-14T09:40:35.181Z",
-        "label": "profile",
+        "createdDate": "2024-06-03T12:17:27.248Z",
+        "label": "coming_soon",
         "disabled": false,
         "info": "",
         "functionSeq": 0,
         "generateNext": true,
-        "serviceName": "profileComponent"
+        "serviceName": "coming_soonComponent"
     },
     {
-        "id": "sd_RZl1lPTvq2B3CnEO",
+        "id": "sd_rCryj0d3w1AcXYk1",
         "type": "OnInit",
-        "z": "sd_vPNvaEpfinZ4fb1w",
+        "z": "sd_5LfjUB7qBjaoyPIC",
         "viewType": "common",
         "nodeType": "start",
         "name": "",
-        "functionName": "sd_RZl1lPTvq2B3CnEO",
+        "functionName": "sd_rCryj0d3w1AcXYk1",
         "category": "Lifecycle Events",
         "x": 30,
         "y": 30,
         "wires": [
             [
-                "sd_4eAqkKdvjjOXSJWW"
+                "sd_u5WgrKOEBJuzHou5"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "profileComponent"
+        "serviceName": "coming_soonComponent"
     },
     {
-        "id": "sd_4eAqkKdvjjOXSJWW",
+        "id": "sd_u5WgrKOEBJuzHou5",
         "type": "PageVariables",
-        "z": "sd_vPNvaEpfinZ4fb1w",
+        "z": "sd_5LfjUB7qBjaoyPIC",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
@@ -41,7 +41,7 @@
         "outputs": 1,
         "operation": "set",
         "globalVariables": [],
-        "functionName": "sd_4eAqkKdvjjOXSJWW",
+        "functionName": "sd_u5WgrKOEBJuzHou5",
         "category": "Function",
         "x": 180,
         "y": 30,
@@ -50,13 +50,13 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "profileComponent",
+        "serviceName": "coming_soonComponent",
         "generated": true
     },
     {
-        "id": "sd_HydofGyzBYWDNkwc",
+        "id": "sd_d2KKfBMbysoiJcTH",
         "type": "PageStart",
-        "z": "sd_vPNvaEpfinZ4fb1w",
+        "z": "sd_5LfjUB7qBjaoyPIC",
         "viewType": "pages",
         "nodeType": "start",
         "name": "Go Back",
@@ -66,21 +66,21 @@
         "flow_type": "sync",
         "functionName": "goBack",
         "category": "General",
-        "x": 45,
-        "y": 180,
+        "x": 65,
+        "y": 160,
         "wires": [
             [
-                "sd_4zLalLXWupkFnGD7"
+                "sd_k4B7JboW63w4JUcP"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "profileComponent"
+        "serviceName": "coming_soonComponent"
     },
     {
-        "id": "sd_4zLalLXWupkFnGD7",
+        "id": "sd_k4B7JboW63w4JUcP",
         "type": "PageCallService",
-        "z": "sd_vPNvaEpfinZ4fb1w",
+        "z": "sd_5LfjUB7qBjaoyPIC",
         "viewType": "pages",
         "nodeType": "flow",
         "name": "",
@@ -108,68 +108,16 @@
         "inputParams": [],
         "accept_bh": false,
         "accept_csd": true,
-        "functionName": "sd_4zLalLXWupkFnGD7",
+        "functionName": "sd_k4B7JboW63w4JUcP",
         "category": "General",
-        "x": 165,
-        "y": 180,
+        "x": 185,
+        "y": 160,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
-        "serviceName": "profileComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_Gs53YiVAeSkcj5Gz",
-        "type": "PageStart",
-        "z": "sd_vPNvaEpfinZ4fb1w",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "logout",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "logout",
-        "category": "General",
-        "x": 40,
-        "y": 340,
-        "wires": [
-            [
-                "sd_EONESmdyvguzBVw2"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "profileComponent"
-    },
-    {
-        "id": "sd_EONESmdyvguzBVw2",
-        "type": "Storage",
-        "z": "sd_vPNvaEpfinZ4fb1w",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "removeItem",
-        "storageType": "sessionStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "user"
-        },
-        "value": {},
-        "resultMapping": {},
-        "functionName": "sd_EONESmdyvguzBVw2",
-        "category": "Storage",
-        "x": 160,
-        "y": 340,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "profileComponent",
+        "serviceName": "coming_soonComponent",
         "generated": true
     }
 ]

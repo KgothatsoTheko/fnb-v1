@@ -146,9 +146,9 @@ export class forgot_passwordComponent {
       const page = this.page;
       if (bh.input.form) {
         page.email = bh.input.form.get('email').value;
-        console.log('valid');
+        // console.log("valid")
       } else {
-        console.log('not valid');
+        // console.log("not valid")
       }
 
       bh = this.sd_CMEjWYscrjevbYPX(bh);
@@ -190,17 +190,22 @@ export class forgot_passwordComponent {
   sd_LSh7NpWWTjA7NlY6(bh) {
     try {
       const page = this.page;
-      bh.body = {
+      bh.input.body = {
         email: page.email,
-        // code: page.random,
-        OTP: page.random,
+        otp: page.random,
       };
 
-      // console.log(bh.body)
+      bh.user = {
+        email: page.email,
+        collection: 'users',
+      };
 
       bh.url = page.ssdUrl + 'forgot-password';
+      bh.url2 = page.ssdUrl + `get-user/${page.email}`;
 
-      // console.log("form:", page.forgotPasswordForm)
+      console.log('bh', bh);
+      console.log('page', page);
+
       bh = this.sd_8vELHlSQYJthK1VQ(bh);
       //appendnew_next_sd_LSh7NpWWTjA7NlY6
       return bh;
@@ -217,14 +222,58 @@ export class forgot_passwordComponent {
         responseType: 'json',
         headers: {},
         params: {},
-        body: bh.body,
+        body: bh.input.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_rT7Iv9cm3h7pEb8y(bh);
+      bh = this.sd_hhbUoIC1At7nJ5z4(bh);
       //appendnew_next_sd_8vELHlSQYJthK1VQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8vELHlSQYJthK1VQ');
+    }
+  }
+
+  async sd_hhbUoIC1At7nJ5z4(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url2,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.user,
+      };
+      this.page.userDetails = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_FGMGlJIXhjO3oSmm(bh);
+      //appendnew_next_sd_hhbUoIC1At7nJ5z4
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hhbUoIC1At7nJ5z4');
+    }
+  }
+
+  sd_FGMGlJIXhjO3oSmm(bh) {
+    try {
+      const page = this.page;
+      console.log('page.userDetails', page.userDetails);
+      console.log('page.result', page.result);
+
+      bh = this.sd_lcGzAslv2kifP3X5(bh);
+      //appendnew_next_sd_FGMGlJIXhjO3oSmm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_FGMGlJIXhjO3oSmm');
+    }
+  }
+
+  sd_lcGzAslv2kifP3X5(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(this.page.userDetails));
+      bh = this.sd_rT7Iv9cm3h7pEb8y(bh);
+      //appendnew_next_sd_lcGzAslv2kifP3X5
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lcGzAslv2kifP3X5');
     }
   }
 
@@ -234,7 +283,9 @@ export class forgot_passwordComponent {
         this.sdService.getPathAndQParamsObj('/verify-code');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_rT7Iv9cm3h7pEb8y
       return bh;
     } catch (e) {

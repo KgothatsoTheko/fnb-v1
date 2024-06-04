@@ -903,6 +903,7 @@
                 {
                     "_key": "class",
                     "_value": [
+                        "add-profile-pic-ff-roboto",
                         "landing-middle"
                     ],
                     "_type": "dav",
@@ -980,7 +981,7 @@
                     },
                     {
                         "_key": "fxLayoutGap",
-                        "_value": "",
+                        "_value": "1em",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -1333,13 +1334,13 @@
                         },
                         {
                             "_key": "layoutAlign",
-                            "_value": "start",
+                            "_value": "space-between",
                             "_type": "a",
                             "_attrDef": "p"
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "stretch",
+                            "_value": "space-between",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -1465,13 +1466,13 @@
                                 },
                                 {
                                     "_key": "layoutAlign",
-                                    "_value": "start",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "pLayoutAlign",
-                                    "_value": "stretch",
+                                    "_value": "center",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 },
@@ -1502,7 +1503,7 @@
                                     },
                                     {
                                         "_key": "style",
-                                        "_value": "width:100%; height: 100%",
+                                        "_value": "width:50%; height: 50%",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -2012,7 +2013,6 @@
                     "4601349a-d0a7-9066-3e50-a053f31809ae": {
                         "paletteKey": "FlexLayoutCol",
                         "parentEditorKey": "01c2435b-6628-21a9-63c7-060bf22cd322",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2083,7 +2083,6 @@
                         "0f42443a-f227-ab69-4adc-d465815fd343": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "4601349a-d0a7-9066-3e50-a053f31809ae",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2148,7 +2147,6 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "0f42443a-f227-ab69-4adc-d465815fd343",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2336,7 +2334,6 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "c1383f63-117d-e1db-4847-89ca86de3a27",
                                     "isAdvancedChildComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -2364,7 +2361,6 @@
                         "97d1bac0-b5ce-1886-78df-2b44555241e5": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "4601349a-d0a7-9066-3e50-a053f31809ae",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2429,7 +2425,6 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "97d1bac0-b5ce-1886-78df-2b44555241e5",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2619,7 +2614,6 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "5324e474-33f3-11f2-90b9-4573eeb4c79c",
                                     "isAdvancedChildComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -3904,7 +3898,6 @@
                     "ec39c173-d7a7-1132-ee33-1126f5d53319": {
                         "paletteKey": "FlexLayoutCol",
                         "parentEditorKey": "01c2435b-6628-21a9-63c7-060bf22cd322",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -3974,7 +3967,6 @@
                         "bdf3bb89-8236-53bf-834c-caa8e264e4e3": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "ec39c173-d7a7-1132-ee33-1126f5d53319",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -4039,7 +4031,6 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "bdf3bb89-8236-53bf-834c-caa8e264e4e3",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4227,7 +4218,6 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "a386ff3a-03f3-8254-7ef6-48c14f64e8bc",
                                     "isAdvancedChildComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {
@@ -4255,7 +4245,6 @@
                         "cdd950c4-3d72-8513-2972-00fde177a8b6": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "ec39c173-d7a7-1132-ee33-1126f5d53319",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -4320,7 +4309,6 @@
                                 "paletteKey": "Html5",
                                 "parentEditorKey": "cdd950c4-3d72-8513-2972-00fde177a8b6",
                                 "isAdvancedComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -4510,7 +4498,6 @@
                                     "paletteKey": "html-editor",
                                     "parentEditorKey": "85ac2707-efbf-f775-c815-42b8fed0a708",
                                     "isAdvancedChildComponent": true,
-                                    "isCommented": "false",
                                     "commentid": null,
                                     "designerReference": [
                                         {

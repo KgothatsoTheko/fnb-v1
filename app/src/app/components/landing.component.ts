@@ -155,7 +155,7 @@ export class landingComponent {
           image: '/Web/Images/manage-debt.PNG',
           route: '/login',
         },
-        { label: '', image: '/Web/Images/add.PNG', route: '' },
+        { label: '', image: '/Web/Images/add.PNG', route: '/coming-soon' },
       ];
 
       bh.isOffline = [

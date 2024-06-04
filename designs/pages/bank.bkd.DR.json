@@ -583,6 +583,12 @@
                                 "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[routerLink]",
+                                "_value": "['/coming-soon']",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ],
                         "241a6637-a761-1a4f-7b0a-bc2f39749465": {
@@ -792,7 +798,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<span class=\"material-symbols-outlined\" (click) = \"goToSearch()\">\r\nsearch\r\n</span>",
+                                        "_value": "<span class=\"material-symbols-outlined\">\r\nsearch\r\n</span>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -859,6 +865,12 @@
                                 "_value": "true",
                                 "_type": "kv",
                                 "_attrDef": "p"
+                            },
+                            {
+                                "_key": "[routerLink]",
+                                "_value": "['/coming-soon']",
+                                "_type": "kv",
+                                "_attrDef": "c"
                             }
                         ],
                         "fb2b7d33-c109-157a-4651-f5578f825a15": {
@@ -1068,7 +1080,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "<span class=\"material-symbols-outlined\" (click) = \"openScanner()\">\r\n                qr_code\r\n</span>",
+                                        "_value": "<span class=\"material-symbols-outlined\">\r\n                qr_code\r\n</span>",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }

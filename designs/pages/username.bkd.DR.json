@@ -1970,7 +1970,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<!-- {{page.loggedInUser.name}} -->\r\n{{page.usernameForm.controls.newUsername.value}}",
+                                    "_value": "{{page.userDetails.username}}\r\n<!-- {{page.usernameForm.controls.newUsername.value}} -->",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -2261,7 +2261,6 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "9b2bac94-feaa-5f68-7bbd-4252858bbc8a",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2451,7 +2450,6 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "427fa7f2-db4d-16ee-8701-2834a5a54119",
                             "isAdvancedChildComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2468,7 +2466,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<input [pattern]=\"page.usernamePattern\" formControlName = \"newUsername\" type=\"text\" style=\"width: 98%; height:100% ; border: 2px solid gray;\r\n    border-radius: 20px; font-size: 18px; background-color: #80808014; padding-left: 6px\">",
+                                    "_value": "<input [pattern]=\"page.usernamePattern\" formControlName = \"username\" type=\"text\" style=\"width: 98%; height:100% ; border: 2px solid gray;\r\n    border-radius: 20px; font-size: 18px; background-color: #80808014; padding-left: 6px\">",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -2479,7 +2477,6 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "9b2bac94-feaa-5f68-7bbd-4252858bbc8a",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2675,7 +2672,6 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "20a61255-f22c-0ce5-3466-da9fa6dd8e34",
                             "isAdvancedChildComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2703,7 +2699,6 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "9b2bac94-feaa-5f68-7bbd-4252858bbc8a",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -2899,7 +2894,6 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "04f9c939-49fc-4ccc-0fd0-f6c86bc32c35",
                             "isAdvancedChildComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3206,7 +3200,6 @@
             "a342a53c-321b-2605-c500-0c3f5b2b5bcc": {
                 "paletteKey": "FlexLayoutRow",
                 "parentEditorKey": "5e272416-edb8-3ba3-b532-ccfae73aa8b4",
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -3271,7 +3264,6 @@
                 "8e3d573a-498d-e83c-aa12-2e1a2fafdcc0": {
                     "paletteKey": "NG-button",
                     "parentEditorKey": "a342a53c-321b-2605-c500-0c3f5b2b5bcc",
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -3318,10 +3310,9 @@
                         },
                         {
                             "_key": "[disabled]",
-                            "_value": "",
+                            "_value": "false",
                             "_type": "kv",
-                            "_attrDef": "p",
-                            "_customAttributeFlag": "customInput"
+                            "_attrDef": "p"
                         },
                         {
                             "_key": "[disableRipple]",
