@@ -456,7 +456,7 @@
                                 },
                                 {
                                     "_key": "html",
-                                    "_value": "<span class=\"material-symbols-outlined pointer\" (click) = \"goBack()\">\r\n                arrow_back\r\n            </span>",
+                                    "_value": "<span class=\"material-symbols-outlined pointer\" (click) = \"goBack2()\">\r\n                arrow_back\r\n            </span>",
                                     "_type": "a",
                                     "_attrDef": "p"
                                 }
@@ -477,7 +477,7 @@
                             },
                             {
                                 "_key": "class",
-                                "_value": "",
+                                "_value": [],
                                 "_type": "dav",
                                 "_attrDef": "p"
                             },
@@ -947,7 +947,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "<span class=\"material-symbols-outlined pointer\" (click)=\"goBack()\">\r\n                close\r\n            </span>",
+                                "_value": "<span class=\"material-symbols-outlined pointer\" (click)=\"goBack2()\">\r\n                close\r\n            </span>",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }

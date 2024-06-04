@@ -1,6 +1,7 @@
 {
     "3647626e-aa39-1d27-e8cc-571f119d74b5": {
         "paletteKey": "FlexLayoutCol",
+        "isCommented": "false",
         "commentid": null,
         "designerReference": [
             {
@@ -32,7 +33,7 @@
             },
             {
                 "_key": "fxLayoutGap",
-                "_value": "",
+                "_value": "1em",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -64,6 +65,7 @@
         "7d0a2706-f8c8-ec15-d9e7-435eb021cb4f": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "3647626e-aa39-1d27-e8cc-571f119d74b5",
+            "isCommented": "false",
             "commentid": null,
             "designerReference": [
                 {
@@ -127,6 +129,7 @@
             "3ad88010-671c-9d0f-50f0-6143f5f61425": {
                 "paletteKey": "FlexLayoutCol",
                 "parentEditorKey": "7d0a2706-f8c8-ec15-d9e7-435eb021cb4f",
+                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -189,6 +192,7 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "3ad88010-671c-9d0f-50f0-6143f5f61425",
                     "isAdvancedComponent": true,
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -376,6 +380,7 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "51a52327-b84b-b599-15f6-39fbae8d7ad2",
                         "isAdvancedChildComponent": true,
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -683,6 +688,7 @@
         "d564b2ab-b80b-6c07-343d-bdcf6faface4": {
             "paletteKey": "FlexLayoutRow",
             "parentEditorKey": "3647626e-aa39-1d27-e8cc-571f119d74b5",
+            "isCommented": "false",
             "commentid": null,
             "designerReference": [
                 {
@@ -694,13 +700,14 @@
                 },
                 {
                     "_key": "style",
-                    "_value": "background:grey;",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
                 {
                     "_key": "class",
                     "_value": [
+                        "bank-full-width",
                         "bank-height-500px"
                     ],
                     "_type": "dav",
@@ -747,6 +754,7 @@
                 "paletteKey": "Html5",
                 "parentEditorKey": "d564b2ab-b80b-6c07-343d-bdcf6faface4",
                 "isAdvancedComponent": true,
+                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -757,7 +765,12 @@
                     },
                     {
                         "_key": "class",
-                        "_value": "",
+                        "_value": [
+                            "bank-margin-top-10px",
+                            "bank-gap-1em",
+                            "bank-column",
+                            "bank-flex"
+                        ],
                         "_type": "dav",
                         "_attrDef": "p"
                     },
@@ -934,6 +947,7 @@
                     "paletteKey": "html-editor",
                     "parentEditorKey": "ac4e7057-66b1-8e0a-a8d3-afb292b36534",
                     "isAdvancedChildComponent": true,
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -950,12 +964,141 @@
                         },
                         {
                             "_key": "html",
-                            "_value": "Scanner",
+                            "_value": " \r\n<ngx-scanner-qrcode #action = 'scanner' class=\"bank-height-500px\"></ngx-scanner-qrcode>\r\n        \r\n<button mat-raised-button (click)=\"action.isStart ? action.stop() : action.start()\">{{action.isStart ?\r\n        'Stop' : 'Start'}}</button>\r\n",
                             "_type": "a",
                             "_attrDef": "p"
                         }
                     ]
                 }
+            }
+        },
+        "38f1c372-3283-329e-20a0-4020cfdfd302": {
+            "paletteKey": "FlexLayoutRow",
+            "parentEditorKey": "3647626e-aa39-1d27-e8cc-571f119d74b5",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "Row",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "bank-full-width"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxFlex",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxLayoutGap",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "wrap",
+                    "_value": "wrap",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "layoutAlign",
+                    "_value": "start",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "pLayoutAlign",
+                    "_value": "stretch",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[fxShow]",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ],
+            "d094ceae-21b2-9b45-ff0d-98595c23cd4e": {
+                "paletteKey": "NG-button",
+                "parentEditorKey": "38f1c372-3283-329e-20a0-4020cfdfd302",
+                "commentid": null,
+                "designerReference": [
+                    {
+                        "_key": "style",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "class",
+                        "_value": [
+                            "bank-top-110px",
+                            "bank-purchase"
+                        ],
+                        "_type": "dav",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "buttonname",
+                        "_value": "ENTER SHORTCODE",
+                        "_type": "a",
+                        "_attrDef": "p",
+                        "_useAsLabel": true
+                    },
+                    {
+                        "_key": "color",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "(click)",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[disabled]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "[disableRipple]",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "type",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    },
+                    {
+                        "_key": "routerLink",
+                        "_value": "",
+                        "_type": "kv",
+                        "_attrDef": "p"
+                    }
+                ]
             }
         }
     }

@@ -1,4 +1,4 @@
-<div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+<div fxLayout="column wrap" class="bank-full-width" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
   <div fxLayout="row wrap" class="bank-padding-5px" fxLayoutAlign="space-between center" [fxShow]="true">
     <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
       <p>
@@ -12,8 +12,14 @@
       </div>
     </div>
   </div>
-  <div fxLayout="row wrap" style="background:grey;" class="bank-height-500px" fxLayoutAlign="center center" [fxShow]="true">
-    <div>
-      Scanner</div>
+  <div fxLayout="row wrap" class="bank-full-width bank-height-500px" fxLayoutAlign="center center" [fxShow]="true">
+    <div class="bank-margin-top-10px bank-gap-1em bank-column bank-flex">
+
+      <ngx-scanner-qrcode #action="scanner" class="bank-height-500px"></ngx-scanner-qrcode>
+
+      <button mat-raised-button (click)="action.isStart ? action.stop() : action.start()">{{action.isStart ?
+        &apos;Stop&apos; : &apos;Start&apos;}}</button>
+    </div>
   </div>
+  <div fxLayout="row wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button class="bank-top-110px bank-purchase">ENTER SHORTCODE</button></div>
 </div>

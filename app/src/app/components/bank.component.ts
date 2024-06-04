@@ -8,6 +8,7 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -179,10 +180,45 @@ export class bankComponent {
 
   sd_yzNTTPPwdiMjtXgw(bh) {
     try {
+      this.page.currentQuote = undefined;
+      bh = this.sd_AZGO8I8Cn77iGbQU(bh);
       //appendnew_next_sd_yzNTTPPwdiMjtXgw
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_yzNTTPPwdiMjtXgw');
+    }
+  }
+
+  sd_AZGO8I8Cn77iGbQU(bh) {
+    try {
+      const commonInstance: common = this.__page_injector__.get(common);
+      bh.currentQuote = commonInstance['currentQuote'];
+      bh = this.sd_w5cpEroO58nEOohN(bh);
+      //appendnew_next_sd_AZGO8I8Cn77iGbQU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AZGO8I8Cn77iGbQU');
+    }
+  }
+
+  sd_w5cpEroO58nEOohN(bh) {
+    try {
+      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
+      page.currentQuote = page.currentQuote || 0;
+
+      if (bh.currentQuote) {
+        console.log('value');
+        page.currentQuote = bh.currentQuote.input.newQuote; // Subtracting the new quote value
+        console.log('new bh :', bh.currentQuote.input.newQuote);
+      } else {
+        console.log('no value');
+        page.currentQuote = 100;
+      }
+
+      //appendnew_next_sd_w5cpEroO58nEOohN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_w5cpEroO58nEOohN');
     }
   }
 

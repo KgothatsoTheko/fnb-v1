@@ -9,6 +9,7 @@ import { FormBuilder } from '@angular/forms'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -72,10 +73,26 @@ export class buy_electricityComponent {
       return this.errorHandler(bh, e, 'sd_wTwI5KXp8W9baa6R');
     }
   }
+
+  submit(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_eXX8BsfxhmCCZceN(bh);
+      //appendnew_next_submit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QJljhIzH0nQatkB8');
+    }
+  }
   //appendnew_flow_buy_electricityComponent_start
 
   sd_WflFAq94qqVyQOV6(bh) {
     try {
+      this.page.quote = undefined;
       //appendnew_next_sd_WflFAq94qqVyQOV6
       return bh;
     } catch (e) {
@@ -103,6 +120,19 @@ export class buy_electricityComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_YWfVfFZvLk9wAyQu');
+    }
+  }
+
+  async sd_eXX8BsfxhmCCZceN(bh) {
+    try {
+      const commonInstance: common = this.__page_injector__.get(common);
+
+      let outputVariables = await commonInstance.update(this.page.quote);
+
+      //appendnew_next_sd_eXX8BsfxhmCCZceN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eXX8BsfxhmCCZceN');
     }
   }
 

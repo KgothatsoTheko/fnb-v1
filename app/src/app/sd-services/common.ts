@@ -20,6 +20,8 @@ export class common {
   public random: any;
   public email: any;
 
+  public currentQuote: any;
+
   constructor(
     private sdService: SDBaseService,
     private router: Router,
@@ -85,6 +87,52 @@ export class common {
       return await this.errorHandler(bh, e, 'sd_7URbVYjuQh1rrIFw');
     }
   }
+
+  async update(newQuote = 0, ...others) {
+    let bh: any = {
+      input: {
+        newQuote,
+      },
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_DbXIiXM0h0l5FP71(bh);
+      //appendnew_next_update
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_vO7ZpSwQ0nvvbLo3');
+    }
+  }
+
+  async amount(...others) {
+    let bh: any = {
+      input: {},
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_SSD3DKzpFoOLZnwq(bh);
+      //appendnew_next_amount
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_gDxgBOtWEwBlKd2e');
+    }
+  }
   //appendnew_flow_common_start
 
   async sd_ZMlcqDyLVVUnwQuz(bh) {
@@ -128,6 +176,64 @@ export class common {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_8IfP9fSLeu6m7gEI');
+    }
+  }
+
+  async sd_DbXIiXM0h0l5FP71(bh) {
+    try {
+      bh = await this.sd_e0YkvY1IoU1EKOEY(bh);
+      //appendnew_next_sd_DbXIiXM0h0l5FP71
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_DbXIiXM0h0l5FP71');
+    }
+  }
+
+  async sd_e0YkvY1IoU1EKOEY(bh) {
+    try {
+      console.log('quote :', bh);
+      // bh.quote.next(bh.input.newQuote)
+      bh = await this.sd_fIHO9yfBT63eind0(bh);
+      //appendnew_next_sd_e0YkvY1IoU1EKOEY
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_e0YkvY1IoU1EKOEY');
+    }
+  }
+
+  async sd_fIHO9yfBT63eind0(bh) {
+    try {
+      this.currentQuote = bh;
+      //appendnew_next_sd_fIHO9yfBT63eind0
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_fIHO9yfBT63eind0');
+    }
+  }
+
+  async sd_SSD3DKzpFoOLZnwq(bh) {
+    try {
+      bh = await this.sd_iShVV0N6PNcKApKr(bh);
+      //appendnew_next_sd_SSD3DKzpFoOLZnwq
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_SSD3DKzpFoOLZnwq');
+    }
+  }
+
+  async sd_iShVV0N6PNcKApKr(bh) {
+    try {
+      // Declaring a quote
+      // bh.quote = new BehaviorSubject<string>("hello")
+      console.log('hello', bh);
+
+      // expose as an observable
+      // bh.currentQuote = bh.quote.asObservable()
+
+      //appendnew_next_sd_iShVV0N6PNcKApKr
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_iShVV0N6PNcKApKr');
     }
   }
 
