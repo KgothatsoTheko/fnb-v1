@@ -3,7 +3,6 @@
 //CORE_REFERENCE_IMPORTS
 //append_imports_start
 
-import { Location } from '@angular/common'; //_splitter_
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormControl, FormGroup } from '@angular/forms'; //_splitter_
 import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
@@ -11,16 +10,17 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { common } from 'app/sd-services/common'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-buy_electricity',
-  templateUrl: './buy_electricity.template.html',
+  selector: 'bh-airtime_details',
+  templateUrl: './airtime_details.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class buy_electricityComponent {
+export class airtime_detailsComponent {
   page: any = { dep: {} };
   constructor(
     private __page_injector__: Injector,
@@ -37,7 +37,7 @@ export class buy_electricityComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_ZwPp3oGDVg1iIWd4(bh);
+      this.sd_zjpiWOyBFghSqCKH(bh);
     }
   }
 
@@ -49,13 +49,43 @@ export class buy_electricityComponent {
     //append_listeners
   }
 
-  sd_ZwPp3oGDVg1iIWd4(bh) {
+  sd_zjpiWOyBFghSqCKH(bh) {
     try {
-      bh = this.sd_IfSSwRERBH4XQxJH(bh);
-      //appendnew_next_sd_ZwPp3oGDVg1iIWd4
+      bh = this.sd_2nITGwhCd7PRhjq6(bh);
+      //appendnew_next_sd_zjpiWOyBFghSqCKH
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ZwPp3oGDVg1iIWd4');
+      return this.errorHandler(bh, e, 'sd_zjpiWOyBFghSqCKH');
+    }
+  }
+
+  goBackToBank(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_Vu3Q5zgctIyUOJZl(bh);
+      //appendnew_next_goBackToBank
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_gqaQbtmVTkZueI6r');
+    }
+  }
+
+  buy(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_4ROZjjy39sOjCcZW(bh);
+      //appendnew_next_buy
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_x1qBKHWc0vQI4xpo');
     }
   }
 
@@ -67,64 +97,48 @@ export class buy_electricityComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_PWsTbDR05jXbzKTy(bh);
+      bh = this.sd_RXYbpHEPujHY7QNe(bh);
       //appendnew_next_goBack
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_wTwI5KXp8W9baa6R');
+      return this.errorHandler(bh, e, 'sd_st5m0B8MGxGA7FgV');
     }
   }
+  //appendnew_flow_airtime_detailsComponent_start
 
-  submit(...others) {
-    let bh: any = {};
+  sd_2nITGwhCd7PRhjq6(bh) {
     try {
-      bh = this.__page_injector__
-        .get(SDPageCommonService)
-        .constructFlowObject(this);
-      bh.input = {};
-      bh.local = {};
-      bh = this.sd_7cVyguTzWL9kbtS0(bh);
-      //appendnew_next_submit
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_QJljhIzH0nQatkB8');
-    }
-  }
-  //appendnew_flow_buy_electricityComponent_start
-
-  sd_IfSSwRERBH4XQxJH(bh) {
-    try {
-      bh = this.sd_WflFAq94qqVyQOV6(bh);
-      //appendnew_next_sd_IfSSwRERBH4XQxJH
+      bh = this.sd_L0DOWUtYu3QzOwWj(bh);
+      //appendnew_next_sd_2nITGwhCd7PRhjq6
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_IfSSwRERBH4XQxJH');
+      return this.errorHandler(bh, e, 'sd_2nITGwhCd7PRhjq6');
     }
   }
 
-  sd_WflFAq94qqVyQOV6(bh) {
+  sd_L0DOWUtYu3QzOwWj(bh) {
     try {
-      this.page.quote = undefined;
-      bh = this.sd_mHUWSZ76nH2kyQwZ(bh);
-      //appendnew_next_sd_WflFAq94qqVyQOV6
+      bh = this.sd_m1B9ke7dS6biVQd9(bh);
+      //appendnew_next_sd_L0DOWUtYu3QzOwWj
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_WflFAq94qqVyQOV6');
+      return this.errorHandler(bh, e, 'sd_L0DOWUtYu3QzOwWj');
     }
   }
 
-  sd_mHUWSZ76nH2kyQwZ(bh) {
+  sd_m1B9ke7dS6biVQd9(bh) {
     try {
       this.page.loggedInUser = JSON.parse(
         sessionStorage.getItem('loggedInUser')
       );
-      bh = this.sd_zz43ZgH2Icyxac5u(bh);
-      //appendnew_next_sd_mHUWSZ76nH2kyQwZ
+      bh = this.sd_vbyqwlYUD9u6Q1n9(bh);
+      //appendnew_next_sd_m1B9ke7dS6biVQd9
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_mHUWSZ76nH2kyQwZ');
+      return this.errorHandler(bh, e, 'sd_m1B9ke7dS6biVQd9');
     }
   }
 
-  sd_zz43ZgH2Icyxac5u(bh) {
+  sd_vbyqwlYUD9u6Q1n9(bh) {
     try {
       const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
       page.currentQuote = page.loggedInUser.balance;
@@ -137,6 +151,8 @@ export class buy_electricityComponent {
       //     console.log('no value');
       // }
 
+      console.log('page', page);
+
       const date = new Date();
 
       const day = date.getDate();
@@ -147,131 +163,130 @@ export class buy_electricityComponent {
 
       page.formattedDate = `${day} ${month} ${year} ${hours}:${minutes}`;
 
-      console.log('page', page);
-
-      page.electricityForm = new FormGroup({
+      page.airtimeForm = new FormGroup({
         customer: new FormControl(page.loggedInUser.name),
-        meterNumber: new FormControl(''),
+        cell: new FormControl(page.loggedInUser.cell),
+        networkProvider: new FormControl(''),
+        bundleType: new FormControl('Airtime'),
         amount: new FormControl(''),
-        cellphone: new FormControl(''),
+        fromAccount: new FormControl('Easy Zero'),
         transactionDate: new FormControl(page.formattedDate),
       });
 
-      //appendnew_next_sd_zz43ZgH2Icyxac5u
+      page.networkProvider = [
+        { value: 'delhi-0', viewValue: 'Delhi' },
+        { value: 'mumbai-1', viewValue: 'Mumbai' },
+        { value: 'pune-2', viewValue: 'Pune' },
+      ];
+
+      //appendnew_next_sd_vbyqwlYUD9u6Q1n9
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zz43ZgH2Icyxac5u');
+      return this.errorHandler(bh, e, 'sd_vbyqwlYUD9u6Q1n9');
     }
   }
 
-  sd_PWsTbDR05jXbzKTy(bh) {
+  async sd_Vu3Q5zgctIyUOJZl(bh) {
     try {
-      this.page.location = this.__page_injector__.get(Location);
-      bh = this.sd_YWfVfFZvLk9wAyQu(bh);
-      //appendnew_next_sd_PWsTbDR05jXbzKTy
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/bank');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_Vu3Q5zgctIyUOJZl
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PWsTbDR05jXbzKTy');
+      return this.errorHandler(bh, e, 'sd_Vu3Q5zgctIyUOJZl');
     }
   }
 
-  sd_YWfVfFZvLk9wAyQu(bh) {
-    try {
-      const page = this.page;
-      page.location.back();
-
-      //appendnew_next_sd_YWfVfFZvLk9wAyQu
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_YWfVfFZvLk9wAyQu');
-    }
-  }
-
-  async sd_7cVyguTzWL9kbtS0(bh) {
+  async sd_4ROZjjy39sOjCcZW(bh) {
     try {
       if (
         this.sdService.operators['gte'](
           this.page.loggedInUser.balance,
-          this.page.electricityForm.value.amount,
+          this.page.airtimeForm.value.amount,
           undefined,
           undefined
         )
       ) {
-        bh = this.sd_uuViWYba2ueOJw37(bh);
+        bh = this.sd_6hCfCYi0nbrxfeGQ(bh);
       } else {
-        bh = await this.sd_lmOQOnE9gGW0Jqxz(bh);
+        bh = await this.sd_CujTaU6EN7rlvVg2(bh);
       }
 
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_7cVyguTzWL9kbtS0');
+      return this.errorHandler(bh, e, 'sd_4ROZjjy39sOjCcZW');
     }
   }
 
-  sd_uuViWYba2ueOJw37(bh) {
+  sd_6hCfCYi0nbrxfeGQ(bh) {
     try {
       const page = this.page;
-      console.log('electricityForm', page.electricityForm.value);
+      console.log('airtimeForm', page.airtimeForm.value);
 
       page.loggedInUser.balance =
-        page.loggedInUser.balance - page.electricityForm.value.amount;
+        page.loggedInUser.balance - page.airtimeForm.value.amount;
 
       console.log('page', page);
-      bh = this.sd_ZNL962tT5IeCTqBZ(bh);
-      //appendnew_next_sd_uuViWYba2ueOJw37
+      bh = this.sd_sxgmbQZXtgUmpagW(bh);
+      //appendnew_next_sd_6hCfCYi0nbrxfeGQ
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_uuViWYba2ueOJw37');
+      return this.errorHandler(bh, e, 'sd_6hCfCYi0nbrxfeGQ');
     }
   }
 
-  sd_ZNL962tT5IeCTqBZ(bh) {
+  sd_sxgmbQZXtgUmpagW(bh) {
     try {
       sessionStorage.setItem(
         'loggedInUser',
         JSON.stringify(this.page.loggedInUser)
       );
-      bh = this.sd_OXfSViGaz0gjW5Jn(bh);
-      //appendnew_next_sd_ZNL962tT5IeCTqBZ
+      bh = this.sd_Igh9Z5stTzYOVqCk(bh);
+      //appendnew_next_sd_sxgmbQZXtgUmpagW
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_ZNL962tT5IeCTqBZ');
+      return this.errorHandler(bh, e, 'sd_sxgmbQZXtgUmpagW');
     }
   }
 
-  sd_OXfSViGaz0gjW5Jn(bh) {
+  sd_Igh9Z5stTzYOVqCk(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
-      bh = this.sd_Vy7Re1ff3VKGjGux(bh);
-      //appendnew_next_sd_OXfSViGaz0gjW5Jn
+      bh = this.sd_lAbfwbbbbQzhZxvw(bh);
+      //appendnew_next_sd_Igh9Z5stTzYOVqCk
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OXfSViGaz0gjW5Jn');
+      return this.errorHandler(bh, e, 'sd_Igh9Z5stTzYOVqCk');
     }
   }
 
-  sd_Vy7Re1ff3VKGjGux(bh) {
+  sd_lAbfwbbbbQzhZxvw(bh) {
     try {
       const page = this.page;
-      bh.url = page.ssdUrl + 'buy-electricity';
+      bh.url = page.ssdUrl + 'buy-airtime';
       bh.url2 = page.ssdUrl + 'update';
 
-      bh.body = page.electricityForm.value;
+      bh.body = page.airtimeForm.value;
 
       bh.body2 = {
         email: page.loggedInUser.email,
         collection: 'users',
         balance: page.loggedInUser.balance,
       };
-      bh = this.sd_cfsMwgXg1D8NTyNt(bh);
-      //appendnew_next_sd_Vy7Re1ff3VKGjGux
+      bh = this.sd_G4qQFwO4pCp2Hm3h(bh);
+      //appendnew_next_sd_lAbfwbbbbQzhZxvw
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Vy7Re1ff3VKGjGux');
+      return this.errorHandler(bh, e, 'sd_lAbfwbbbbQzhZxvw');
     }
   }
 
-  async sd_cfsMwgXg1D8NTyNt(bh) {
+  async sd_G4qQFwO4pCp2Hm3h(bh) {
     try {
       let requestOptions = {
         url: bh.url,
@@ -282,15 +297,15 @@ export class buy_electricityComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_lk2FRezJkeUEMuOc(bh);
-      //appendnew_next_sd_cfsMwgXg1D8NTyNt
+      bh = this.sd_0Pb0Uhvb5rO399T1(bh);
+      //appendnew_next_sd_G4qQFwO4pCp2Hm3h
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_cfsMwgXg1D8NTyNt');
+      return this.errorHandler(bh, e, 'sd_G4qQFwO4pCp2Hm3h');
     }
   }
 
-  async sd_lk2FRezJkeUEMuOc(bh) {
+  async sd_0Pb0Uhvb5rO399T1(bh) {
     try {
       let requestOptions = {
         url: bh.url2,
@@ -301,15 +316,15 @@ export class buy_electricityComponent {
         body: bh.body2,
       };
       this.page.update = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_86j6RevOd8e3ZKkO(bh);
-      //appendnew_next_sd_lk2FRezJkeUEMuOc
+      bh = this.sd_eIipOQSbbRJCI0Ka(bh);
+      //appendnew_next_sd_0Pb0Uhvb5rO399T1
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_lk2FRezJkeUEMuOc');
+      return this.errorHandler(bh, e, 'sd_0Pb0Uhvb5rO399T1');
     }
   }
 
-  sd_86j6RevOd8e3ZKkO(bh) {
+  sd_eIipOQSbbRJCI0Ka(bh) {
     try {
       this.__page_injector__
         .get(MatSnackBar)
@@ -319,15 +334,15 @@ export class buy_electricityComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
-      bh = this.sd_21gHL2xhMj3IYVca(bh);
-      //appendnew_next_sd_86j6RevOd8e3ZKkO
+      bh = this.sd_hKRqPgBx5eOz9254(bh);
+      //appendnew_next_sd_eIipOQSbbRJCI0Ka
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_86j6RevOd8e3ZKkO');
+      return this.errorHandler(bh, e, 'sd_eIipOQSbbRJCI0Ka');
     }
   }
 
-  async sd_21gHL2xhMj3IYVca(bh) {
+  async sd_hKRqPgBx5eOz9254(bh) {
     try {
       const { paramObj: qprm, path: path } =
         this.sdService.getPathAndQParamsObj('/bank');
@@ -336,14 +351,14 @@ export class buy_electricityComponent {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
-      //appendnew_next_sd_21gHL2xhMj3IYVca
+      //appendnew_next_sd_hKRqPgBx5eOz9254
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_21gHL2xhMj3IYVca');
+      return this.errorHandler(bh, e, 'sd_hKRqPgBx5eOz9254');
     }
   }
 
-  sd_lmOQOnE9gGW0Jqxz(bh) {
+  sd_CujTaU6EN7rlvVg2(bh) {
     try {
       this.__page_injector__.get(MatSnackBar).open('Insufficent funds', 'Ok', {
         duration: 3000,
@@ -351,10 +366,23 @@ export class buy_electricityComponent {
         horizontalPosition: 'center',
         verticalPosition: 'bottom',
       });
-      //appendnew_next_sd_lmOQOnE9gGW0Jqxz
+      //appendnew_next_sd_CujTaU6EN7rlvVg2
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_lmOQOnE9gGW0Jqxz');
+      return this.errorHandler(bh, e, 'sd_CujTaU6EN7rlvVg2');
+    }
+  }
+
+  async sd_RXYbpHEPujHY7QNe(bh) {
+    try {
+      const commonInstance: common = this.__page_injector__.get(common);
+
+      let outputVariables = await commonInstance.goBack();
+
+      //appendnew_next_sd_RXYbpHEPujHY7QNe
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RXYbpHEPujHY7QNe');
     }
   }
 
@@ -374,5 +402,5 @@ export class buy_electricityComponent {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_buy_electricityComponent_Catch
+  //appendnew_flow_airtime_detailsComponent_Catch
 }

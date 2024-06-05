@@ -23,7 +23,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_XdZkRUacWzIDiQhi"
+                "sd_tS4QeW0tWbtwlwf1"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -43,12 +43,10 @@
         "globalVariables": [],
         "functionName": "sd_tS4QeW0tWbtwlwf1",
         "category": "Function",
-        "x": 245,
+        "x": 145,
         "y": 40,
         "wires": [
-            [
-                "sd_5r3OUjpttnHskp2v"
-            ]
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -167,36 +165,13 @@
         "serviceDesignerType": "pages",
         "functionName": "sd_XdZkRUacWzIDiQhi",
         "category": "Function",
-        "x": 145,
-        "y": 40,
-        "wires": [
-            [
-                "sd_tS4QeW0tWbtwlwf1"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "qr_code_readerComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_5r3OUjpttnHskp2v",
-        "type": "Script",
-        "z": "sd_AOv9kIt72QmNixpa",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "console.log(page)",
-        "functionName": "sd_5r3OUjpttnHskp2v",
-        "category": "Function",
-        "x": 345,
+        "x": 245,
         "y": 40,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "qr_code_readerComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "qr_code_readerComponent"
     }
 ]

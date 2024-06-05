@@ -31,10 +31,9 @@ search
           <p class="bank-no-margin">
             63022441248</p>
         </div>
-        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-amount" (click)="goToTransactions()">R800</button>
-          <p>
-            {{page.currentQuote}}
-          </p>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <div (click)="goToTransactions()" class="bank-amount bank-flex bank-center-center">
+            R{{page.loggedInUser.balance}}</div>
         </div>
       </div>
     </mat-card-content>

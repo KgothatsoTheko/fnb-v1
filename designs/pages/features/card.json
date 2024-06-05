@@ -136,5 +136,49 @@
         "generateNext": false,
         "serviceName": "cardComponent",
         "generated": true
+    },
+    {
+        "id": "sd_IK1CkF0IHzFSFJhb",
+        "type": "PageStart",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "open scan to pay",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "openScanToPay",
+        "category": "General",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "sd_f3tkITNIYIIognCe"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "cardComponent"
+    },
+    {
+        "id": "sd_f3tkITNIYIIognCe",
+        "type": "Navigation",
+        "z": "sd_vfyfaZUquOcdXWt1",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/qr-code-reader",
+        "functionName": "sd_f3tkITNIYIIognCe",
+        "category": "Navigation",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "cardComponent",
+        "generated": true
     }
 ]

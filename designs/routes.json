@@ -105,6 +105,18 @@
             "component": "verify_codeComponent"
         },
         {
+            "path": "qr-code-manual",
+            "component": "qr_code_readerComponent"
+        },
+        {
+            "path": "airtime-details",
+            "component": "airtime_detailsComponent"
+        },
+        {
+            "path": "airtimeAnother-details",
+            "component": "airtimeAnother_detailsComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "landing",
             "pathMatch": "full",

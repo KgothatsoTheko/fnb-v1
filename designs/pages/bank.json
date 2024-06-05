@@ -11,59 +11,6 @@
         "serviceName": "bankComponent"
     },
     {
-        "id": "sd_mEliQLOZp4jIw1lX",
-        "type": "OnInit",
-        "z": "sd_OnCLyxjiMYoKcuBV",
-        "viewType": "common",
-        "nodeType": "start",
-        "name": "",
-        "functionName": "sd_mEliQLOZp4jIw1lX",
-        "category": "Lifecycle Events",
-        "x": 85,
-        "y": 80,
-        "wires": [
-            [
-                "sd_yzNTTPPwdiMjtXgw"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "bankComponent"
-    },
-    {
-        "id": "sd_yzNTTPPwdiMjtXgw",
-        "type": "PageVariables",
-        "z": "sd_OnCLyxjiMYoKcuBV",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "inputs": 1,
-        "outputs": 1,
-        "operation": "set",
-        "globalVariables": [
-            {
-                "textIp": "currentQuote",
-                "typedIpValue": {
-                    "type": "literal",
-                    "value": ""
-                }
-            }
-        ],
-        "functionName": "sd_yzNTTPPwdiMjtXgw",
-        "category": "Function",
-        "x": 185,
-        "y": 80,
-        "wires": [
-            [
-                "sd_AZGO8I8Cn77iGbQU"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "bankComponent",
-        "generated": true
-    },
-    {
         "id": "sd_EgdyPsf05vhDko23",
         "type": "PageStart",
         "z": "sd_OnCLyxjiMYoKcuBV",
@@ -472,7 +419,60 @@
         "generated": true
     },
     {
-        "id": "sd_AZGO8I8Cn77iGbQU",
+        "id": "sd_K89ydCREuQk6JRCc",
+        "type": "OnInit",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_K89ydCREuQk6JRCc",
+        "category": "Lifecycle Events",
+        "x": 85,
+        "y": 80,
+        "wires": [
+            [
+                "sd_3313vsjK8WDNBsFI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "bankComponent"
+    },
+    {
+        "id": "sd_3313vsjK8WDNBsFI",
+        "type": "PageVariables",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "currentQuote",
+                "typedIpValue": {
+                    "type": "literal",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_3313vsjK8WDNBsFI",
+        "category": "Function",
+        "x": 185,
+        "y": 80,
+        "wires": [
+            [
+                "sd_9bDRCvGWsSYHLJOr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_9bDRCvGWsSYHLJOr",
         "type": "PageServiceVariables",
         "z": "sd_OnCLyxjiMYoKcuBV",
         "viewType": "pages",
@@ -490,7 +490,7 @@
                 }
             }
         ],
-        "functionName": "sd_AZGO8I8Cn77iGbQU",
+        "functionName": "sd_9bDRCvGWsSYHLJOr",
         "service": {
             "id": "sd_O7BgeFkazhosv8N2",
             "type": "tab",
@@ -523,7 +523,7 @@
         "y": 80,
         "wires": [
             [
-                "sd_w5cpEroO58nEOohN"
+                "sd_27vHPFM3aNGZbRyw"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -532,19 +532,52 @@
         "generated": true
     },
     {
-        "id": "sd_w5cpEroO58nEOohN",
+        "id": "sd_n4nRrKPEshmLxTLw",
         "type": "Script",
         "z": "sd_OnCLyxjiMYoKcuBV",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.currentQuote || 0;\n\nif (bh.currentQuote) {\n    console.log('value');\n    page.currentQuote = bh.currentQuote.input.newQuote; // Subtracting the new quote value\n    console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n} else {\n    console.log('no value');\n    page.currentQuote = 100;\n}\n",
-        "functionName": "sd_w5cpEroO58nEOohN",
+        "script": "// console.log(\"new bh :\", bh.currentQuote.input.newQuote)\npage.currentQuote = page.loggedInUser.balance;\n\n// if (bh.currentQuote) {\n//     console.log('value');\n//     page.currentQuote = bh.currentQuote.input.newQuote;\n//     console.log(\"new bh :\", bh.currentQuote.input.newQuote);\n// } else {\n//     console.log('no value');\n// }\n\nconsole.log('page', page)\nconsole.log('bh', bh)\n",
+        "functionName": "sd_n4nRrKPEshmLxTLw",
         "category": "Function",
-        "x": 425,
+        "x": 605,
         "y": 80,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "bankComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_27vHPFM3aNGZbRyw",
+        "type": "Storage",
+        "z": "sd_OnCLyxjiMYoKcuBV",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "loggedInUser"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "loggedInUser"
+        },
+        "functionName": "sd_27vHPFM3aNGZbRyw",
+        "category": "Storage",
+        "x": 445,
+        "y": 80,
+        "wires": [
+            [
+                "sd_n4nRrKPEshmLxTLw"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

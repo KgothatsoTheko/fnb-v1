@@ -1755,77 +1755,6 @@
                                 "_attrDef": "p"
                             }
                         ],
-                        "6b772a3a-11be-e3a4-5f78-b5850ef9bb1c": {
-                            "paletteKey": "NG-RaisedButton",
-                            "parentEditorKey": "60d32e44-ab3b-1322-e597-297b56b92040",
-                            "commentid": null,
-                            "designerReference": [
-                                {
-                                    "_key": "style",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "class",
-                                    "_value": [
-                                        "bank-amount"
-                                    ],
-                                    "_type": "dav",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "buttonname",
-                                    "_value": "R800",
-                                    "_type": "a",
-                                    "_attrDef": "p",
-                                    "_useAsLabel": true
-                                },
-                                {
-                                    "_key": "color",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "(click)",
-                                    "_value": "goToTransactions()",
-                                    "_type": "kv",
-                                    "_attrDef": "p",
-                                    "objValue": {
-                                        "nodeID": "sd_EgdyPsf05vhDko23",
-                                        "functionName": "goToTransactions",
-                                        "activeTree": "pages",
-                                        "z": "sd_OnCLyxjiMYoKcuBV",
-                                        "input": []
-                                    }
-                                },
-                                {
-                                    "_key": "[disabled]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "[disableRipple]",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "type",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                },
-                                {
-                                    "_key": "routerLink",
-                                    "_value": "",
-                                    "_type": "kv",
-                                    "_attrDef": "p"
-                                }
-                            ]
-                        },
                         "03416302-7a90-d749-5eca-9a6502e283c3": {
                             "paletteKey": "Html5",
                             "parentEditorKey": "60d32e44-ab3b-1322-e597-297b56b92040",
@@ -1840,20 +1769,24 @@
                                 },
                                 {
                                     "_key": "class",
-                                    "_value": "",
+                                    "_value": [
+                                        "bank-amount",
+                                        "bank-flex",
+                                        "bank-center-center"
+                                    ],
                                     "_type": "dav",
                                     "_attrDef": "p"
                                 },
                                 {
                                     "_key": "htmlElement",
-                                    "_value": "p",
+                                    "_value": "div",
                                     "_type": "dav",
                                     "_attrDef": "p",
                                     "_useAsLabel": true
                                 },
                                 {
                                     "_key": "tagType",
-                                    "_value": "p",
+                                    "_value": "div",
                                     "_type": "a",
                                     "_attrDef": "p",
                                     "_visibility": false
@@ -2011,6 +1944,13 @@
                                     "_type": "kv",
                                     "_attrDef": "p",
                                     "_visibility": false
+                                },
+                                {
+                                    "_key": "(click)",
+                                    "_value": "goToTransactions()",
+                                    "_type": "kv",
+                                    "_attrDef": "c",
+                                    "_customAttributeFlag": "customInput"
                                 }
                             ],
                             "fd8229e4-2ed5-a5b1-673b-e0331c0a2198": {
@@ -2033,7 +1973,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": "{{page.currentQuote}}",
+                                        "_value": "R{{page.loggedInUser.balance}}",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }

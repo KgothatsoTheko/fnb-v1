@@ -5,6 +5,7 @@
 
 import { Location } from '@angular/common'; //_splitter_
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -70,6 +71,21 @@ export class cardComponent {
       return this.errorHandler(bh, e, 'sd_wUs9U3CcvBpO3bt7');
     }
   }
+
+  openScanToPay(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_f3tkITNIYIIognCe(bh);
+      //appendnew_next_openScanToPay
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_IK1CkF0IHzFSFJhb');
+    }
+  }
   //appendnew_flow_cardComponent_start
 
   sd_HLdYTEAFr0krmd5a(bh) {
@@ -101,6 +117,20 @@ export class cardComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_eNKwox5CTGR08gcB');
+    }
+  }
+
+  async sd_f3tkITNIYIIognCe(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/qr-code-reader');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_f3tkITNIYIIognCe
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_f3tkITNIYIIognCe');
     }
   }
 

@@ -3,9 +3,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { appDeclarations, appBootstrap, appProviders } from './config/declarations';
 import { appImportModules } from './config/import-modules';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { NgxScannerQrcodeModule, LOAD_WASM } from 'ngx-scanner-qrcode';
+import { NgxScannerQrcodeModule} from 'ngx-scanner-qrcode';
 
-LOAD_WASM().subscribe();
+
 
 @NgModule({
   declarations: [...appDeclarations],
