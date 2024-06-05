@@ -986,6 +986,13 @@
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "_visibility": false
+                            },
+                            {
+                                "_key": "(click)",
+                                "_value": "openScanToPay()",
+                                "_type": "kv",
+                                "_attrDef": "c",
+                                "_customAttributeFlag": "customInput"
                             }
                         ],
                         "9e66b9cb-62fc-87c2-7a2c-066eb2b6812e": {

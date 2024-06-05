@@ -248,7 +248,7 @@ export class verify_codeComponent {
   async sd_syhqL8DbCmWvp5qY(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/change-password');
+        this.sdService.getPathAndQParamsObj('/bank');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);

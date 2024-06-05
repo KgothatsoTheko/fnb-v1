@@ -11,7 +11,7 @@
     </div>
     <div fxLayout="column wrap" fxLayoutAlign="center stretch" [fxShow]="true">
       <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start stretch" [fxShow]="true">
-        <div>
+        <div (click)="openScanToPay()">
           <span class="material-symbols-outlined pointer">
                 qr_code
             </span>

@@ -35,7 +35,7 @@ export class bankComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_mEliQLOZp4jIw1lX(bh);
+      this.sd_K89ydCREuQk6JRCc(bh);
     }
   }
 
@@ -45,16 +45,6 @@ export class bankComponent {
       .constructFlowObject(this);
 
     //append_listeners
-  }
-
-  sd_mEliQLOZp4jIw1lX(bh) {
-    try {
-      bh = this.sd_yzNTTPPwdiMjtXgw(bh);
-      //appendnew_next_sd_mEliQLOZp4jIw1lX
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_mEliQLOZp4jIw1lX');
-    }
   }
 
   goToTransactions(...others) {
@@ -176,51 +166,17 @@ export class bankComponent {
       return this.errorHandler(bh, e, 'sd_wX3DmtKIglUiskZF');
     }
   }
+  sd_K89ydCREuQk6JRCc(bh) {
+    try {
+      bh = this.sd_3313vsjK8WDNBsFI(bh);
+      //appendnew_next_sd_K89ydCREuQk6JRCc
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_K89ydCREuQk6JRCc');
+    }
+  }
+
   //appendnew_flow_bankComponent_start
-
-  sd_yzNTTPPwdiMjtXgw(bh) {
-    try {
-      this.page.currentQuote = undefined;
-      bh = this.sd_AZGO8I8Cn77iGbQU(bh);
-      //appendnew_next_sd_yzNTTPPwdiMjtXgw
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_yzNTTPPwdiMjtXgw');
-    }
-  }
-
-  sd_AZGO8I8Cn77iGbQU(bh) {
-    try {
-      const commonInstance: common = this.__page_injector__.get(common);
-      bh.currentQuote = commonInstance['currentQuote'];
-      bh = this.sd_w5cpEroO58nEOohN(bh);
-      //appendnew_next_sd_AZGO8I8Cn77iGbQU
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_AZGO8I8Cn77iGbQU');
-    }
-  }
-
-  sd_w5cpEroO58nEOohN(bh) {
-    try {
-      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
-      page.currentQuote = page.currentQuote || 0;
-
-      if (bh.currentQuote) {
-        console.log('value');
-        page.currentQuote = bh.currentQuote.input.newQuote; // Subtracting the new quote value
-        console.log('new bh :', bh.currentQuote.input.newQuote);
-      } else {
-        console.log('no value');
-        page.currentQuote = 100;
-      }
-
-      //appendnew_next_sd_w5cpEroO58nEOohN
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_w5cpEroO58nEOohN');
-    }
-  }
 
   async sd_lzbhoAkaARC0iBfx(bh) {
     try {
@@ -347,6 +303,65 @@ export class bankComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4gY2NKIDRROAm3qN');
+    }
+  }
+
+  sd_3313vsjK8WDNBsFI(bh) {
+    try {
+      this.page.currentQuote = undefined;
+      bh = this.sd_9bDRCvGWsSYHLJOr(bh);
+      //appendnew_next_sd_3313vsjK8WDNBsFI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3313vsjK8WDNBsFI');
+    }
+  }
+
+  sd_9bDRCvGWsSYHLJOr(bh) {
+    try {
+      const commonInstance: common = this.__page_injector__.get(common);
+      bh.currentQuote = commonInstance['currentQuote'];
+      bh = this.sd_27vHPFM3aNGZbRyw(bh);
+      //appendnew_next_sd_9bDRCvGWsSYHLJOr
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_9bDRCvGWsSYHLJOr');
+    }
+  }
+
+  sd_27vHPFM3aNGZbRyw(bh) {
+    try {
+      this.page.loggedInUser = JSON.parse(
+        sessionStorage.getItem('loggedInUser')
+      );
+      bh = this.sd_n4nRrKPEshmLxTLw(bh);
+      //appendnew_next_sd_27vHPFM3aNGZbRyw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_27vHPFM3aNGZbRyw');
+    }
+  }
+
+  sd_n4nRrKPEshmLxTLw(bh) {
+    try {
+      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
+      page.currentQuote = page.loggedInUser.balance;
+
+      // if (bh.currentQuote) {
+      //     console.log('value');
+      //     page.currentQuote = bh.currentQuote.input.newQuote;
+      //     console.log("new bh :", bh.currentQuote.input.newQuote);
+      // } else {
+      //     console.log('no value');
+      // }
+
+      console.log('page', page);
+      console.log('bh', bh);
+
+      //appendnew_next_sd_n4nRrKPEshmLxTLw
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_n4nRrKPEshmLxTLw');
     }
   }
 

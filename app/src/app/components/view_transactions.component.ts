@@ -90,10 +90,170 @@ export class view_transactionsComponent {
 
   sd_3oH2r6rOuBE5VSlL(bh) {
     try {
+      bh = this.sd_GFUVMLwhBkIKvPjv(bh);
       //appendnew_next_sd_3oH2r6rOuBE5VSlL
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3oH2r6rOuBE5VSlL');
+    }
+  }
+
+  sd_GFUVMLwhBkIKvPjv(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_6Ihta6dFH2WqedTq(bh);
+      //appendnew_next_sd_GFUVMLwhBkIKvPjv
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GFUVMLwhBkIKvPjv');
+    }
+  }
+
+  sd_6Ihta6dFH2WqedTq(bh) {
+    try {
+      this.page.loggedInUser = JSON.parse(
+        sessionStorage.getItem('loggedInUser')
+      );
+      bh = this.sd_UtIdsMpnbEzdy33G(bh);
+      //appendnew_next_sd_6Ihta6dFH2WqedTq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6Ihta6dFH2WqedTq');
+    }
+  }
+
+  sd_UtIdsMpnbEzdy33G(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdUrl + `get-airtime/${page.loggedInUser.email}`;
+      bh.url2 = page.ssdUrl + `get-electricity/${page.loggedInUser.email}`;
+      bh.url3 = page.ssdUrl + `get-ewallet/${page.loggedInUser.email}`;
+      bh.url4 = page.ssdUrl + `get-pay/${page.loggedInUser.email}`;
+
+      bh = this.sd_NO1swfx7Djl88TaU(bh);
+      //appendnew_next_sd_UtIdsMpnbEzdy33G
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_UtIdsMpnbEzdy33G');
+    }
+  }
+
+  async sd_NO1swfx7Djl88TaU(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.airtime = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_ywShD8cOBT5apeHm(bh);
+      //appendnew_next_sd_NO1swfx7Djl88TaU
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_NO1swfx7Djl88TaU');
+    }
+  }
+
+  async sd_ywShD8cOBT5apeHm(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url2,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.electricity = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_lNXTuv9JhUg8NEh8(bh);
+      //appendnew_next_sd_ywShD8cOBT5apeHm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ywShD8cOBT5apeHm');
+    }
+  }
+
+  async sd_lNXTuv9JhUg8NEh8(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url3,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.ewallet = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_Yu8yEAuVIKQrq9PN(bh);
+      //appendnew_next_sd_lNXTuv9JhUg8NEh8
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lNXTuv9JhUg8NEh8');
+    }
+  }
+
+  async sd_Yu8yEAuVIKQrq9PN(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url4,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      this.page.pay = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_QXMibve5VdwFRL9r(bh);
+      //appendnew_next_sd_Yu8yEAuVIKQrq9PN
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Yu8yEAuVIKQrq9PN');
+    }
+  }
+
+  sd_QXMibve5VdwFRL9r(bh) {
+    try {
+      const page = this.page;
+      page.transctions = [
+        ...page.airtime,
+        ...page.electricity,
+        ...page.ewallet,
+        ...page.pay,
+      ];
+
+      const newArray = page.transctions.map((transaction) => {
+        let description;
+        if (transaction.bundleType) {
+          description = `Airtime purchase for ${transaction.cell} on ${transaction.networkProvider}`;
+        } else if (transaction.meterNumber) {
+          description = `Electricity purchase for meter number ${transaction.meterNumber}`;
+        } else if (transaction.cellNumber) {
+          description = `Transaction for cell number ${transaction.cellNumber}`;
+        } else if (transaction.cardNumber) {
+          description = `Money sent to ${transaction.recipientName} with reference ${transaction.ownRef}`;
+        }
+
+        return {
+          transactionDate: transaction.transactionDate,
+          amount: transaction.amount,
+          description: description,
+        };
+      });
+      newArray.sort((a, b) => {
+        page.dateA = new Date(a.transactionDate);
+        page.dateB = new Date(b.transactionDate);
+        return page.dateB - page.dateA;
+      });
+
+      page.newArr = newArray;
+      console.log('newArray', page.newArr);
+      //appendnew_next_sd_QXMibve5VdwFRL9r
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_QXMibve5VdwFRL9r');
     }
   }
 

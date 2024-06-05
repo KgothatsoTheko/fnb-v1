@@ -4,6 +4,7 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
@@ -70,14 +71,81 @@ export class buy_airtimeComponent {
       return this.errorHandler(bh, e, 'sd_UPPt3rtyuEHaLwqM');
     }
   }
+
+  openAirtimeDetails(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_6zQvR1COL7ks0Uhe(bh);
+      //appendnew_next_openAirtimeDetails
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ciLgyBpsargQvb9r');
+    }
+  }
+
+  openAirtimeAnotherDetails(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_vPRi09XZbOaMOagK(bh);
+      //appendnew_next_openAirtimeAnotherDetails
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AuwZwELVV5ja31MS');
+    }
+  }
   //appendnew_flow_buy_airtimeComponent_start
 
   sd_4NC0TDgF3SEBdfuA(bh) {
     try {
+      bh = this.sd_24vDLIgEl1Ye1BkQ(bh);
       //appendnew_next_sd_4NC0TDgF3SEBdfuA
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4NC0TDgF3SEBdfuA');
+    }
+  }
+
+  sd_24vDLIgEl1Ye1BkQ(bh) {
+    try {
+      this.page.loggedInUser = JSON.parse(
+        sessionStorage.getItem('loggedInUser')
+      );
+      bh = this.sd_AYvdSXjUTKDz7u6s(bh);
+      //appendnew_next_sd_24vDLIgEl1Ye1BkQ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_24vDLIgEl1Ye1BkQ');
+    }
+  }
+
+  sd_AYvdSXjUTKDz7u6s(bh) {
+    try {
+      const page = this.page; // console.log("new bh :", bh.currentQuote.input.newQuote)
+      page.currentQuote = page.loggedInUser.balance;
+
+      // if (bh.currentQuote) {
+      //     console.log('value');
+      //     page.currentQuote = bh.currentQuote.input.newQuote;
+      //     console.log("new bh :", bh.currentQuote.input.newQuote);
+      // } else {
+      //     console.log('no value');
+      // }
+
+      console.log('page', page);
+      console.log('bh', bh);
+
+      //appendnew_next_sd_AYvdSXjUTKDz7u6s
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AYvdSXjUTKDz7u6s');
     }
   }
 
@@ -91,6 +159,36 @@ export class buy_airtimeComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_rnwzf7GG4GtwMenu');
+    }
+  }
+
+  async sd_6zQvR1COL7ks0Uhe(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/airtime-details');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_6zQvR1COL7ks0Uhe
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_6zQvR1COL7ks0Uhe');
+    }
+  }
+
+  async sd_vPRi09XZbOaMOagK(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/airtimeAnother-details');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_vPRi09XZbOaMOagK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vPRi09XZbOaMOagK');
     }
   }
 

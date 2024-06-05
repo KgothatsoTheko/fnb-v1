@@ -28,7 +28,7 @@
         <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
           <div>
             <p class="bank-no-margin">Easy Zero</p>
-            <p class="bank-no-margin"><strong>R800</strong></p>
+            <p class="bank-no-margin"><strong>{{page.loggedInUser.balance}}</strong></p>
             <p class="bank-no-margin"><small>Available</small></p>
           </div>
         </div>
@@ -57,24 +57,25 @@
       </div>
     </mat-card-content>
   </mat-card>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-      <p>
-        Amount:</p>
-      <div class="bank-full-width">
-        <input type="text" class="bank-no-padding bank-no-margin bank-input bank-border-radius-10px">
+  <form [formGroup]="page.ewalletForm">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Amount:</p>
+        <div class="bank-full-width">
+          <input type="number" formControlName="amount" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
       </div>
     </div>
-  </div>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
-      <p>
-        Cellphone Number</p>
-      <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-        <input matInput placeholder="Input" [required]="false">
-        <mat-icon matSuffix>add_circle</mat-icon>
-      </mat-form-field>
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" class="bank-full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+        <p>
+          Cellphone Number</p>
+        <div class="bank-full-width">
+          <input type="number" formControlName="cellNumber" class="bank-padding-10px bank-border-box bank-no-margin bank-input bank-border-radius-10px">
+        </div>
+      </div>
     </div>
-  </div>
-  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="bank-top-110px bank-purchase bank-relative">Send</button></div>
+  </form>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="bank-top-110px bank-purchase bank-relative" (click)="send()">Send</button></div>
 </div>

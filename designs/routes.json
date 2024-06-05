@@ -113,6 +113,18 @@
             "component": "change_password2Component"
         },
         {
+            "path": "qr-code-manual",
+            "component": "qr_code_readerComponent"
+        },
+        {
+            "path": "airtime-details",
+            "component": "airtime_detailsComponent"
+        },
+        {
+            "path": "airtimeAnother-details",
+            "component": "airtimeAnother_detailsComponent"
+        },
+        {
             "path": "''",
             "redirectTo": "landing",
             "pathMatch": "full",

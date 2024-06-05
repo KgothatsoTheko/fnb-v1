@@ -27,7 +27,11 @@
       <div>
         Kgothatso Theko</div>
     </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-amount">0614227501</button></div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true" (click)="openAirtimeDetails()">
+      <div class="bank-amount-btn2 bank-flex bank-center-center">
+        {{page.loggedInUser.cell}}
+      </div>
+    </div>
   </div>
   <div>
     <mat-divider></mat-divider>
@@ -42,7 +46,7 @@
       <p>
         Buy for someonle else</p>
     </div>
-    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-amount">Buy</button></div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button class="bank-amount" (click)="openAirtimeAnotherDetails()">Buy</button></div>
   </div>
   <div>
     <mat-divider></mat-divider>
