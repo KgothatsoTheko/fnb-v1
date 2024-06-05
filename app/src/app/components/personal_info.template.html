@@ -16,12 +16,12 @@
       <div fxLayout="row wrap" class="landing-full-width personal-info-middle-top-row1" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
         <div fxLayout="row wrap" class="personal-info-middle-top-row1-left" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Images/default-user.jpg" class="personal-info-img-round landing-full-height landing-full-width"></div>
         <div fxLayout="column wrap" class="personal-info-middle-top-row1-right" fxLayoutAlign="center stretch" [fxShow]="true"><label class="message-fz-20">
-            {{page.loggedInUser.name}} {{page.loggedInUser.surname}}</label><label style="color: #919397" class="message-fz-20">
-            {{page.loggedInUser.idNum}}</label></div>
+            {{page.userDetails.name}} {{page.userDetails.surname}}</label><label style="color: #919397" class="message-fz-20">
+            {{page.userDetails.idNum}}</label></div>
       </div>
-      <div fxLayout="row wrap" class="personal-info-middle-top-row2" fxLayoutAlign="center start" [fxShow]="true"><button mat-raised-button routerLink="/add-profile-pic" class="message-fz-18 personal-info-update-picture">Update profile picture</button></div>
+      <div fxLayout="row wrap" class="personal-info-middle-top-row2" fxLayoutAlign="center start" [fxShow]="true"><button mat-raised-button routerLink="/add-profile-pic" class="message-fz-18 personal-info-update-picture" [disabled]="true">Update profile picture</button></div>
     </div>
-    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/id-documents&apos;]">
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
       <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
         <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
           <span class="material-symbols-outlined personal-info-fz-28">
@@ -33,7 +33,7 @@ id_card
           ID details
         </label></div>
     </div>
-    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
       <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
         <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
           <span class="material-symbols-outlined personal-info-fz-28">
@@ -45,7 +45,7 @@ person
           Additional details
         </label></div>
     </div>
-    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
       <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
         <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
           <span class="material-symbols-outlined personal-info-fz-28">
@@ -57,7 +57,7 @@ contact_mail
           Contact details
         </label></div>
     </div>
-    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
       <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
         <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
           <span class="material-symbols-outlined personal-info-fz-28">
@@ -69,7 +69,7 @@ two_pager
           Address book
         </label></div>
     </div>
-    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" class="landing-full-width personal-middle-row" fxLayoutGap="2em" fxLayoutAlign="center center" [fxShow]="true" [routerLink]="[&apos;/coming-soon&apos;]">
       <div fxLayout="row wrap" class="personal-info-icon-round message-height-90 personal-middle-row-left" fxLayoutAlign="center center" [fxShow]="true">
         <div style="display: flex; align-items: center; justify-content: center" class="my-profile-green-text">
           <span class="material-symbols-outlined personal-info-fz-28">

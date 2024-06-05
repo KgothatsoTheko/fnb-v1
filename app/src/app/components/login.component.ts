@@ -5,7 +5,6 @@
 
 import { Component, Injector } from '@angular/core'; //_splitter_
 import { FormControl, FormGroup, Validators } from '@angular/forms'; //_splitter_
-import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
@@ -97,7 +96,7 @@ export class loginComponent {
         .constructFlowObject(this);
       bh.input = { form };
       bh.local = {};
-      bh = this.sd_AuqUk4zhQQO4MrD4(bh);
+      bh = this.sd_sLY2AoAhaPHAAaDr(bh);
       //appendnew_next_login
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_44CrbDcLdLIXeUnr');
@@ -181,6 +180,86 @@ export class loginComponent {
     }
   }
 
+  async sd_sLY2AoAhaPHAAaDr(bh) {
+    try {
+      if (
+        this.sdService.operators['se'](
+          this.page.loginForm.value.password.length,
+          4,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_XcH0HPbNJBk5GnM2(bh);
+      } else {
+        bh = await this.sd_AuqUk4zhQQO4MrD4(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_sLY2AoAhaPHAAaDr');
+    }
+  }
+
+  sd_XcH0HPbNJBk5GnM2(bh) {
+    try {
+      this.page.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_7q0RrCOpw7ALlMgL(bh);
+      //appendnew_next_sd_XcH0HPbNJBk5GnM2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XcH0HPbNJBk5GnM2');
+    }
+  }
+
+  sd_7q0RrCOpw7ALlMgL(bh) {
+    try {
+      const page = this.page;
+      bh.body = {
+        email: bh.input.form.get('email').value,
+        PIN: bh.input.form.get('password').value,
+      };
+
+      bh.url = page.ssdUrl + 'login';
+
+      bh = this.sd_OD8zvEV2HAw9CPuS(bh);
+      //appendnew_next_sd_7q0RrCOpw7ALlMgL
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_7q0RrCOpw7ALlMgL');
+    }
+  }
+
+  async sd_OD8zvEV2HAw9CPuS(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_AEBXo1QgAnxUvQ0R(bh);
+      //appendnew_next_sd_OD8zvEV2HAw9CPuS
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OD8zvEV2HAw9CPuS');
+    }
+  }
+
+  sd_AEBXo1QgAnxUvQ0R(bh) {
+    try {
+      const page = this.page;
+      console.log(page.result);
+      //appendnew_next_sd_AEBXo1QgAnxUvQ0R
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AEBXo1QgAnxUvQ0R');
+    }
+  }
+
   sd_AuqUk4zhQQO4MrD4(bh) {
     try {
       this.page.ssdUrl = bh.system.environment.properties.ssdURL;
@@ -194,26 +273,13 @@ export class loginComponent {
 
   sd_mjHhs3TZbNwVZsQd(bh) {
     try {
-      const page = this.page; // page.submitted = true;
+      const page = this.page;
       bh.body = {
-        // email: page.email
         email: bh.input.form.get('email').value,
         password: bh.input.form.get('password').value,
-
-        // email: bh.body.email
-        // email: page.loginForm.email
       };
 
-      console.log('length:', bh.input.form.get('password').value.length);
       bh.url = page.ssdUrl + 'login';
-      // bh.url = page.ssdUrl + 'add-admin';
-
-      console.log('email1', bh.input.form.get('email').value);
-      console.log('second email', bh.input.email);
-      console.log('3email', page.loginForm.email);
-      console.log('bh body', bh.body);
-
-      console.log(page.loginForm.value);
 
       bh = this.sd_OBFx5QCcbXpVMC3X(bh);
       //appendnew_next_sd_mjHhs3TZbNwVZsQd
@@ -234,7 +300,7 @@ export class loginComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_qHPQnSMmoHBTLids(bh);
+      bh = this.sd_jBhlw0WwVBhFapvj(bh);
       //appendnew_next_sd_OBFx5QCcbXpVMC3X
       return bh;
     } catch (e) {
@@ -242,46 +308,40 @@ export class loginComponent {
     }
   }
 
-  sd_qHPQnSMmoHBTLids(bh) {
+  sd_jBhlw0WwVBhFapvj(bh) {
     try {
-      this.__page_injector__.get(MatSnackBar).open('Logged In', 'OK', {
-        duration: 2000,
-        direction: 'ltr',
-        horizontalPosition: 'center',
-        verticalPosition: 'bottom',
-      });
-      bh = this.sd_CMrcJi2YZEihissP(bh);
-      //appendnew_next_sd_qHPQnSMmoHBTLids
+      const page = this.page;
+      console.log(page.result);
+      bh = this.sd_1Nc70SHc4wCOUjSZ(bh);
+      //appendnew_next_sd_jBhlw0WwVBhFapvj
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_qHPQnSMmoHBTLids');
+      return this.errorHandler(bh, e, 'sd_jBhlw0WwVBhFapvj');
     }
   }
 
-  sd_CMrcJi2YZEihissP(bh) {
+  sd_1Nc70SHc4wCOUjSZ(bh) {
     try {
-      sessionStorage.setItem('loggedInUser', JSON.stringify(this.page.result));
-      bh = this.sd_Qok80ybFFhBH8hR9(bh);
-      //appendnew_next_sd_CMrcJi2YZEihissP
+      sessionStorage.setItem('user', JSON.stringify(this.page.result));
+      bh = this.sd_w7pLMcccCEh0xCaL(bh);
+      //appendnew_next_sd_1Nc70SHc4wCOUjSZ
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_CMrcJi2YZEihissP');
+      return this.errorHandler(bh, e, 'sd_1Nc70SHc4wCOUjSZ');
     }
   }
 
-  async sd_Qok80ybFFhBH8hR9(bh) {
+  async sd_w7pLMcccCEh0xCaL(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/deposit');
+        this.sdService.getPathAndQParamsObj('/home');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
-      //appendnew_next_sd_Qok80ybFFhBH8hR9
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_w7pLMcccCEh0xCaL
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_Qok80ybFFhBH8hR9');
+      return this.errorHandler(bh, e, 'sd_w7pLMcccCEh0xCaL');
     }
   }
 

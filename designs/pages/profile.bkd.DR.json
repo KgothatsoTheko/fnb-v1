@@ -640,7 +640,6 @@
                 "paletteKey": "Html5",
                 "parentEditorKey": "c2bc7c23-31a0-32de-69d5-0f3420a8ec22",
                 "isAdvancedComponent": true,
-                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -830,7 +829,6 @@
                     "paletteKey": "html-editor",
                     "parentEditorKey": "d7309962-efa7-65b8-ec48-06096efa9aab",
                     "isAdvancedChildComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -1958,7 +1956,6 @@
                         "b57c6496-57f4-8515-4e2f-e1d87552e8e2": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "fe3a8c0e-8194-2961-de62-550338d85ec6",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2936,7 +2933,6 @@
                         "83170045-a0d8-f6b6-d662-14f889674ab6": {
                             "paletteKey": "FlexLayoutRow",
                             "parentEditorKey": "b0235fce-2cd1-1a45-3840-db367310c772",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3285,6 +3281,19 @@
                             "_value": "['/landing']",
                             "_type": "kv",
                             "_attrDef": "c"
+                        },
+                        {
+                            "_key": "(click)",
+                            "_value": "logout()",
+                            "_type": "kv",
+                            "_attrDef": "c",
+                            "objValue": {
+                                "nodeID": "sd_Gs53YiVAeSkcj5Gz",
+                                "functionName": "logout",
+                                "activeTree": "pages",
+                                "z": "sd_vPNvaEpfinZ4fb1w",
+                                "input": []
+                            }
                         }
                     ],
                     "96fe8d8a-2d8a-c0d6-c1ec-081da7a7b7d3": {

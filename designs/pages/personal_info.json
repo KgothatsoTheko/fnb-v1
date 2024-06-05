@@ -43,7 +43,7 @@
         "globalVariables": [],
         "functionName": "sd_rQOfEXAMOUzol1j5",
         "category": "Function",
-        "x": 305,
+        "x": 345,
         "y": 80,
         "wires": [
             []
@@ -132,16 +132,38 @@
         "outputs": 1,
         "key": {
             "type": "str",
-            "value": "loggedInUser"
+            "value": "user"
         },
         "value": {},
         "resultMapping": {
             "type": "this.page",
-            "value": "loggedInUser"
+            "value": "userDetails"
         },
         "functionName": "sd_ikzzmdpAVXbHii6E",
         "category": "Storage",
-        "x": 180,
+        "x": 165,
+        "y": 80,
+        "wires": [
+            [
+                "sd_a8YTzAlyRhKPCUhO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "personal_infoComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_a8YTzAlyRhKPCUhO",
+        "type": "Script",
+        "z": "sd_qZ45hTZbEWoSgzLO",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "// console.log(page.userDetails)",
+        "functionName": "sd_a8YTzAlyRhKPCUhO",
+        "category": "Function",
+        "x": 245,
         "y": 80,
         "wires": [
             [

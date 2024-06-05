@@ -586,7 +586,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.body = {\n    email: page.email,\n    OTP: page.random,\n};\n\nbh.url = page.ssdUrl + 'forgot-password';\n\nconsole.log(bh.body)\n",
+        "script": "bh.body = {\n    email: page.email,\n    OTP: page.random,\n};\n\nbh.url = page.ssdUrl + 'forgot-password';\n\n// console.log(bh.body)\n",
         "functionName": "sd_gTeUoaunEY4SEmNI",
         "category": "Function",
         "x": 380,
@@ -648,7 +648,7 @@
         "y": 560,
         "wires": [
             [
-                "sd_jhaRzdlpZkZv36Oc"
+                "sd_XPR8zTL16v7wobXG"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -667,7 +667,7 @@
         "logObject": "this.page.random",
         "functionName": "sd_TlD2ZlPTBdAsgIdY",
         "category": "General",
-        "x": 705,
+        "x": 785,
         "y": 560,
         "wires": [],
         "__ssdTypeInputs__": {
@@ -712,7 +712,7 @@
         "direction": "ltr",
         "functionName": "sd_jhaRzdlpZkZv36Oc",
         "category": "General",
-        "x": 605,
+        "x": 685,
         "y": 560,
         "wires": [
             [
@@ -773,6 +773,39 @@
         "wires": [
             [
                 "sd_JnOutHTCg72NGJIq"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verify_codeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_XPR8zTL16v7wobXG",
+        "type": "Storage",
+        "z": "sd_O5utXTlOeL3NSqi0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "user"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "result"
+        },
+        "resultMapping": {},
+        "functionName": "sd_XPR8zTL16v7wobXG",
+        "category": "Storage",
+        "x": 585,
+        "y": 560,
+        "wires": [
+            [
+                "sd_jhaRzdlpZkZv36Oc"
             ]
         ],
         "__n_excludedFromValidation__": {},

@@ -105,6 +105,14 @@
             "component": "verify_codeComponent"
         },
         {
+            "path": "coming-soon",
+            "component": "coming_soonComponent"
+        },
+        {
+            "path": "change-password2",
+            "component": "change_password2Component"
+        },
+        {
             "path": "qr-code-manual",
             "component": "qr_code_readerComponent"
         },

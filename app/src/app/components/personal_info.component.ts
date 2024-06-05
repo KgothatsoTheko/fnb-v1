@@ -74,14 +74,23 @@ export class personal_infoComponent {
 
   sd_ikzzmdpAVXbHii6E(bh) {
     try {
-      this.page.loggedInUser = JSON.parse(
-        sessionStorage.getItem('loggedInUser')
-      );
-      bh = this.sd_rQOfEXAMOUzol1j5(bh);
+      this.page.userDetails = JSON.parse(sessionStorage.getItem('user'));
+      bh = this.sd_a8YTzAlyRhKPCUhO(bh);
       //appendnew_next_sd_ikzzmdpAVXbHii6E
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ikzzmdpAVXbHii6E');
+    }
+  }
+
+  sd_a8YTzAlyRhKPCUhO(bh) {
+    try {
+      const page = this.page; // console.log(page.userDetails)
+      bh = this.sd_rQOfEXAMOUzol1j5(bh);
+      //appendnew_next_sd_a8YTzAlyRhKPCUhO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_a8YTzAlyRhKPCUhO');
     }
   }
 

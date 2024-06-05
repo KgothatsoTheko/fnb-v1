@@ -138,7 +138,27 @@
         "generated": true
     },
     {
-        "id": "sd_SCwW4nHklebIcI9W",
+        "id": "sd_F4KXyA8KsxeWXj4H",
+        "type": "Navigation",
+        "z": "sd_pJX4oN0ELFcPypn0",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/bank",
+        "functionName": "sd_F4KXyA8KsxeWXj4H",
+        "category": "Navigation",
+        "x": 280,
+        "y": 320,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "deposit_ownComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_n1swxNd5XPSBN52k",
         "type": "Script",
         "z": "sd_pJX4oN0ELFcPypn0",
         "viewType": "common",

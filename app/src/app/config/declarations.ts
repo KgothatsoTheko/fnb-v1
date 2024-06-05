@@ -16,6 +16,10 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-change_password2Component
+import { change_password2Component } from '../components/change_password2.component';
+//CORE_REFERENCE_IMPORT-coming_soonComponent
+import { coming_soonComponent } from '../components/coming_soon.component';
 //CORE_REFERENCE_IMPORT-airtimeAnother_detailsComponent
 import { airtimeAnother_detailsComponent } from '../components/pop_ups/airtimeAnother_details.component';
 //CORE_REFERENCE_IMPORT-airtime_detailsComponent
@@ -108,6 +112,10 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-change_password2Component
+  change_password2Component,
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-coming_soonComponent
+  coming_soonComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-airtimeAnother_detailsComponent
   airtimeAnother_detailsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-airtime_detailsComponent
@@ -219,6 +227,8 @@ export const appRoutes = [
   { path: 'menu-dialog', component: menu_dialogComponent },
   { path: 'forgot-password', component: forgot_passwordComponent },
   { path: 'verify-code', component: verify_codeComponent },
+  { path: 'coming-soon', component: coming_soonComponent },
+  { path: 'change-password2', component: change_password2Component },
   { path: 'qr-code-manual', component: qr_code_readerComponent },
   { path: 'airtime-details', component: airtime_detailsComponent },
   {

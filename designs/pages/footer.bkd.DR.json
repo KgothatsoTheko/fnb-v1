@@ -106,6 +106,7 @@
             "74000a3c-8ce2-be7d-2d87-17734f8b193a": {
                 "paletteKey": "FlexLayoutCol",
                 "parentEditorKey": "9f62b876-25df-51b1-b2a1-090c2de4c406",
+                "isCommented": "false",
                 "commentid": null,
                 "designerReference": [
                     {
@@ -176,6 +177,7 @@
                 "eeb86eb7-6072-4cb9-6700-3c0b0df98870": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "74000a3c-8ce2-be7d-2d87-17734f8b193a",
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -225,7 +227,7 @@
                         },
                         {
                             "_key": "pLayoutAlign",
-                            "_value": "end",
+                            "_value": "center",
                             "_type": "a",
                             "_attrDef": "p"
                         },
@@ -240,6 +242,7 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "eeb86eb7-6072-4cb9-6700-3c0b0df98870",
                         "isAdvancedComponent": true,
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -427,6 +430,7 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "a6529f00-f9c7-12c9-f91a-7b47d4d63b89",
                             "isAdvancedChildComponent": true,
+                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -454,6 +458,7 @@
                 "f25fe0cf-f385-94f5-bd97-113660e88229": {
                     "paletteKey": "FlexLayoutRow",
                     "parentEditorKey": "74000a3c-8ce2-be7d-2d87-17734f8b193a",
+                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -518,6 +523,7 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "f25fe0cf-f385-94f5-bd97-113660e88229",
                         "isAdvancedComponent": true,
+                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -529,6 +535,7 @@
                             {
                                 "_key": "class",
                                 "_value": [
+                                    "limits-fz-16",
                                     "footer-text-center"
                                 ],
                                 "_type": "dav",
@@ -707,6 +714,7 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "314ae7fb-25f7-a925-6ad6-7da285579008",
                             "isAdvancedChildComponent": true,
+                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1157,6 +1165,7 @@
                             {
                                 "_key": "class",
                                 "_value": [
+                                    "limits-fz-16",
                                     "footer-text-center"
                                 ],
                                 "_type": "dav",
@@ -1424,7 +1433,7 @@
                     },
                     {
                         "_key": "[routerLink]",
-                        "_value": "['/message']",
+                        "_value": "['/coming-soon']",
                         "_type": "kv",
                         "_attrDef": "c"
                     }
@@ -1785,6 +1794,7 @@
                             {
                                 "_key": "class",
                                 "_value": [
+                                    "limits-fz-16",
                                     "footer-text-center"
                                 ],
                                 "_type": "dav",
@@ -2413,6 +2423,7 @@
                             {
                                 "_key": "class",
                                 "_value": [
+                                    "limits-fz-16",
                                     "footer-text-center"
                                 ],
                                 "_type": "dav",

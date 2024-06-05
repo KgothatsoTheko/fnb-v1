@@ -312,7 +312,7 @@ export class verify_codeComponent {
 
       bh.url = page.ssdUrl + 'forgot-password';
 
-      console.log(bh.body);
+      // console.log(bh.body)
 
       bh = this.sd_afKuwnXlNLvaV6aQ(bh);
       //appendnew_next_sd_gTeUoaunEY4SEmNI
@@ -333,11 +333,22 @@ export class verify_codeComponent {
         body: bh.body,
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
-      bh = this.sd_jhaRzdlpZkZv36Oc(bh);
+      bh = this.sd_XPR8zTL16v7wobXG(bh);
       //appendnew_next_sd_afKuwnXlNLvaV6aQ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_afKuwnXlNLvaV6aQ');
+    }
+  }
+
+  sd_XPR8zTL16v7wobXG(bh) {
+    try {
+      sessionStorage.setItem('user', JSON.stringify(this.page.result));
+      bh = this.sd_jhaRzdlpZkZv36Oc(bh);
+      //appendnew_next_sd_XPR8zTL16v7wobXG
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XPR8zTL16v7wobXG');
     }
   }
 
